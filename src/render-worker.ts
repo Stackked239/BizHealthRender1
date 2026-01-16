@@ -123,13 +123,30 @@ async function processJob(job: any): Promise<void> {
       throw new Error(`Failed to fetch questionnaire: ${fetchError?.message || 'Not found'}`);
     }
 
-    // Extract webhook payload - use pipeline_payload.raw_questionnaire if available (from edge function)
-    // Otherwise, fall back to converting the questionnaire data
+    // Extract webhook payload - merge raw_questionnaire with raw_company_profile
     let webhookPayload;
     if (questionnaire.pipeline_payload?.raw_questionnaire) {
-      // Edge function already prepared the webhook format
-      webhookPayload = questionnaire.pipeline_payload.raw_questionnaire;
-      logger.info({ jobId }, 'Using pre-formatted webhook payload from pipeline_payload');
+      // Edge function prepared the questionnaire responses
+      // We need to merge with raw_company_profile to get the full webhook format
+      const rawQuestionnaire = questionnaire.pipeline_payload.raw_questionnaire;
+      const rawCompanyProfile = questionnaire.pipeline_payload.raw_company_profile;
+
+      // Build the webhook payload with business_overview from raw_company_profile
+      webhookPayload = {
+        ...rawQuestionnaire,
+        business_overview: rawCompanyProfile || questionnaire.company_profile || {},
+        // Ensure required fields exist
+        submission_id: rawQuestionnaire.submission_id || questionnaire.id,
+        timestamp: rawQuestionnaire.timestamp || new Date().toISOString(),
+        created_at: rawQuestionnaire.created_at || questionnaire.created_at,
+      };
+
+      logger.info({
+        jobId,
+        hasRawQuestionnaire: true,
+        hasRawCompanyProfile: !!rawCompanyProfile,
+        companyName: webhookPayload.business_overview?.company_name,
+      }, 'Built webhook payload from pipeline_payload');
     } else {
       // Fall back to converting questionnaire data
       webhookPayload = convertToWebhookPayload(questionnaire);
