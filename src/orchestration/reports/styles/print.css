@@ -1,0 +1,355 @@
+/* ============================================
+   BIZHEALTH.AI VISUAL COMPONENTS - PRINT STYLES
+   Optimized for PDF rendering and physical printing
+   Ensures color fidelity and proper page breaks
+   ============================================ */
+
+@media print {
+  /* ===== FORCE COLOR PRINTING ===== */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* ===== PAGE SETUP ===== */
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  @page :first {
+    margin-top: 0.25in;
+  }
+
+  @page :left {
+    margin-left: 0.6in;
+    margin-right: 0.4in;
+  }
+
+  @page :right {
+    margin-left: 0.4in;
+    margin-right: 0.6in;
+  }
+
+  /* ===== BODY RESET ===== */
+  html, body {
+    font-size: 11pt;
+    line-height: 1.5;
+    background: #fff !important;
+  }
+
+  /* ===== PREVENT PAGE BREAKS INSIDE COMPONENTS ===== */
+  .biz-gauge,
+  .biz-gauge-container,
+  .biz-score-tile,
+  .biz-heatmap,
+  .biz-heatmap__chapter,
+  .biz-action-card,
+  .biz-metric-card,
+  .biz-kpi-dashboard,
+  .biz-risk-matrix,
+  .biz-bar-chart,
+  .biz-radar-chart,
+  .biz-timeline-item,
+  .biz-roadmap-phase,
+  .biz-table-row,
+  .biz-funnel-stage,
+  .biz-waterfall-bar,
+  .biz-benchmark-bar {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* ===== FORCE PAGE BREAKS BEFORE SECTIONS ===== */
+  .biz-page-break-before,
+  .biz-section--new-page {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* First section should not have page break */
+  .biz-section:first-of-type,
+  .biz-section-header:first-of-type {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* Keep headers with content */
+  .biz-section-header,
+  .biz-subsection-header,
+  .biz-component-title,
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* ===== HIDE INTERACTIVE/DIGITAL-ONLY ELEMENTS ===== */
+  .biz-tooltip,
+  .biz-hover-state,
+  .biz-interactive-only,
+  .biz-no-print,
+  [data-print="hide"] {
+    display: none !important;
+  }
+
+  /* ===== ENSURE SVG VISIBILITY ===== */
+  svg {
+    overflow: visible !important;
+    max-width: 100% !important;
+  }
+
+  svg text {
+    fill: currentColor !important;
+  }
+
+  /* ===== LINK HANDLING ===== */
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  a[href]:after {
+    content: none !important;  /* Don't print URLs */
+  }
+
+  /* ===== GAUGE COMPONENT ===== */
+  .biz-gauge svg {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .biz-gauge__arc {
+    stroke-linecap: round !important;
+  }
+
+  .biz-gauge--excellence .biz-gauge__arc { stroke: var(--biz-excellent) !important; }
+  .biz-gauge--proficiency .biz-gauge__arc { stroke: var(--biz-proficiency) !important; }
+  .biz-gauge--attention .biz-gauge__arc { stroke: var(--biz-attention) !important; }
+  .biz-gauge--critical .biz-gauge__arc { stroke: var(--biz-critical) !important; }
+
+  /* ===== SCORE TILE ===== */
+  .biz-score-tile {
+    border: 1px solid var(--biz-border) !important;
+    box-shadow: none !important;
+  }
+
+  .biz-score-tile--excellence { border-left: 4px solid var(--biz-excellent) !important; }
+  .biz-score-tile--proficiency { border-left: 4px solid var(--biz-proficiency) !important; }
+  .biz-score-tile--attention { border-left: 4px solid var(--biz-attention) !important; }
+  .biz-score-tile--critical { border-left: 4px solid var(--biz-critical) !important; }
+
+  /* ===== HEATMAP ===== */
+  .biz-heatmap {
+    border: 1px solid var(--biz-border) !important;
+    box-shadow: none !important;
+  }
+
+  .biz-heatmap__cell--excellence {
+    background: var(--biz-excellent-bg) !important;
+    color: var(--biz-excellent-text) !important;
+  }
+
+  .biz-heatmap__cell--proficiency {
+    background: var(--biz-proficiency-bg) !important;
+    color: var(--biz-proficiency-text) !important;
+  }
+
+  .biz-heatmap__cell--attention {
+    background: var(--biz-attention-bg) !important;
+    color: var(--biz-attention-text) !important;
+  }
+
+  .biz-heatmap__cell--critical {
+    background: var(--biz-critical-bg) !important;
+    color: var(--biz-critical-text) !important;
+  }
+
+  /* ===== BAR CHART ===== */
+  .biz-bar-chart__bar--excellence { background: var(--biz-excellent) !important; }
+  .biz-bar-chart__bar--proficiency { background: var(--biz-proficiency) !important; }
+  .biz-bar-chart__bar--attention { background: var(--biz-attention) !important; }
+  .biz-bar-chart__bar--critical { background: var(--biz-critical) !important; }
+
+  .biz-bar-chart__benchmark {
+    border-left: 2px solid var(--biz-benchmark) !important;
+  }
+
+  /* ===== RISK MATRIX ===== */
+  .biz-risk-matrix__cell--low {
+    background: var(--biz-excellent-bg) !important;
+  }
+
+  .biz-risk-matrix__cell--medium {
+    background: var(--biz-attention-bg) !important;
+  }
+
+  .biz-risk-matrix__cell--high {
+    background: var(--biz-critical-bg) !important;
+  }
+
+  /* ===== ACTION CARD ===== */
+  .biz-action-card {
+    border: 1px solid var(--biz-border) !important;
+    box-shadow: none !important;
+  }
+
+  .biz-action-card__header {
+    background: var(--biz-navy) !important;
+    color: var(--biz-text-inverse) !important;
+  }
+
+  /* ===== METRIC CARD ===== */
+  .biz-metric-card {
+    border: 1px solid var(--biz-border) !important;
+    box-shadow: none !important;
+  }
+
+  .biz-metric-card--excellence { border-top: 3px solid var(--biz-excellent) !important; }
+  .biz-metric-card--proficiency { border-top: 3px solid var(--biz-proficiency) !important; }
+  .biz-metric-card--attention { border-top: 3px solid var(--biz-attention) !important; }
+  .biz-metric-card--critical { border-top: 3px solid var(--biz-critical) !important; }
+
+  /* ===== KPI DASHBOARD ===== */
+  .biz-kpi-dashboard {
+    border: 1px solid var(--biz-border) !important;
+    box-shadow: none !important;
+  }
+
+  /* ===== TABLE HANDLING ===== */
+  table {
+    border-collapse: collapse !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tfoot {
+    display: table-footer-group !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+  }
+
+  th {
+    background: var(--biz-navy) !important;
+    color: var(--biz-text-inverse) !important;
+  }
+
+  /* ===== TIMELINE/ROADMAP ===== */
+  .biz-timeline::before,
+  .biz-roadmap-timeline__line {
+    background: var(--biz-navy) !important;
+  }
+
+  .biz-timeline-item::before,
+  .biz-roadmap-timeline__marker {
+    background: var(--biz-green) !important;
+    border-color: var(--biz-navy) !important;
+  }
+
+  /* ===== WATERFALL ===== */
+  .biz-waterfall__bar--positive {
+    background: var(--biz-positive) !important;
+  }
+
+  .biz-waterfall__bar--negative {
+    background: var(--biz-negative) !important;
+  }
+
+  .biz-waterfall__bar--total {
+    background: var(--biz-navy) !important;
+  }
+
+  /* ===== FUNNEL ===== */
+  .biz-funnel__stage {
+    background: linear-gradient(90deg, var(--biz-navy), var(--biz-navy-light)) !important;
+    color: var(--biz-text-inverse) !important;
+  }
+
+  /* ===== RADAR CHART ===== */
+  .biz-radar-chart__area {
+    fill: rgba(33, 38, 83, 0.3) !important;
+    stroke: var(--biz-navy) !important;
+  }
+
+  .biz-radar-chart__benchmark-area {
+    fill: none !important;
+    stroke: var(--biz-benchmark) !important;
+  }
+
+  /* ===== SPARKLINE ===== */
+  .biz-sparkline path {
+    stroke: var(--biz-navy) !important;
+  }
+
+  .biz-sparkline--positive path { stroke: var(--biz-positive) !important; }
+  .biz-sparkline--negative path { stroke: var(--biz-negative) !important; }
+
+  /* ===== BENCHMARK BAR ===== */
+  .biz-benchmark-bar__client {
+    background: var(--biz-navy) !important;
+  }
+
+  .biz-benchmark-bar__industry {
+    background: var(--biz-neutral-bg) !important;
+  }
+
+  /* ===== GENERAL BACKGROUND FIXES ===== */
+  .biz-bg-navy { background: var(--biz-navy) !important; }
+  .biz-bg-green { background: var(--biz-green) !important; }
+  .biz-bg-surface { background: var(--biz-surface) !important; }
+
+  /* ===== BORDER FIXES ===== */
+  .biz-border-navy { border-color: var(--biz-navy) !important; }
+  .biz-border-green { border-color: var(--biz-green) !important; }
+
+  /* ===== ORPHAN/WIDOW CONTROL ===== */
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* ===== GRID LAYOUT FIXES ===== */
+  .biz-grid,
+  .biz-heatmap__grid,
+  .biz-kpi-dashboard__grid {
+    display: grid !important;
+  }
+
+  /* Ensure 4-column layout for heatmap in print */
+  .biz-heatmap__grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  /* 3-column for KPI dashboard */
+  .biz-kpi-dashboard__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* ===== FOOTNOTES AND SOURCES ===== */
+  .biz-footnote,
+  .biz-source {
+    font-size: 8pt !important;
+    color: var(--biz-text-muted) !important;
+  }
+}
+
+/* ===== PRINT PREVIEW HELPERS (for development) ===== */
+@media screen {
+  .biz-print-preview {
+    background: #f0f0f0;
+    padding: 20px;
+  }
+
+  .biz-print-preview .biz-page {
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    padding: 0.5in;
+    width: 8.5in;
+    min-height: 11in;
+  }
+}

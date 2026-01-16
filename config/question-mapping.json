@@ -1,0 +1,1377 @@
+{
+  "$schema": "./question-mapping.schema.json",
+  "version": "v2025-09-16",
+  "description": "Question ID to dimension/sub-indicator mapping for BizHealth questionnaire",
+  "total_questions": 87,
+  "chapters": [
+    {
+      "chapter_code": "GE",
+      "name": "Growth Engine",
+      "dimensions": [
+        {
+          "dimension_code": "STR",
+          "name": "Strategy",
+          "questions": [
+            {
+              "question_id": "strategy_q1",
+              "question_number": 1,
+              "sub_indicator_id": "STR_competitive_clarity",
+              "prompt_text": "On a scale of 1-5, how well does your company understand your 'competitive differentiators'?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "strategy_q2",
+              "question_number": 2,
+              "sub_indicator_id": "STR_market_share",
+              "prompt_text": "What share of your local market do you think you currently have?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "output_range": [0, 100],
+                "formula": "value"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "strategy_q3",
+              "question_number": 3,
+              "sub_indicator_id": "STR_sales_growth_actual",
+              "prompt_text": "What percent has your sales grown in the past year?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "output_range": [-100, 200],
+                "formula": "value"
+              },
+              "weight": 1.0,
+              "has_estimate_flag": true
+            },
+            {
+              "question_id": "strategy_q4",
+              "question_number": 4,
+              "sub_indicator_id": "STR_sales_growth_target",
+              "prompt_text": "What is your target Sales growth for the upcoming year?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "output_range": [0, 200],
+                "formula": "value"
+              },
+              "weight": 1.0,
+              "derived_metrics": ["growth_gap"]
+            },
+            {
+              "question_id": "strategy_q5",
+              "question_number": 5,
+              "sub_indicator_id": "STR_goals_documentation",
+              "prompt_text": "On a scale of 1-5, do you have a set plan or documented business goals for the next year?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5,
+              "has_follow_up": true
+            },
+            {
+              "question_id": "strategy_q6",
+              "question_number": 6,
+              "sub_indicator_id": "STR_plan_review_frequency",
+              "prompt_text": "On a scale of 1-5, do you review your business plan or adapt your business strategy every few months?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "strategy_q7",
+              "question_number": 7,
+              "sub_indicator_id": "STR_exit_plan",
+              "prompt_text": "On a scale of 1-5, do you have a defined/documented plan for growing or someday selling your business?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            }
+          ]
+        },
+        {
+          "dimension_code": "SAL",
+          "name": "Sales",
+          "questions": [
+            {
+              "question_id": "sales_q1",
+              "question_number": 8,
+              "sub_indicator_id": "SAL_customer_mix",
+              "prompt_text": "Sales mix: B2B/B2C and Wholesale/Retail/Online",
+              "response_type": "composite_percentage",
+              "normalization_rule": {
+                "method": "composite",
+                "components": ["b2b_percent", "b2c_percent", "wholesale_percent", "retail_percent", "online_percent"]
+              },
+              "weight": 0.5
+            },
+            {
+              "question_id": "sales_q2",
+              "question_number": 9,
+              "sub_indicator_id": "SAL_targets_alignment",
+              "prompt_text": "On a scale of 1-5, do your monthly sales targets align with what the business really needs?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "sales_q3",
+              "question_number": 10,
+              "sub_indicator_id": "SAL_pipeline_management",
+              "prompt_text": "Sales Pipeline Management: On a scale of 1-5, is your sales process smooth and organized?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "sales_q4",
+              "question_number": 11,
+              "sub_indicator_id": "SAL_cycle_length",
+              "prompt_text": "Average Sales Cycle: how many days does it typically take to close a sale?",
+              "response_type": "numeric",
+              "response_unit": "days",
+              "normalization_rule": {
+                "method": "numeric",
+                "benchmark_based": true,
+                "lower_is_better": true
+              },
+              "weight": 1.0,
+              "has_na_option": true,
+              "derived_metrics": ["sales_velocity"]
+            },
+            {
+              "question_id": "sales_q5",
+              "question_number": 12,
+              "sub_indicator_id": "SAL_close_rate",
+              "prompt_text": "Close Rate: What percentage of your customer interactions result in a sale?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "output_range": [0, 100],
+                "formula": "value"
+              },
+              "weight": 1.0,
+              "has_na_option": true,
+              "derived_metrics": ["sales_velocity"]
+            },
+            {
+              "question_id": "sales_q6",
+              "question_number": 13,
+              "sub_indicator_id": "SAL_avg_deal_size",
+              "prompt_text": "What is your average sale/order size (in dollars)?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "derived_metrics": ["sales_velocity"]
+            },
+            {
+              "question_id": "sales_q7",
+              "question_number": 14,
+              "sub_indicator_id": "SAL_repeat_rate",
+              "prompt_text": "Repeat Sales: What percentage of your monthly sales are from returning customers?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "output_range": [0, 100],
+                "formula": "value"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "sales_q8",
+              "question_number": 15,
+              "sub_indicator_id": "SAL_upselling_focus",
+              "prompt_text": "On a scale of 1-5, how actively do you focus on increasing sales to existing customers?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0,
+              "has_follow_up": true
+            }
+          ]
+        },
+        {
+          "dimension_code": "MKT",
+          "name": "Marketing",
+          "questions": [
+            {
+              "question_id": "marketing_q1",
+              "question_number": 16,
+              "sub_indicator_id": "MKT_brand_awareness",
+              "prompt_text": "On a scale of 1-5, how well do your customers know your brand?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "marketing_q2",
+              "question_number": 17,
+              "sub_indicator_id": "MKT_channel_count",
+              "prompt_text": "How many marketing methods/channels do you currently use?",
+              "response_type": "numeric",
+              "normalization_rule": {
+                "method": "numeric",
+                "benchmark_based": true
+              },
+              "weight": 0.5
+            },
+            {
+              "question_id": "marketing_q3",
+              "question_number": 18,
+              "sub_indicator_id": "MKT_current_channels",
+              "prompt_text": "What marketing channels are you currently using?",
+              "response_type": "text",
+              "normalization_rule": {
+                "method": "text",
+                "skip_normalization": true
+              },
+              "weight": 0.5
+            },
+            {
+              "question_id": "marketing_q4",
+              "question_number": 19,
+              "sub_indicator_id": "MKT_future_channels",
+              "prompt_text": "What marketing channels do you plan to use in the future?",
+              "response_type": "text",
+              "normalization_rule": {
+                "method": "text",
+                "skip_normalization": true
+              },
+              "weight": 0.5
+            },
+            {
+              "question_id": "marketing_q5",
+              "question_number": 20,
+              "sub_indicator_id": "MKT_customer_targeting",
+              "prompt_text": "On a scale of 1-5, do you know who your target customer is?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "marketing_q6",
+              "question_number": 21,
+              "sub_indicator_id": "MKT_cac",
+              "prompt_text": "What is your Customer Acquisition Cost (CAC)?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true,
+                "lower_is_better": true
+              },
+              "weight": 1.0,
+              "has_na_option": true,
+              "derived_metrics": ["cac_ltv_ratio"]
+            },
+            {
+              "question_id": "marketing_q7",
+              "question_number": 22,
+              "sub_indicator_id": "MKT_ltv",
+              "prompt_text": "What is your Customer Lifetime Value (LTV)?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "has_na_option": true,
+              "derived_metrics": ["cac_ltv_ratio"]
+            },
+            {
+              "question_id": "marketing_q8",
+              "question_number": 23,
+              "sub_indicator_id": "MKT_conversion_rate",
+              "prompt_text": "What is your conversion rate from awareness to purchase?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "output_range": [0, 100],
+                "formula": "value"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "marketing_q9",
+              "question_number": 24,
+              "sub_indicator_id": "MKT_roi",
+              "prompt_text": "What is your Marketing ROI?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "has_na_option": true
+            }
+          ]
+        },
+        {
+          "dimension_code": "CXP",
+          "name": "Customer Experience",
+          "questions": [
+            {
+              "question_id": "customer_experience_q1",
+              "question_number": 25,
+              "sub_indicator_id": "CXP_feedback_tracking",
+              "prompt_text": "On a scale of 1-5, how well do you track customer feedback?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0,
+              "has_follow_up": true
+            },
+            {
+              "question_id": "customer_experience_q2",
+              "question_number": 26,
+              "sub_indicator_id": "CXP_satisfaction",
+              "prompt_text": "On a scale of 1-5, how satisfied are your customers?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5,
+              "has_na_option": true
+            },
+            {
+              "question_id": "customer_experience_q3",
+              "question_number": 27,
+              "sub_indicator_id": "CXP_nps",
+              "prompt_text": "On a scale of 1-5, how likely are your customers to recommend you? (Net Promoter Score)",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "customer_experience_q4",
+              "question_number": 28,
+              "sub_indicator_id": "CXP_effort_score",
+              "prompt_text": "On a scale of 1-5, how easy is it for customers to do business with you? (Customer Effort Score)",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "customer_experience_q5",
+              "question_number": 29,
+              "sub_indicator_id": "CXP_competitive_strength",
+              "prompt_text": "On a scale of 1-5, how do you compare to your competitors in customer experience?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "customer_experience_q6",
+              "question_number": 30,
+              "sub_indicator_id": "CXP_issue_resolution",
+              "prompt_text": "On a scale of 1-5, how effectively do you resolve customer issues on first contact?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "customer_experience_q7",
+              "question_number": 31,
+              "sub_indicator_id": "CXP_response_time",
+              "prompt_text": "What is your average response time to customer inquiries (in hours)?",
+              "response_type": "numeric",
+              "response_unit": "hours",
+              "normalization_rule": {
+                "method": "numeric",
+                "benchmark_based": true,
+                "lower_is_better": true
+              },
+              "weight": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_code": "PH",
+      "name": "Performance & Health",
+      "dimensions": [
+        {
+          "dimension_code": "OPS",
+          "name": "Operations",
+          "questions": [
+            {
+              "question_id": "operations_q1",
+              "question_number": 32,
+              "sub_indicator_id": "OPS_efficiency",
+              "prompt_text": "On a scale of 1-5, how efficient are your operations?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5,
+              "has_follow_up": true
+            },
+            {
+              "question_id": "operations_q2",
+              "question_number": 33,
+              "sub_indicator_id": "OPS_documentation",
+              "prompt_text": "On a scale of 1-5, how well documented are your workflows and processes?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "operations_q3",
+              "question_number": 34,
+              "sub_indicator_id": "OPS_inventory_turnover",
+              "prompt_text": "What is your inventory turnover rate (times per year)?",
+              "response_type": "numeric",
+              "response_unit": "turns_per_year",
+              "normalization_rule": {
+                "method": "numeric",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "has_na_option": true
+            },
+            {
+              "question_id": "operations_q4",
+              "question_number": 35,
+              "sub_indicator_id": "OPS_reliability",
+              "prompt_text": "On a scale of 1-5, how reliable are your operations?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "operations_q5",
+              "question_number": 36,
+              "sub_indicator_id": "OPS_lean_principles",
+              "prompt_text": "On a scale of 1-5, how well do you apply lean principles?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "operations_q6",
+              "question_number": 37,
+              "sub_indicator_id": "OPS_capacity_utilization",
+              "prompt_text": "What is your utilization rate for space, equipment, and personnel?",
+              "response_type": "composite_percentage",
+              "normalization_rule": {
+                "method": "composite",
+                "components": ["space_utilization", "equipment_utilization", "personnel_utilization"]
+              },
+              "weight": 1.0,
+              "derived_metrics": ["capacity_utilization_avg"]
+            }
+          ]
+        },
+        {
+          "dimension_code": "FIN",
+          "name": "Financials",
+          "questions": [
+            {
+              "question_id": "financials_q1",
+              "question_number": 38,
+              "sub_indicator_id": "FIN_total_debt",
+              "prompt_text": "What is your total debt and liabilities?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true,
+                "lower_is_better": true
+              },
+              "weight": 1.0,
+              "derived_metrics": ["debt_to_asset_ratio"]
+            },
+            {
+              "question_id": "financials_q2",
+              "question_number": 39,
+              "sub_indicator_id": "FIN_working_capital",
+              "prompt_text": "What is your total working capital?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "derived_metrics": ["debt_to_asset_ratio"]
+            },
+            {
+              "question_id": "financials_q3",
+              "question_number": 40,
+              "sub_indicator_id": "FIN_debt_monitoring",
+              "prompt_text": "On a scale of 1-5, how well do you monitor your debt?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "financials_q4",
+              "question_number": 41,
+              "sub_indicator_id": "FIN_cash_available",
+              "prompt_text": "How much cash do you currently have available?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "derived_metrics": ["cash_ratio"]
+            },
+            {
+              "question_id": "financials_q5",
+              "question_number": 42,
+              "sub_indicator_id": "FIN_near_term_expenses",
+              "prompt_text": "What are your near-term monthly expenses?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "derived_metrics": ["cash_ratio"]
+            },
+            {
+              "question_id": "financials_q6",
+              "question_number": 43,
+              "sub_indicator_id": "FIN_cash_runway",
+              "prompt_text": "How many months of cash runway do you have?",
+              "response_type": "numeric",
+              "response_unit": "months",
+              "normalization_rule": {
+                "method": "numeric",
+                "benchmark_based": true
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "financials_q7",
+              "question_number": 44,
+              "sub_indicator_id": "FIN_gross_margin",
+              "prompt_text": "What is your gross profit margin?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "benchmark_based": true
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "financials_q8",
+              "question_number": 45,
+              "sub_indicator_id": "FIN_monthly_profit",
+              "prompt_text": "What is your estimated monthly profit?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "has_estimate_flag": true
+            },
+            {
+              "question_id": "financials_q9",
+              "question_number": 46,
+              "sub_indicator_id": "FIN_burn_rate",
+              "prompt_text": "What is your monthly burn rate?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true,
+                "lower_is_better": true
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "financials_q10",
+              "question_number": 47,
+              "sub_indicator_id": "FIN_cash_forecasting",
+              "prompt_text": "On a scale of 1-5, how effective is your cash flow forecasting?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "financials_q11",
+              "question_number": 48,
+              "sub_indicator_id": "FIN_budgeting",
+              "prompt_text": "On a scale of 1-5, how effective is your budgeting and financial planning?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "financials_q12",
+              "question_number": 49,
+              "sub_indicator_id": "FIN_growth_readiness",
+              "prompt_text": "On a scale of 1-5, how financially ready are you for growth?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5,
+              "has_follow_up": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_code": "PL",
+      "name": "People & Leadership",
+      "dimensions": [
+        {
+          "dimension_code": "HRS",
+          "name": "Human Resources",
+          "questions": [
+            {
+              "question_id": "human_resources_q1",
+              "question_number": 50,
+              "sub_indicator_id": "HRS_infrastructure",
+              "prompt_text": "On a scale of 1-5, how complete is your HR infrastructure?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "human_resources_q2",
+              "question_number": 51,
+              "sub_indicator_id": "HRS_culture",
+              "prompt_text": "On a scale of 1-5, how strong is your company culture?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "human_resources_q3",
+              "question_number": 52,
+              "sub_indicator_id": "HRS_recruiting",
+              "prompt_text": "On a scale of 1-5, how effective is your recruiting and onboarding?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "human_resources_q4",
+              "question_number": 53,
+              "sub_indicator_id": "HRS_training",
+              "prompt_text": "On a scale of 1-5, how effective is your training and development?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0,
+              "has_follow_up": true
+            },
+            {
+              "question_id": "human_resources_q5",
+              "question_number": 54,
+              "sub_indicator_id": "HRS_turnover",
+              "prompt_text": "What is your employee turnover rate?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "benchmark_based": true,
+                "lower_is_better": true
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "human_resources_q6",
+              "question_number": 55,
+              "sub_indicator_id": "HRS_engagement",
+              "prompt_text": "On a scale of 1-5, how engaged are your employees?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "human_resources_q7",
+              "question_number": 56,
+              "sub_indicator_id": "HRS_performance_mgmt",
+              "prompt_text": "On a scale of 1-5, how effective is your performance management?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            }
+          ]
+        },
+        {
+          "dimension_code": "LDG",
+          "name": "Leadership & Governance",
+          "questions": [
+            {
+              "question_id": "leadership_q1",
+              "question_number": 57,
+              "sub_indicator_id": "LDG_effectiveness",
+              "prompt_text": "On a scale of 1-5, how effective is your leadership?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "leadership_q2",
+              "question_number": 58,
+              "sub_indicator_id": "LDG_decision_structure",
+              "prompt_text": "On a scale of 1-5, how clear is your decision-making structure?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "leadership_q3",
+              "question_number": 59,
+              "sub_indicator_id": "LDG_board_oversight",
+              "prompt_text": "On a scale of 1-5, how effective is your leadership/board oversight?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "leadership_q4",
+              "question_number": 60,
+              "sub_indicator_id": "LDG_advisory_board",
+              "prompt_text": "Do you have an advisory board?",
+              "response_type": "boolean",
+              "normalization_rule": {
+                "method": "boolean",
+                "true_value": 100,
+                "false_value": 0
+              },
+              "weight": 0.5
+            },
+            {
+              "question_id": "leadership_q5",
+              "question_number": 61,
+              "sub_indicator_id": "LDG_decision_effectiveness",
+              "prompt_text": "On a scale of 1-5, how effective is your decision-making?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "leadership_q6",
+              "question_number": 62,
+              "sub_indicator_id": "LDG_culture_effectiveness",
+              "prompt_text": "On a scale of 1-5, how effective is your leadership in creating culture?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "leadership_q7",
+              "question_number": 63,
+              "sub_indicator_id": "LDG_mentorship",
+              "prompt_text": "On a scale of 1-5, how effective is your leadership development and mentorship?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_code": "RS",
+      "name": "Resilience & Safeguards",
+      "dimensions": [
+        {
+          "dimension_code": "TIN",
+          "name": "Technology & Innovation",
+          "questions": [
+            {
+              "question_id": "technology_q1",
+              "question_number": 64,
+              "sub_indicator_id": "TIN_investment",
+              "prompt_text": "How much do you invest annually in technology?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 1.0,
+              "has_estimate_flag": true
+            },
+            {
+              "question_id": "technology_q2",
+              "question_number": 65,
+              "sub_indicator_id": "TIN_innovation_pipeline",
+              "prompt_text": "What percentage of your revenue comes from innovation pipeline?",
+              "response_type": "percentage",
+              "normalization_rule": {
+                "method": "percentage",
+                "benchmark_based": true
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "technology_q3",
+              "question_number": 66,
+              "sub_indicator_id": "TIN_innovation_culture",
+              "prompt_text": "On a scale of 1-5, how strong is your innovation culture?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "technology_q4",
+              "question_number": 67,
+              "sub_indicator_id": "TIN_emerging_tech",
+              "prompt_text": "On a scale of 1-5, how well do you track emerging technologies?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "technology_q5",
+              "question_number": 68,
+              "sub_indicator_id": "TIN_adoption",
+              "prompt_text": "On a scale of 1-5, how quickly do you adopt new technologies?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "technology_q6",
+              "question_number": 69,
+              "sub_indicator_id": "TIN_automation",
+              "prompt_text": "On a scale of 1-5, how well do you utilize automation?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "technology_q7",
+              "question_number": 70,
+              "sub_indicator_id": "TIN_impact",
+              "prompt_text": "On a scale of 1-5, what is the impact of innovation on your business?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            }
+          ]
+        },
+        {
+          "dimension_code": "IDS",
+          "name": "IT, Data & Systems",
+          "questions": [
+            {
+              "question_id": "it_infrastructure_q1",
+              "question_number": 71,
+              "sub_indicator_id": "IDS_infrastructure",
+              "prompt_text": "On a scale of 1-5, how adequate is your IT infrastructure?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "it_infrastructure_q2",
+              "question_number": 72,
+              "sub_indicator_id": "IDS_network",
+              "prompt_text": "On a scale of 1-5, how effective is your network?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "it_infrastructure_q3",
+              "question_number": 73,
+              "sub_indicator_id": "IDS_cybersecurity",
+              "prompt_text": "On a scale of 1-5, how strong is your cybersecurity?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 2.0
+            },
+            {
+              "question_id": "it_infrastructure_q4",
+              "question_number": 74,
+              "sub_indicator_id": "IDS_data_management",
+              "prompt_text": "On a scale of 1-5, how effective is your data management?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "it_infrastructure_q5",
+              "question_number": 75,
+              "sub_indicator_id": "IDS_data_governance",
+              "prompt_text": "On a scale of 1-5, how effective is your data governance?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "it_infrastructure_q6",
+              "question_number": 76,
+              "sub_indicator_id": "IDS_scalability",
+              "prompt_text": "On a scale of 1-5, how scalable is your IT infrastructure?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "it_infrastructure_q7",
+              "question_number": 77,
+              "sub_indicator_id": "IDS_support",
+              "prompt_text": "On a scale of 1-5, how effective is your IT support and maintenance?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            }
+          ]
+        },
+        {
+          "dimension_code": "RMS",
+          "name": "Risk Management & Sustainability",
+          "questions": [
+            {
+              "question_id": "risk_management_q1",
+              "question_number": 78,
+              "sub_indicator_id": "RMS_outlook",
+              "prompt_text": "On a scale of 1-5, what is your overall risk outlook?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5,
+              "has_follow_up": true
+            },
+            {
+              "question_id": "risk_management_q2",
+              "question_number": 79,
+              "sub_indicator_id": "RMS_identification",
+              "prompt_text": "On a scale of 1-5, how effectively do you identify and review risks?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "risk_management_q3",
+              "question_number": 80,
+              "sub_indicator_id": "RMS_mitigation",
+              "prompt_text": "On a scale of 1-5, how effective is your risk mitigation?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "risk_management_q4",
+              "question_number": 81,
+              "sub_indicator_id": "RMS_contingency",
+              "prompt_text": "On a scale of 1-5, how prepared are your contingency plans?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "risk_management_q5",
+              "question_number": 82,
+              "sub_indicator_id": "RMS_financial_resilience",
+              "prompt_text": "On a scale of 1-5, how resilient are you financially?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "risk_management_q6",
+              "question_number": 83,
+              "sub_indicator_id": "RMS_continuity",
+              "prompt_text": "On a scale of 1-5, how prepared are you for operational disruptions?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "risk_management_q7",
+              "question_number": 84,
+              "sub_indicator_id": "RMS_succession",
+              "prompt_text": "On a scale of 1-5, how stable is your succession and leadership?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "risk_management_q8",
+              "question_number": 85,
+              "sub_indicator_id": "RMS_adaptability",
+              "prompt_text": "On a scale of 1-5, how adaptable is your strategy?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0,
+              "has_follow_up": true
+            }
+          ]
+        },
+        {
+          "dimension_code": "CMP",
+          "name": "Compliance & Legal",
+          "questions": [
+            {
+              "question_id": "compliance_q1",
+              "question_number": 86,
+              "sub_indicator_id": "CMP_awareness",
+              "prompt_text": "On a scale of 1-5, how aware are you of compliance requirements?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "compliance_q2",
+              "question_number": 87,
+              "sub_indicator_id": "CMP_adherence",
+              "prompt_text": "On a scale of 1-5, how well do you adhere to policies?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "compliance_q3",
+              "question_number": 88,
+              "sub_indicator_id": "CMP_training",
+              "prompt_text": "On a scale of 1-5, how complete is your compliance training?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "compliance_q4",
+              "question_number": 89,
+              "sub_indicator_id": "CMP_monitoring",
+              "prompt_text": "On a scale of 1-5, how effective is your compliance monitoring?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.5
+            },
+            {
+              "question_id": "compliance_q5",
+              "question_number": 90,
+              "sub_indicator_id": "CMP_regulatory_updates",
+              "prompt_text": "On a scale of 1-5, how well do you track regulatory updates?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "compliance_q6",
+              "question_number": 91,
+              "sub_indicator_id": "CMP_documentation",
+              "prompt_text": "On a scale of 1-5, how complete is your compliance documentation?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "compliance_q7",
+              "question_number": 92,
+              "sub_indicator_id": "CMP_incident_reporting",
+              "prompt_text": "On a scale of 1-5, how effective is your incident reporting?",
+              "response_type": "scale",
+              "normalization_rule": {
+                "method": "scale_1_5",
+                "output_range": [0, 100],
+                "formula": "(value - 1) * 25"
+              },
+              "weight": 1.0
+            },
+            {
+              "question_id": "compliance_q8",
+              "question_number": 93,
+              "sub_indicator_id": "CMP_costs",
+              "prompt_text": "What are your annual compliance costs?",
+              "response_type": "currency",
+              "response_unit": "USD",
+              "normalization_rule": {
+                "method": "currency",
+                "benchmark_based": true
+              },
+              "weight": 0.5,
+              "has_estimate_flag": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "derived_metrics_formulas": {
+    "growth_gap": {
+      "formula": "strategy_q4.value - strategy_q3.value",
+      "description": "Difference between target and actual sales growth",
+      "unit": "percentage_points"
+    },
+    "sales_velocity": {
+      "formula": "(sales_q6.value * (sales_q5.value / 100)) / sales_q4.value",
+      "description": "Revenue generated per day in sales cycle",
+      "unit": "USD_per_day",
+      "requires": ["sales_q4", "sales_q5", "sales_q6"]
+    },
+    "cac_ltv_ratio": {
+      "formula": "marketing_q7.value / marketing_q6.value",
+      "description": "Ratio of customer lifetime value to acquisition cost",
+      "unit": "ratio",
+      "requires": ["marketing_q6", "marketing_q7"]
+    },
+    "cash_ratio": {
+      "formula": "financials_q4.value / financials_q5.value",
+      "description": "Ratio of cash to near-term expenses",
+      "unit": "ratio",
+      "requires": ["financials_q4", "financials_q5"]
+    },
+    "debt_to_asset_ratio": {
+      "formula": "financials_q1.value / financials_q2.value",
+      "description": "Ratio of debt to working capital",
+      "unit": "ratio",
+      "requires": ["financials_q1", "financials_q2"]
+    },
+    "capacity_utilization_avg": {
+      "formula": "(operations_q6.space + operations_q6.equipment + operations_q6.personnel) / 3",
+      "description": "Average utilization across space, equipment, and personnel",
+      "unit": "percentage",
+      "requires": ["operations_q6"]
+    }
+  }
+}

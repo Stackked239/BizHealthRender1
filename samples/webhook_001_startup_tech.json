@@ -1,0 +1,206 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T10:15:30.123Z",
+    "submission_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "created_at": "2025-11-28 08:30:15.123456+00",
+    "business_overview": {
+        "company_name": "NexGen AI Solutions",
+        "location": "Austin TX",
+        "country": "United States",
+        "company_website": "nexgenai.com",
+        "industry": "information",
+        "industry_other_details": "AI-powered business automation SaaS platform",
+        "corporate_structure": "llc",
+        "year_started": 2022,
+        "multiple_locations": false,
+        "number_of_locations": 1,
+        "executive_leadership_roles": 2,
+        "support_admin_staff": 8,
+        "full_time_employees": 10,
+        "part_time_employees": 3,
+        "contract_temp_personnel": 5,
+        "seasonal_employees": 0,
+        "last_year_revenue": 850000,
+        "projected_revenue": 1500000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 850000,
+        "products_services": [
+            {
+                "name": "AI Workflow Automation",
+                "percentage": 65,
+                "type": "service"
+            },
+            {
+                "name": "Custom AI Integration",
+                "percentage": 25,
+                "type": "service"
+            },
+            {
+                "name": "Training & Consulting",
+                "percentage": 10,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "sales",
+            "marketing",
+            "financials",
+            "human_resources"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Zapier",
+                "website": "https://zapier.com"
+            },
+            {
+                "direct_competitor": false,
+                "name": "Make.com",
+                "website": "https://make.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 2,
+        "sales_growth_past_year": 85,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 120,
+        "business_goals_plan": 5,
+        "goals_barriers": null,
+        "business_plan_review": 5,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": 90,
+        "b2c_percentage": 10,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": 100,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 4,
+        "average_sales_cycle_days": 45,
+        "no_sales_cycle": false,
+        "close_rate": 18,
+        "no_customer_interaction": false,
+        "average_sale_size": 12000,
+        "repeat_sales_percentage": 45,
+        "upselling_focus": 5,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 6,
+        "current_marketing_channels": "Social Media, Content Marketing, SEO, Email, Webinars, Podcasts",
+        "future_marketing_channels": "Paid Ads, Influencer Marketing",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 850,
+        "cac_unknown": false,
+        "customer_lifetime_value": 24000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 3.5,
+        "marketing_roi": 2.8,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 8500
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 4,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 4,
+        "competitive_strength": 4,
+        "issue_resolution": 4,
+        "response_time_hours": 4
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": null,
+        "workflow_documentation": 5,
+        "inventory_turnover_rate": null,
+        "no_inventory": true,
+        "operational_reliability": 4,
+        "lean_principles": 5,
+        "space_utilization": 85,
+        "equipment_utilization": 90,
+        "personnel_utilization": 95
+    },
+    "financials": {
+        "total_debt_liabilities": 200000,
+        "total_working_capital": 450000,
+        "debt_monitoring": 5,
+        "current_cash_available": 380000,
+        "near_term_expenses": 125000,
+        "cash_runway_months": 18,
+        "gross_profit_margin": 68,
+        "monthly_profit_estimate": 45000,
+        "profit_is_estimate": false,
+        "burn_rate": 5,
+        "cash_flow_forecasting": 5,
+        "budgeting_financial_planning": 5,
+        "financial_readiness_growth": 4,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 5,
+        "recruiting_onboarding": 4,
+        "training_development": 4,
+        "training_resources_needed": null,
+        "employee_turnover_rate": 12.5,
+        "employee_engagement": 5,
+        "performance_management": 4
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 3,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 5,
+        "development_mentorship": 4
+    },
+    "technology": {
+        "technology_investment": 250000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 85,
+        "innovation_culture": 5,
+        "emerging_technologies": 5,
+        "technology_adoption": 5,
+        "automation_utilization": 5,
+        "innovation_impact": 5
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 4,
+        "network_effectiveness": 5,
+        "cybersecurity": 4,
+        "data_management": 4,
+        "data_governance": 4,
+        "it_scalability": 5,
+        "it_support_maintenance": 4
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Market competition, funding runway",
+        "risk_identification_review": 4,
+        "risk_mitigation": 4,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 2,
+        "strategic_adaptability": 5,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 4,
+        "policy_adherence": 4,
+        "training_completion": 4,
+        "compliance_monitoring": 3,
+        "regulatory_updates": 4,
+        "compliance_documentation": 3,
+        "incident_reporting": 4,
+        "compliance_costs": 25000,
+        "compliance_cost_estimate": false
+    }
+}

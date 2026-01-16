@@ -1,0 +1,175 @@
+{
+  "_metadata": {
+    "fixture_name": "manufacturing-golden",
+    "fixture_version": "1.0.0",
+    "created_date": "2025-12-13",
+    "purpose": "Operations-heavy baseline with moderate tech investment",
+    "expected_ops_score": "75-85",
+    "expected_tin_score": "50-65",
+    "critical_assertions": [
+      "Operations should be strongest category",
+      "technology_investment $45,000 should score 50-60",
+      "Inventory turnover metrics critical"
+    ]
+  },
+  "event": "submission.created",
+  "submissionId": "manufacturing-test-001",
+  "createdAt": "2025-12-13T10:00:00.000Z",
+  "data": {
+    "business_overview": {
+      "company_name": "Precision Metal Works Inc.",
+      "location_city": "Detroit",
+      "location_state": "Michigan",
+      "country": "United States",
+      "multiple_locations": "Yes",
+      "number_of_locations": 2,
+      "industry_sector": "Manufacturing - Metal Fabrication",
+      "corporate_structure": "S-Corp",
+      "company_website": "www.precisionmetalworks.com",
+      "year_started": 1998,
+      "employees_executive": 6,
+      "employees_support": 12,
+      "employees_fulltime": 85,
+      "employees_parttime": 8,
+      "employees_contract": 15,
+      "employees_seasonal": 0,
+      "revenue_last_year": 12500000,
+      "revenue_projected": 13200000,
+      "revenue_highest_year": 2023,
+      "revenue_highest_amount": 12800000,
+      "products_services": [
+        { "name": "Custom Metal Fabrication", "percentage": 55 },
+        { "name": "CNC Machining Services", "percentage": 30 },
+        { "name": "Assembly & Finishing", "percentage": 15 }
+      ],
+      "current_challenges": ["Operations", "Human Resources", "Technology"],
+      "competitors": [
+        { "name": "Metro Fabricators", "website": "www.metrofab.com", "direct": true },
+        { "name": "Allied Manufacturing", "website": "www.alliedmfg.com", "direct": true }
+      ]
+    },
+    "strategy": {
+      "competitive_differentiators": 4,
+      "market_share_percentage": 12,
+      "sales_growth_past_year": 6,
+      "target_growth_next_year": 8,
+      "business_plan_quality": 4,
+      "plan_review_frequency": 3,
+      "growth_exit_plan": 3
+    },
+    "sales": {
+      "b2b_percentage": 100,
+      "b2c_percentage": 0,
+      "wholesale_percentage": 85,
+      "retail_percentage": 0,
+      "online_percentage": 15,
+      "sales_target_alignment": 4,
+      "pipeline_management": 4,
+      "average_sales_cycle_days": 60,
+      "close_rate_percentage": 35,
+      "average_sale_size": 28000,
+      "repeat_sales_percentage": 78,
+      "upselling_focus": 3
+    },
+    "marketing": {
+      "brand_awareness": 4,
+      "marketing_channels_count": 3,
+      "current_marketing_channels": "Trade shows, industry publications, referrals",
+      "future_marketing_channels": "LinkedIn, industry directories",
+      "target_customer_knowledge": 5,
+      "customer_acquisition_cost": 2200,
+      "customer_lifetime_value": 145000,
+      "awareness_conversion_rate": 12,
+      "marketing_roi_percentage": 320,
+      "monthly_marketing_spend": 6500,
+      "customer_feedback_tracking": 3
+    },
+    "customer_experience": {
+      "product_service_satisfaction": 5,
+      "net_promoter_score": 4,
+      "customer_effort_score": 4,
+      "competitive_strength": 4,
+      "issue_resolution": 4,
+      "response_time_hours": 4
+    },
+    "operations": {
+      "operational_efficiency": 5,
+      "workflow_documentation": 5,
+      "inventory_turnover_rate": 12,
+      "operational_reliability": 5,
+      "lean_principles": 5,
+      "capacity_utilization_space": 85,
+      "capacity_utilization_equipment": 90,
+      "capacity_utilization_personnel": 88
+    },
+    "financials": {
+      "total_debt_liabilities": 1800000,
+      "total_working_capital": 2200000,
+      "debt_monitoring": 4,
+      "total_cash_available": 680000,
+      "total_near_term_expenses": 420000,
+      "cash_runway_months": 8,
+      "gross_profit_margin": 32,
+      "monthly_profit_before_taxes": 95000,
+      "burn_rate": 4,
+      "cash_flow_forecasting": 4,
+      "budgeting_financial_planning": 4,
+      "financial_readiness_growth": 4
+    },
+    "human_resources": {
+      "hr_infrastructure": 4,
+      "company_culture": 4,
+      "recruiting_onboarding": 3,
+      "training_development": 4,
+      "employee_turnover_rate": 15,
+      "employee_engagement_retention": 4,
+      "performance_management": 4
+    },
+    "leadership": {
+      "leadership_effectiveness": 4,
+      "decision_making_structure": 4,
+      "leadership_board_oversight": 3,
+      "decision_making_effectiveness": 4,
+      "leadership_culture_effectiveness": 4,
+      "development_mentorship": 3
+    },
+    "technology_innovation": {
+      "technology_investment": 45000,
+      "innovation_pipeline_percentage": 8,
+      "innovation_culture": 3,
+      "emerging_technologies": 2,
+      "technology_adoption": 3,
+      "automation_utilization": 4,
+      "innovation_impact": 3
+    },
+    "it_data_systems": {
+      "it_infrastructure": 3,
+      "network_effectiveness": 4,
+      "cybersecurity": 3,
+      "data_management": 3,
+      "data_governance_compliance": 4,
+      "it_network_scalability": 3,
+      "it_support_maintenance": 4
+    },
+    "risk_management": {
+      "overall_risk_outlook": 4,
+      "risk_identification_review": 4,
+      "risk_mitigation": 4,
+      "contingency_plans": 4,
+      "financial_resilience": 4,
+      "operational_continuity": 5,
+      "succession_leadership_stability": 3,
+      "strategic_adaptability": 3
+    },
+    "compliance": {
+      "compliance_awareness": 5,
+      "policy_adherence": 5,
+      "training_completion": 5,
+      "hr_policy_compliance": 5,
+      "licensing_compliance": 5,
+      "contract_review_legal": 4,
+      "legal_incidents": 5,
+      "audit_readiness": 5
+    }
+  }
+}

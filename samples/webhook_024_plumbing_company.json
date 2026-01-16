@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-30T09:18:32.234Z",
+    "submission_id": "x4y5z6a7-b8c9-0123-xyza-bc4567890123",
+    "created_at": "2025-11-30 07:12:08.234567+00",
+    "business_overview": {
+        "company_name": "FlowMaster Plumbing Services",
+        "location": "Phoenix AZ",
+        "country": "United States",
+        "company_website": "flowmasterplumbing.com",
+        "industry": "construction",
+        "industry_other_details": "Residential and commercial plumbing services including emergency repairs and installations",
+        "corporate_structure": "s_corporation",
+        "year_started": 2003,
+        "multiple_locations": true,
+        "number_of_locations": 3,
+        "executive_leadership_roles": 2,
+        "support_admin_staff": 8,
+        "full_time_employees": 35,
+        "part_time_employees": 4,
+        "contract_temp_personnel": 8,
+        "seasonal_employees": 0,
+        "last_year_revenue": 4850000,
+        "projected_revenue": 5300000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 4850000,
+        "products_services": [
+            {
+                "name": "Residential Plumbing Services",
+                "percentage": 55,
+                "type": "service"
+            },
+            {
+                "name": "Commercial Plumbing",
+                "percentage": 30,
+                "type": "service"
+            },
+            {
+                "name": "Emergency Services",
+                "percentage": 15,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "human_resources",
+            "sales",
+            "technology"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Roto-Rooter",
+                "website": "https://rotorooter.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Mr. Rooter",
+                "website": "https://mrrooter.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 8,
+        "sales_growth_past_year": 10,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 12,
+        "business_goals_plan": 3,
+        "goals_barriers": "Technician shortage, competition",
+        "business_plan_review": 3,
+        "growth_exit_plan": 2
+    },
+    "sales": {
+        "b2b_percentage": 35,
+        "b2c_percentage": 65,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": 25,
+        "sales_targets_alignment": 3,
+        "sales_pipeline_management": 3,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 485,
+        "repeat_sales_percentage": 58,
+        "upselling_focus": 4,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 5,
+        "current_marketing_channels": "Local SEO, Google Ads, Truck Wraps, Direct Mail, Referrals",
+        "future_marketing_channels": "Social Media, Video Marketing",
+        "customer_targeting": 3,
+        "customer_acquisition_cost": 125,
+        "cac_unknown": false,
+        "customer_lifetime_value": 2850,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 38,
+        "marketing_roi": 8.5,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 22000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 5,
+        "competitive_strength": 4,
+        "issue_resolution": 5,
+        "response_time_hours": 1
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": "Route optimization, parts inventory",
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": 22,
+        "no_inventory": false,
+        "operational_reliability": 5,
+        "lean_principles": 4,
+        "space_utilization": 80,
+        "equipment_utilization": 88,
+        "personnel_utilization": 85
+    },
+    "financials": {
+        "total_debt_liabilities": 980000,
+        "total_working_capital": 680000,
+        "debt_monitoring": 4,
+        "current_cash_available": 420000,
+        "near_term_expenses": 395000,
+        "cash_runway_months": 12,
+        "gross_profit_margin": 48,
+        "monthly_profit_estimate": 125000,
+        "profit_is_estimate": true,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 4,
+        "recruiting_onboarding": 3,
+        "training_development": 3,
+        "training_resources_needed": "Technical certification, safety training, customer service",
+        "employee_turnover_rate": 32,
+        "employee_engagement": 4,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 3,
+        "leadership_board_oversight": 2,
+        "has_advisory_board": false,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 4,
+        "development_mentorship": 3
+    },
+    "technology": {
+        "technology_investment": 155000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 35,
+        "innovation_culture": 3,
+        "emerging_technologies": 3,
+        "technology_adoption": 4,
+        "automation_utilization": 3,
+        "innovation_impact": 3
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 4,
+        "cybersecurity": 3,
+        "data_management": 3,
+        "data_governance": 3,
+        "it_scalability": 3,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Liability claims, technician safety",
+        "risk_identification_review": 4,
+        "risk_mitigation": 4,
+        "contingency_plans": 4,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 3,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 4,
+        "training_completion": 4,
+        "compliance_monitoring": 4,
+        "regulatory_updates": 4,
+        "compliance_documentation": 4,
+        "incident_reporting": 5,
+        "compliance_costs": 125000,
+        "compliance_cost_estimate": true
+    }
+}

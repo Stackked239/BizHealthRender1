@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-30T06:22:42.345Z",
+    "submission_id": "u1v2w3x4-y5z6-7890-uvwx-yz1234567890",
+    "created_at": "2025-11-30 04:15:28.345678+00",
+    "business_overview": {
+        "company_name": "Canvas Creative Studio",
+        "location": "Portland OR",
+        "country": "United States",
+        "company_website": "canvascreativestudio.com",
+        "industry": "professional_scientific_technical_services",
+        "industry_other_details": "Boutique graphic design and branding studio serving lifestyle and tech brands",
+        "corporate_structure": "partnership",
+        "year_started": 2020,
+        "multiple_locations": false,
+        "number_of_locations": 1,
+        "executive_leadership_roles": 2,
+        "support_admin_staff": 2,
+        "full_time_employees": 8,
+        "part_time_employees": 3,
+        "contract_temp_personnel": 12,
+        "seasonal_employees": 0,
+        "last_year_revenue": 920000,
+        "projected_revenue": 1250000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 920000,
+        "products_services": [
+            {
+                "name": "Brand Identity Design",
+                "percentage": 50,
+                "type": "service"
+            },
+            {
+                "name": "Marketing Collateral",
+                "percentage": 30,
+                "type": "service"
+            },
+            {
+                "name": "Web Design",
+                "percentage": 20,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "sales",
+            "financials",
+            "operations"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "99designs",
+                "website": "https://99designs.com"
+            },
+            {
+                "direct_competitor": false,
+                "name": "Fiverr",
+                "website": "https://fiverr.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 5,
+        "local_market_share": 3,
+        "sales_growth_past_year": 48,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 40,
+        "business_goals_plan": 4,
+        "goals_barriers": null,
+        "business_plan_review": 4,
+        "growth_exit_plan": 2
+    },
+    "sales": {
+        "b2b_percentage": 100,
+        "b2c_percentage": null,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": 100,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 4,
+        "average_sales_cycle_days": 21,
+        "no_sales_cycle": false,
+        "close_rate": 52,
+        "no_customer_interaction": false,
+        "average_sale_size": 18500,
+        "repeat_sales_percentage": 62,
+        "upselling_focus": 5,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 5,
+        "current_marketing_channels": "Portfolio Website, Instagram, Behance, Referrals, LinkedIn",
+        "future_marketing_channels": "Case Studies, Blog, Email Marketing",
+        "customer_targeting": 5,
+        "customer_acquisition_cost": 1850,
+        "cac_unknown": false,
+        "customer_lifetime_value": 42000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 18,
+        "marketing_roi": 5.2,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 5500
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 5,
+        "competitive_strength": 5,
+        "issue_resolution": 5,
+        "response_time_hours": 4
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": "Project scoping, client revisions management",
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": null,
+        "no_inventory": true,
+        "operational_reliability": 4,
+        "lean_principles": 4,
+        "space_utilization": 85,
+        "equipment_utilization": 92,
+        "personnel_utilization": 90
+    },
+    "financials": {
+        "total_debt_liabilities": 125000,
+        "total_working_capital": 185000,
+        "debt_monitoring": 4,
+        "current_cash_available": 125000,
+        "near_term_expenses": 75000,
+        "cash_runway_months": 14,
+        "gross_profit_margin": 72,
+        "monthly_profit_estimate": 42000,
+        "profit_is_estimate": true,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 2,
+        "company_culture": 5,
+        "recruiting_onboarding": 3,
+        "training_development": 4,
+        "training_resources_needed": null,
+        "employee_turnover_rate": 25,
+        "employee_engagement": 5,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 5,
+        "leadership_board_oversight": 2,
+        "has_advisory_board": false,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 5,
+        "development_mentorship": 4
+    },
+    "technology": {
+        "technology_investment": 45000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 60,
+        "innovation_culture": 5,
+        "emerging_technologies": 5,
+        "technology_adoption": 5,
+        "automation_utilization": 4,
+        "innovation_impact": 4
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 4,
+        "cybersecurity": 3,
+        "data_management": 4,
+        "data_governance": 3,
+        "it_scalability": 4,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Client concentration, creative talent retention",
+        "risk_identification_review": 3,
+        "risk_mitigation": 3,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 5,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 3,
+        "policy_adherence": 3,
+        "training_completion": 3,
+        "compliance_monitoring": 3,
+        "regulatory_updates": 3,
+        "compliance_documentation": 3,
+        "incident_reporting": 3,
+        "compliance_costs": 18000,
+        "compliance_cost_estimate": true
+    }
+}

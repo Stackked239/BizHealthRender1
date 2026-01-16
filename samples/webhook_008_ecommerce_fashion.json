@@ -1,0 +1,206 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T17:55:48.456Z",
+    "submission_id": "h8i9j0k1-l2m3-4567-hijk-lm8901234567",
+    "created_at": "2025-11-29 15:48:25.456789+00",
+    "business_overview": {
+        "company_name": "StyleVerse Online",
+        "location": "Los Angeles CA",
+        "country": "United States",
+        "company_website": "styleverse.com",
+        "industry": "retail_trade",
+        "industry_other_details": "Direct-to-consumer online fashion marketplace specializing in streetwear",
+        "corporate_structure": "llc",
+        "year_started": 2020,
+        "multiple_locations": false,
+        "number_of_locations": 1,
+        "executive_leadership_roles": 3,
+        "support_admin_staff": 18,
+        "full_time_employees": 21,
+        "part_time_employees": 6,
+        "contract_temp_personnel": 12,
+        "seasonal_employees": 8,
+        "last_year_revenue": 3200000,
+        "projected_revenue": 4800000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 3200000,
+        "products_services": [
+            {
+                "name": "Apparel",
+                "percentage": 70,
+                "type": "product"
+            },
+            {
+                "name": "Footwear",
+                "percentage": 20,
+                "type": "product"
+            },
+            {
+                "name": "Accessories",
+                "percentage": 10,
+                "type": "product"
+            }
+        ],
+        "current_challenges": [
+            "operations",
+            "financials",
+            "marketing",
+            "technology"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "ASOS",
+                "website": "https://asos.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Fashion Nova",
+                "website": "https://fashionnova.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 1,
+        "sales_growth_past_year": 65,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 55,
+        "business_goals_plan": 4,
+        "goals_barriers": "Supply chain challenges, high CAC",
+        "business_plan_review": 4,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": null,
+        "b2c_percentage": 100,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": 100,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 3,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 95,
+        "repeat_sales_percentage": 38,
+        "upselling_focus": 5,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 7,
+        "current_marketing_channels": "Instagram, TikTok, Facebook Ads, Influencer Marketing, Email, SMS, Affiliate",
+        "future_marketing_channels": "YouTube, Pinterest",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 42,
+        "cac_unknown": false,
+        "customer_lifetime_value": 285,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 2.8,
+        "marketing_roi": 3.2,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 85000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 4,
+        "feedback_challenges": null,
+        "customer_satisfaction": 3,
+        "no_feedback_method": false,
+        "net_promoter_score": 3,
+        "customer_effort_score": 4,
+        "competitive_strength": 3,
+        "issue_resolution": 3,
+        "response_time_hours": 18
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Returns processing, fulfillment speed",
+        "workflow_documentation": 3,
+        "inventory_turnover_rate": 8,
+        "no_inventory": false,
+        "operational_reliability": 3,
+        "lean_principles": 3,
+        "space_utilization": 85,
+        "equipment_utilization": 78,
+        "personnel_utilization": 82
+    },
+    "financials": {
+        "total_debt_liabilities": 850000,
+        "total_working_capital": 420000,
+        "debt_monitoring": 4,
+        "current_cash_available": 285000,
+        "near_term_expenses": 280000,
+        "cash_runway_months": 9,
+        "gross_profit_margin": 45,
+        "monthly_profit_estimate": 65000,
+        "profit_is_estimate": true,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": "Inventory financing, marketing spend efficiency"
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 4,
+        "recruiting_onboarding": 3,
+        "training_development": 3,
+        "training_resources_needed": null,
+        "employee_turnover_rate": 28,
+        "employee_engagement": 4,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 3,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 4,
+        "development_mentorship": 3
+    },
+    "technology": {
+        "technology_investment": 380000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 60,
+        "innovation_culture": 4,
+        "emerging_technologies": 4,
+        "technology_adoption": 5,
+        "automation_utilization": 4,
+        "innovation_impact": 4
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 4,
+        "network_effectiveness": 4,
+        "cybersecurity": 4,
+        "data_management": 4,
+        "data_governance": 3,
+        "it_scalability": 5,
+        "it_support_maintenance": 4
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Inventory obsolescence, platform dependency",
+        "risk_identification_review": 4,
+        "risk_mitigation": 3,
+        "contingency_plans": 3,
+        "financial_resilience": 2,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 4,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 4,
+        "policy_adherence": 4,
+        "training_completion": 3,
+        "compliance_monitoring": 3,
+        "regulatory_updates": 4,
+        "compliance_documentation": 3,
+        "incident_reporting": 4,
+        "compliance_costs": 45000,
+        "compliance_cost_estimate": true
+    }
+}

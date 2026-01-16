@@ -1,0 +1,176 @@
+{
+  "_metadata": {
+    "fixture_name": "brewery-golden",
+    "fixture_version": "1.0.0",
+    "created_date": "2025-12-13",
+    "purpose": "Regression test for TIN_001=0 zero-score bug",
+    "expected_tin_score": "80-90 (NOT 0)",
+    "critical_assertions": [
+      "technology_investment raw value $85,000 must normalize to 80-90",
+      "Phase 1.5 TIN category score must be 75-85",
+      "Phase 4 IDM TIN_001 must NOT be 0",
+      "ITD dimension must exist (IDS merged)",
+      "All 17 reports must generate without error"
+    ]
+  },
+  "event": "submission.created",
+  "submissionId": "brewery-test-001",
+  "createdAt": "2025-12-13T10:00:00.000Z",
+  "data": {
+    "business_overview": {
+      "company_name": "Golden Valley Brewing Co.",
+      "location_city": "Portland",
+      "location_state": "Oregon",
+      "country": "United States",
+      "multiple_locations": "Yes",
+      "number_of_locations": 3,
+      "industry_sector": "Food & Beverage - Brewing",
+      "corporate_structure": "LLC",
+      "company_website": "www.goldenvalleybrewing.com",
+      "year_started": 2015,
+      "employees_executive": 4,
+      "employees_support": 8,
+      "employees_fulltime": 45,
+      "employees_parttime": 22,
+      "employees_contract": 5,
+      "employees_seasonal": 12,
+      "revenue_last_year": 2800000,
+      "revenue_projected": 3200000,
+      "revenue_highest_year": 2024,
+      "revenue_highest_amount": 2800000,
+      "products_services": [
+        { "name": "Craft Beer Production", "percentage": 65 },
+        { "name": "Taproom Sales", "percentage": 25 },
+        { "name": "Merchandise", "percentage": 10 }
+      ],
+      "current_challenges": ["Operations", "Marketing", "Financials"],
+      "competitors": [
+        { "name": "Deschutes Brewery", "website": "www.deschutesbrewery.com", "direct": true },
+        { "name": "Rogue Ales", "website": "www.rogue.com", "direct": true }
+      ]
+    },
+    "strategy": {
+      "competitive_differentiators": 4,
+      "market_share_percentage": 8,
+      "sales_growth_past_year": 12,
+      "target_growth_next_year": 15,
+      "business_plan_quality": 4,
+      "plan_review_frequency": 4,
+      "growth_exit_plan": 3
+    },
+    "sales": {
+      "b2b_percentage": 40,
+      "b2c_percentage": 60,
+      "wholesale_percentage": 35,
+      "retail_percentage": 45,
+      "online_percentage": 20,
+      "sales_target_alignment": 4,
+      "pipeline_management": 3,
+      "average_sales_cycle_days": 14,
+      "close_rate_percentage": 45,
+      "average_sale_size": 850,
+      "repeat_sales_percentage": 68,
+      "upselling_focus": 4
+    },
+    "marketing": {
+      "brand_awareness": 4,
+      "marketing_channels_count": 4,
+      "current_marketing_channels": "Social media, email, local events, partnerships",
+      "future_marketing_channels": "Influencer marketing, SEO, content marketing",
+      "target_customer_knowledge": 4,
+      "customer_acquisition_cost": 125,
+      "customer_lifetime_value": 2400,
+      "awareness_conversion_rate": 8,
+      "marketing_roi_percentage": 280,
+      "monthly_marketing_spend": 8500,
+      "customer_feedback_tracking": 4
+    },
+    "customer_experience": {
+      "product_service_satisfaction": 5,
+      "net_promoter_score": 4,
+      "customer_effort_score": 4,
+      "competitive_strength": 4,
+      "issue_resolution": 4,
+      "response_time_hours": 2
+    },
+    "operations": {
+      "operational_efficiency": 4,
+      "workflow_documentation": 3,
+      "inventory_turnover_rate": 8,
+      "operational_reliability": 4,
+      "lean_principles": 3,
+      "capacity_utilization_space": 75,
+      "capacity_utilization_equipment": 80,
+      "capacity_utilization_personnel": 85
+    },
+    "financials": {
+      "total_debt_liabilities": 450000,
+      "total_working_capital": 320000,
+      "debt_monitoring": 4,
+      "total_cash_available": 185000,
+      "total_near_term_expenses": 95000,
+      "cash_runway_months": 6,
+      "gross_profit_margin": 42,
+      "monthly_profit_before_taxes": 28000,
+      "burn_rate": 4,
+      "cash_flow_forecasting": 4,
+      "budgeting_financial_planning": 4,
+      "financial_readiness_growth": 3
+    },
+    "human_resources": {
+      "hr_infrastructure": 3,
+      "company_culture": 4,
+      "recruiting_onboarding": 3,
+      "training_development": 3,
+      "employee_turnover_rate": 18,
+      "employee_engagement_retention": 4,
+      "performance_management": 3
+    },
+    "leadership": {
+      "leadership_effectiveness": 4,
+      "decision_making_structure": 4,
+      "leadership_board_oversight": 3,
+      "decision_making_effectiveness": 4,
+      "leadership_culture_effectiveness": 4,
+      "development_mentorship": 3
+    },
+    "technology_innovation": {
+      "technology_investment": 85000,
+      "innovation_pipeline_percentage": 15,
+      "innovation_culture": 4,
+      "emerging_technologies": 3,
+      "technology_adoption": 4,
+      "automation_utilization": 3,
+      "innovation_impact": 4
+    },
+    "it_data_systems": {
+      "it_infrastructure": 4,
+      "network_effectiveness": 4,
+      "cybersecurity": 3,
+      "data_management": 4,
+      "data_governance_compliance": 3,
+      "it_network_scalability": 4,
+      "it_support_maintenance": 4
+    },
+    "risk_management": {
+      "overall_risk_outlook": 3,
+      "risk_identification_review": 3,
+      "risk_mitigation": 3,
+      "contingency_plans": 3,
+      "financial_resilience": 3,
+      "operational_continuity": 4,
+      "succession_leadership_stability": 2,
+      "strategic_adaptability": 4
+    },
+    "compliance": {
+      "compliance_awareness": 4,
+      "policy_adherence": 4,
+      "training_completion": 4,
+      "hr_policy_compliance": 4,
+      "licensing_compliance": 5,
+      "contract_review_legal": 3,
+      "legal_incidents": 5,
+      "audit_readiness": 4
+    }
+  }
+}

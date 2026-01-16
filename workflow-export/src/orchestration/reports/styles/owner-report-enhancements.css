@@ -1,0 +1,275 @@
+/* ================================================================
+   BIZHEALTH OWNER/COMPREHENSIVE BUNDLE STYLES
+   BizNavy: #212653 | BizGreen: #969423
+   ================================================================ */
+
+/* === REPORT RELATIONSHIP NOTICE (Comprehensive) === */
+.report-relationship-notice {
+  display: flex;
+  gap: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  border-left: 4px solid #212653;
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.report-relationship-notice .notice-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.report-relationship-notice .notice-content { flex: 1; }
+
+.report-relationship-notice h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.report-relationship-notice p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.report-relationship-notice strong { color: #212653; }
+
+/* === COMPREHENSIVE REFERENCE CALLOUTS (Owner) === */
+.comprehensive-reference {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border-left: 3px solid #969423;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.comprehensive-reference .ref-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.comprehensive-reference .ref-text { color: #555; }
+.comprehensive-reference .ref-text strong { color: #212653; }
+.comprehensive-reference .ref-text em {
+  color: #969423;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.comprehensive-reference.reference-missing {
+  border-left-color: #dc3545;
+  background: #fff5f5;
+}
+
+.comprehensive-reference.reference-missing .ref-text { color: #dc3545; }
+
+.inline-ref {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.inline-ref em {
+  color: #969423;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* === OWNER SECTION HEADERS === */
+.owner-section-header { margin-bottom: 1.5rem; }
+
+.owner-section-header h2 {
+  margin-bottom: 0.5rem;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.owner-question {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  padding-left: 0.5rem;
+  border-left: 3px solid #969423;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.owner-question .question-icon { font-size: 1.1rem; }
+.owner-question em { font-style: italic; }
+
+/* === OWNER IMPLICATIONS GRID === */
+.owner-implications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.implication-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.implication-card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.implication-card .card-title {
+  font-weight: 600;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.implication-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.implication-card.growth { border-top: 3px solid #28a745; }
+.implication-card.risk { border-top: 3px solid #dc3545; }
+.implication-card.value { border-top: 3px solid #969423; }
+
+/* === FINANCIAL SUMMARY GRID === */
+.financial-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.financial-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.financial-card.highlight {
+  background: linear-gradient(135deg, #212653 0%, #2d3a7a 100%);
+  color: #fff;
+  border: none;
+}
+
+.financial-card .card-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.financial-card.highlight .card-label { color: rgba(255,255,255,0.8); }
+
+.financial-card .card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.financial-card.highlight .card-value { color: #fff; }
+
+.financial-card .card-sublabel {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.financial-card.highlight .card-sublabel { color: rgba(255,255,255,0.7); }
+
+/* === BUNDLE CONTENTS === */
+.bundle-contents {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.bundle-contents h3 {
+  margin: 0 0 1rem 0;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.bundle-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.bundle-item.primary { border-left: 3px solid #212653; }
+
+.bundle-item strong {
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bundle-item span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* === REFERENCE TABLE === */
+.reference-table td:first-child { font-weight: 500; }
+.reference-table em {
+  color: #969423;
+  font-style: normal;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .owner-implications-grid,
+  .financial-summary-grid,
+  .bundle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === PRINT === */
+@media print {
+  .owner-implications-grid,
+  .financial-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bundle-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .financial-card.highlight {
+    background: #212653 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .comprehensive-reference,
+  .report-relationship-notice {
+    background: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

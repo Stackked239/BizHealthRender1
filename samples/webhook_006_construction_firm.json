@@ -1,0 +1,206 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T15:41:22.890Z",
+    "submission_id": "f6g7h8i9-j0k1-2345-fghi-jk6789012345",
+    "created_at": "2025-11-29 13:35:44.890123+00",
+    "business_overview": {
+        "company_name": "Summit Build Group",
+        "location": "Denver CO",
+        "country": "United States",
+        "company_website": "summitbuildgroup.com",
+        "industry": "construction",
+        "industry_other_details": "Commercial and residential construction, specializing in sustainable building practices",
+        "corporate_structure": "s_corporation",
+        "year_started": 2008,
+        "multiple_locations": true,
+        "number_of_locations": 2,
+        "executive_leadership_roles": 3,
+        "support_admin_staff": 15,
+        "full_time_employees": 48,
+        "part_time_employees": 8,
+        "contract_temp_personnel": 65,
+        "seasonal_employees": 20,
+        "last_year_revenue": 18500000,
+        "projected_revenue": 21000000,
+        "highest_sales_year": 2022,
+        "highest_annual_sales": 19200000,
+        "products_services": [
+            {
+                "name": "Commercial Construction",
+                "percentage": 55,
+                "type": "service"
+            },
+            {
+                "name": "Residential Construction",
+                "percentage": 30,
+                "type": "service"
+            },
+            {
+                "name": "Renovation & Remodeling",
+                "percentage": 15,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "human_resources",
+            "operations",
+            "sales",
+            "financials"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Turner Construction",
+                "website": "https://turnerconstruction.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Saunders Construction",
+                "website": "https://saundersinc.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 7,
+        "sales_growth_past_year": 8,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 18,
+        "business_goals_plan": 3,
+        "goals_barriers": "Skilled labor shortage, material cost volatility",
+        "business_plan_review": 3,
+        "growth_exit_plan": 2
+    },
+    "sales": {
+        "b2b_percentage": 75,
+        "b2c_percentage": 25,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": 5,
+        "sales_targets_alignment": 3,
+        "sales_pipeline_management": 4,
+        "average_sales_cycle_days": 120,
+        "no_sales_cycle": false,
+        "close_rate": 32,
+        "no_customer_interaction": false,
+        "average_sale_size": 425000,
+        "repeat_sales_percentage": 55,
+        "upselling_focus": 3,
+        "upselling_obstacles": "Project scope constraints"
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 4,
+        "current_marketing_channels": "Referrals, Industry Events, Website, LinkedIn",
+        "future_marketing_channels": "Content Marketing, Case Studies",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 8500,
+        "cac_unknown": false,
+        "customer_lifetime_value": 850000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 18,
+        "marketing_roi": 5.2,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 12000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 4,
+        "feedback_challenges": null,
+        "customer_satisfaction": 4,
+        "no_feedback_method": false,
+        "net_promoter_score": 4,
+        "customer_effort_score": 3,
+        "competitive_strength": 4,
+        "issue_resolution": 3,
+        "response_time_hours": 16
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Project delays, subcontractor coordination",
+        "workflow_documentation": 3,
+        "inventory_turnover_rate": 8,
+        "no_inventory": false,
+        "operational_reliability": 3,
+        "lean_principles": 3,
+        "space_utilization": 70,
+        "equipment_utilization": 72,
+        "personnel_utilization": 75
+    },
+    "financials": {
+        "total_debt_liabilities": 4200000,
+        "total_working_capital": 2800000,
+        "debt_monitoring": 4,
+        "current_cash_available": 1850000,
+        "near_term_expenses": 1200000,
+        "cash_runway_months": 12,
+        "gross_profit_margin": 22,
+        "monthly_profit_estimate": 185000,
+        "profit_is_estimate": true,
+        "burn_rate": 3,
+        "cash_flow_forecasting": 3,
+        "budgeting_financial_planning": 3,
+        "financial_readiness_growth": 3,
+        "financial_concerns": "Material cost volatility"
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 3,
+        "recruiting_onboarding": 2,
+        "training_development": 3,
+        "training_resources_needed": "Safety training, technical skills development",
+        "employee_turnover_rate": 42,
+        "employee_engagement": 3,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 3,
+        "decision_making_structure": 3,
+        "leadership_board_oversight": 2,
+        "has_advisory_board": false,
+        "decision_making_effectiveness": 3,
+        "leadership_culture_effectiveness": 3,
+        "development_mentorship": 2
+    },
+    "technology": {
+        "technology_investment": 280000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 40,
+        "innovation_culture": 3,
+        "emerging_technologies": 3,
+        "technology_adoption": 3,
+        "automation_utilization": 2,
+        "innovation_impact": 3
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 3,
+        "cybersecurity": 3,
+        "data_management": 3,
+        "data_governance": 2,
+        "it_scalability": 3,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Safety incidents, project delays, bonding capacity",
+        "risk_identification_review": 4,
+        "risk_mitigation": 3,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 3,
+        "succession_leadership_stability": 2,
+        "strategic_adaptability": 3,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 4,
+        "training_completion": 4,
+        "compliance_monitoring": 4,
+        "regulatory_updates": 4,
+        "compliance_documentation": 4,
+        "incident_reporting": 5,
+        "compliance_costs": 175000,
+        "compliance_cost_estimate": true
+    }
+}

@@ -1,0 +1,206 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-30T04:52:38.789Z",
+    "submission_id": "s9t0u1v2-w3x4-5678-stuv-wx9012345678",
+    "created_at": "2025-11-30 02:45:15.789012+00",
+    "business_overview": {
+        "company_name": "Heritage Valley Farms",
+        "location": "Lancaster PA",
+        "country": "United States",
+        "company_website": "heritagevalleyfarms.com",
+        "industry": "agriculture_forestry_fishing_hunting",
+        "industry_other_details": "Organic farm specializing in produce, dairy, and direct-to-consumer sales",
+        "corporate_structure": "family_owned",
+        "year_started": 1978,
+        "multiple_locations": true,
+        "number_of_locations": 2,
+        "executive_leadership_roles": 2,
+        "support_admin_staff": 6,
+        "full_time_employees": 28,
+        "part_time_employees": 18,
+        "contract_temp_personnel": 5,
+        "seasonal_employees": 45,
+        "last_year_revenue": 3650000,
+        "projected_revenue": 4100000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 3650000,
+        "products_services": [
+            {
+                "name": "Organic Produce",
+                "percentage": 50,
+                "type": "product"
+            },
+            {
+                "name": "Dairy Products",
+                "percentage": 30,
+                "type": "product"
+            },
+            {
+                "name": "Farm Store & CSA",
+                "percentage": 20,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "operations",
+            "financials",
+            "human_resources",
+            "technology"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Local Organic Farms",
+                "website": null
+            },
+            {
+                "direct_competitor": false,
+                "name": "Whole Foods",
+                "website": "https://wholefoodsmarket.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 12,
+        "sales_growth_past_year": 14,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 15,
+        "business_goals_plan": 3,
+        "goals_barriers": "Weather variability, labor shortage",
+        "business_plan_review": 2,
+        "growth_exit_plan": 2
+    },
+    "sales": {
+        "b2b_percentage": 40,
+        "b2c_percentage": 60,
+        "wholesale_percentage": 40,
+        "retail_percentage": 60,
+        "online_percentage": 15,
+        "sales_targets_alignment": 3,
+        "sales_pipeline_management": 2,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 85,
+        "repeat_sales_percentage": 75,
+        "upselling_focus": 3,
+        "upselling_obstacles": "Seasonal availability"
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 4,
+        "current_marketing_channels": "Farmers Markets, Social Media, Email, Word of Mouth",
+        "future_marketing_channels": "E-commerce, Local Advertising",
+        "customer_targeting": 3,
+        "customer_acquisition_cost": 15,
+        "cac_unknown": false,
+        "customer_lifetime_value": 1850,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 32,
+        "marketing_roi": 7.5,
+        "marketing_roi_unknown": true,
+        "monthly_marketing_spend": 4500
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 3,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 4,
+        "competitive_strength": 5,
+        "issue_resolution": 4,
+        "response_time_hours": 12
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Weather dependency, equipment maintenance, labor management",
+        "workflow_documentation": 2,
+        "inventory_turnover_rate": 35,
+        "no_inventory": false,
+        "operational_reliability": 3,
+        "lean_principles": 2,
+        "space_utilization": 95,
+        "equipment_utilization": 70,
+        "personnel_utilization": 65
+    },
+    "financials": {
+        "total_debt_liabilities": 2100000,
+        "total_working_capital": 485000,
+        "debt_monitoring": 3,
+        "current_cash_available": 285000,
+        "near_term_expenses": 325000,
+        "cash_runway_months": 8,
+        "gross_profit_margin": 32,
+        "monthly_profit_estimate": 85000,
+        "profit_is_estimate": true,
+        "burn_rate": 3,
+        "cash_flow_forecasting": 3,
+        "budgeting_financial_planning": 3,
+        "financial_readiness_growth": 2,
+        "financial_concerns": "Seasonal cash flow variability, equipment financing"
+    },
+    "human_resources": {
+        "hr_infrastructure": 2,
+        "company_culture": 4,
+        "recruiting_onboarding": 2,
+        "training_development": 2,
+        "training_resources_needed": "Agricultural best practices, safety training",
+        "employee_turnover_rate": 55,
+        "employee_engagement": 3,
+        "performance_management": 2
+    },
+    "leadership": {
+        "leadership_effectiveness": 3,
+        "decision_making_structure": 3,
+        "leadership_board_oversight": 1,
+        "has_advisory_board": false,
+        "decision_making_effectiveness": 3,
+        "leadership_culture_effectiveness": 4,
+        "development_mentorship": 2
+    },
+    "technology": {
+        "technology_investment": 95000,
+        "tech_investment_estimate": true,
+        "innovation_pipeline_percentage": 35,
+        "innovation_culture": 3,
+        "emerging_technologies": 2,
+        "technology_adoption": 2,
+        "automation_utilization": 2,
+        "innovation_impact": 3
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 2,
+        "network_effectiveness": 2,
+        "cybersecurity": 2,
+        "data_management": 2,
+        "data_governance": 1,
+        "it_scalability": 2,
+        "it_support_maintenance": 2
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Weather events, crop failure, market price volatility",
+        "risk_identification_review": 3,
+        "risk_mitigation": 3,
+        "contingency_plans": 3,
+        "financial_resilience": 2,
+        "operational_continuity": 3,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 3,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 4,
+        "policy_adherence": 4,
+        "training_completion": 3,
+        "compliance_monitoring": 3,
+        "regulatory_updates": 4,
+        "compliance_documentation": 3,
+        "incident_reporting": 4,
+        "compliance_costs": 125000,
+        "compliance_cost_estimate": true
+    }
+}

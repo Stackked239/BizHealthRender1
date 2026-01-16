@@ -1,0 +1,206 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T12:18:12.789Z",
+    "submission_id": "c3d4e5f6-g7h8-9012-cdef-gh3456789012",
+    "created_at": "2025-11-29 10:12:33.987654+00",
+    "business_overview": {
+        "company_name": "Precision Components Inc",
+        "location": "Cleveland OH",
+        "country": "United States",
+        "company_website": "precisioncomponents.com",
+        "industry": "manufacturing",
+        "industry_other_details": "Aerospace and automotive parts manufacturer specializing in precision machining",
+        "corporate_structure": "c_corporation",
+        "year_started": 1985,
+        "multiple_locations": true,
+        "number_of_locations": 4,
+        "executive_leadership_roles": 6,
+        "support_admin_staff": 28,
+        "full_time_employees": 185,
+        "part_time_employees": 12,
+        "contract_temp_personnel": 25,
+        "seasonal_employees": 0,
+        "last_year_revenue": 42000000,
+        "projected_revenue": 45000000,
+        "highest_sales_year": 2019,
+        "highest_annual_sales": 48000000,
+        "products_services": [
+            {
+                "name": "Aerospace Components",
+                "percentage": 55,
+                "type": "product"
+            },
+            {
+                "name": "Automotive Parts",
+                "percentage": 35,
+                "type": "product"
+            },
+            {
+                "name": "Custom Machining Services",
+                "percentage": 10,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "operations",
+            "technology",
+            "leadership",
+            "sales"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "AAR Corp",
+                "website": "https://aarcorp.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Spirit AeroSystems",
+                "website": "https://spiritaero.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 12,
+        "sales_growth_past_year": -5,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 8,
+        "business_goals_plan": 3,
+        "goals_barriers": "Aging workforce, technology modernization needs",
+        "business_plan_review": 2,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": 100,
+        "b2c_percentage": null,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": null,
+        "sales_targets_alignment": 3,
+        "sales_pipeline_management": 3,
+        "average_sales_cycle_days": 180,
+        "no_sales_cycle": false,
+        "close_rate": 25,
+        "no_customer_interaction": false,
+        "average_sale_size": 185000,
+        "repeat_sales_percentage": 85,
+        "upselling_focus": 3,
+        "upselling_obstacles": "Limited product development capacity"
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 3,
+        "current_marketing_channels": "Trade Shows, Industry Publications, Direct Sales",
+        "future_marketing_channels": "Digital Marketing, Content Marketing",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 28000,
+        "cac_unknown": false,
+        "customer_lifetime_value": 2500000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 5,
+        "marketing_roi": 8.5,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 22000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 4,
+        "feedback_challenges": null,
+        "customer_satisfaction": 4,
+        "no_feedback_method": false,
+        "net_promoter_score": 4,
+        "customer_effort_score": 3,
+        "competitive_strength": 4,
+        "issue_resolution": 4,
+        "response_time_hours": 8
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Equipment aging, need for modernization",
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": 4.5,
+        "no_inventory": false,
+        "operational_reliability": 4,
+        "lean_principles": 3,
+        "space_utilization": 75,
+        "equipment_utilization": 68,
+        "personnel_utilization": 72
+    },
+    "financials": {
+        "total_debt_liabilities": 8500000,
+        "total_working_capital": 6200000,
+        "debt_monitoring": 4,
+        "current_cash_available": 3800000,
+        "near_term_expenses": 3200000,
+        "cash_runway_months": 14,
+        "gross_profit_margin": 35,
+        "monthly_profit_estimate": 420000,
+        "profit_is_estimate": false,
+        "burn_rate": 3,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": "Equipment modernization capital needs"
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 3,
+        "recruiting_onboarding": 3,
+        "training_development": 3,
+        "training_resources_needed": "Technical skills training, succession planning",
+        "employee_turnover_rate": 15.5,
+        "employee_engagement": 3,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 3,
+        "decision_making_structure": 2,
+        "leadership_board_oversight": 3,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 3,
+        "leadership_culture_effectiveness": 3,
+        "development_mentorship": 2
+    },
+    "technology": {
+        "technology_investment": 1200000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 35,
+        "innovation_culture": 2,
+        "emerging_technologies": 2,
+        "technology_adoption": 2,
+        "automation_utilization": 3,
+        "innovation_impact": 3
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 3,
+        "cybersecurity": 3,
+        "data_management": 3,
+        "data_governance": 3,
+        "it_scalability": 3,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Succession planning, technology obsolescence",
+        "risk_identification_review": 3,
+        "risk_mitigation": 3,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 2,
+        "strategic_adaptability": 2,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 5,
+        "training_completion": 4,
+        "compliance_monitoring": 4,
+        "regulatory_updates": 4,
+        "compliance_documentation": 5,
+        "incident_reporting": 5,
+        "compliance_costs": 385000,
+        "compliance_cost_estimate": false
+    }
+}

@@ -1,0 +1,331 @@
+{
+  "report_id": "employees",
+  "name": "Employee Business Health Summary",
+  "version": "1.0.0",
+  "primary_audience": "employees",
+  "description": "Accessible summary for all employees with focus on company health, culture, and how their work contributes to improvement.",
+  "target_page_range": {
+    "min": 3,
+    "max": 6
+  },
+  "brand_config": {
+    "primary_color": "#212653",
+    "accent_color": "#969423",
+    "font_heading": "Montserrat",
+    "font_body": "Open Sans"
+  },
+  "default_tone_tags": ["supportive", "motivational", "summary"],
+  "sections": [
+    {
+      "id": "welcome",
+      "title": "Our Business Health Journey",
+      "description": "Introduction to the assessment and why it matters",
+      "data_sources": [
+        { "id": "health_score", "from": "scores_summary.overall_health_score" },
+        { "id": "descriptor", "from": "scores_summary.descriptor" }
+      ],
+      "tone_tags": ["supportive", "motivational"],
+      "visual_type": "score_tile",
+      "layout_hints": { "alignment": "center" }
+    },
+    {
+      "id": "what_we_do_well",
+      "title": "What We Do Well",
+      "description": "Celebrating our strengths and competitive advantages",
+      "data_sources": [
+        { "id": "strengths", "from": "findings", "filters": [{ "type": "strength" }], "limit": 5 },
+        { "id": "top_dims", "from": "dimensions", "sort": { "field": "score_overall", "direction": "desc" }, "limit": 3 }
+      ],
+      "tone_tags": ["motivational", "supportive"],
+      "visual_type": "bullet_list"
+    },
+    {
+      "id": "where_we_grow",
+      "title": "Where We're Growing",
+      "description": "Areas of focus for improvement",
+      "data_sources": [
+        { "id": "focus_areas", "from": "dimensions", "sort": { "field": "score_overall", "direction": "asc" }, "limit": 3 }
+      ],
+      "tone_tags": ["educational", "supportive"],
+      "visual_type": "bullet_list"
+    },
+    {
+      "id": "team_focus",
+      "title": "How We Can All Contribute",
+      "description": "Ways every team member can support improvement",
+      "data_sources": [
+        { "id": "quick_wins", "from": "quick_wins" },
+        { "id": "recommendations", "from": "recommendations", "limit": 3 }
+      ],
+      "tone_tags": ["action_oriented", "supportive"],
+      "visual_type": "checklist"
+    },
+    {
+      "id": "culture_spotlight",
+      "title": "Culture & People Focus",
+      "description": "How we're investing in our people",
+      "data_sources": [
+        { "id": "hrs_dimension", "from": "dimensions[dimension_code=HRS]" },
+        { "id": "hrs_findings", "from": "findings", "filters": [{ "dimension_codes": ["HRS"] }], "limit": 3 }
+      ],
+      "tone_tags": ["supportive", "motivational"],
+      "visual_type": "narrative"
+    },
+    {
+      "id": "whats_next",
+      "title": "What's Next",
+      "description": "Our improvement journey and what to expect",
+      "data_sources": [
+        { "id": "roadmap", "from": "roadmap.phases" }
+      ],
+      "tone_tags": ["educational", "motivational"],
+      "visual_type": "timeline"
+    }
+  ],
+  "visuals": {
+    "version": "1.1.0",
+    "schema_version": "2025-06-01",
+
+    "global_settings": {
+      "brand_colors": true,
+      "accessibility_symbols": true,
+      "print_optimized": true,
+      "show_benchmarks": false,
+      "style_modifiers": {
+        "friendly_language": true,
+        "celebratory_style": true,
+        "action_oriented": true,
+        "simple_style": true
+      },
+      "style_modifier_mappings": {
+        "friendly_language": {
+          "css_class": "biz-friendly",
+          "terminology_level": "basic",
+          "avoid_jargon": true,
+          "use_second_person": true
+        },
+        "celebratory_style": {
+          "css_class": "biz-celebration",
+          "positive_emphasis": true,
+          "highlight_strengths": true,
+          "minimize_negatives": true
+        }
+      },
+      "jsonpath_config": {
+        "library": "jsonpath-plus",
+        "strict_mode": false,
+        "log_path_resolution": false,
+        "null_handling": "use_default"
+      }
+    },
+
+    "data_requirements": {
+      "required_fields": [
+        { "path": "$.scores_summary.overall_health_score", "type": "number", "validation": "0-100" }
+      ],
+      "optional_fields": [
+        { "path": "$.findings[?(@.type=='strength')]", "type": "array", "default": [], "min_items_to_render": 1 },
+        { "path": "$.quick_wins", "type": "array", "default": [], "min_items_to_render": 1 }
+      ],
+      "validation_mode": "silent"
+    },
+
+    "print_configuration": {
+      "stylesheet_reference": "/styles/print.css",
+      "page_settings": {
+        "size": "letter",
+        "orientation": "portrait",
+        "margins": { "top": "0.5in", "right": "0.5in", "bottom": "0.75in", "left": "0.5in" }
+      },
+      "component_rules": {
+        "gauge": { "break_inside": "avoid", "print_size": "large", "max_width": "180px" },
+        "score_tile": { "break_inside": "avoid", "print_size": "standard" },
+        "bar_chart": { "break_inside": "avoid", "print_grayscale_fallback": true },
+        "metric_card": { "break_inside": "avoid", "print_size": "standard" }
+      },
+      "color_handling": {
+        "force_color_print": true,
+        "webkit_print_color_adjust": "exact",
+        "fallback_patterns": true,
+        "high_contrast_mode": false
+      }
+    },
+
+    "performance_budgets": {
+      "components": {
+        "per_report": { "warning_threshold": 10, "error_threshold": 12, "action_on_exceed": "log_warning" },
+        "per_section": { "warning_threshold": 4, "error_threshold": 6, "action_on_exceed": "log_warning" }
+      },
+      "rendering": {
+        "target_time_ms": 1000,
+        "warning_time_ms": 2000,
+        "max_time_ms": 3000,
+        "lazy_load_threshold": 8,
+        "progressive_rendering": false
+      },
+      "output": {
+        "max_file_size_kb": 500,
+        "warning_file_size_kb": 400,
+        "max_embedded_images": 6,
+        "image_compression": "medium",
+        "image_format": "png"
+      },
+      "validation": {
+        "enforce_budgets": true,
+        "log_violations": true,
+        "fail_on_error_threshold": false,
+        "include_in_report_metadata": true
+      }
+    },
+
+    "benchmark_configuration": {
+      "primary_source": null,
+      "fallback_sources": [],
+      "fallback_display": {
+        "text": "",
+        "show_placeholder": false,
+        "hide_benchmark_components": true
+      },
+      "display_settings": {
+        "show_percentile_rank": false,
+        "show_cohort_context": false
+      }
+    },
+
+    "accessibility_requirements": {
+      "compliance_level": "WCAG_2.1_AA",
+      "validation_required": true,
+      "validation_tools": ["axe-core"],
+      "color_requirements": {
+        "min_contrast_normal_text": 4.5,
+        "min_contrast_large_text": 3.0,
+        "colorblind_safe": true,
+        "never_color_alone": true,
+        "status_symbols": {
+          "excellence": { "symbol": "🌟", "aria_label": "Star performer" },
+          "proficiency": { "symbol": "👍", "aria_label": "Doing well" },
+          "attention": { "symbol": "📈", "aria_label": "Growing" },
+          "critical": { "symbol": "🎯", "aria_label": "Focus area" }
+        }
+      },
+      "screen_reader_requirements": {
+        "all_charts_have_aria_label": true,
+        "provide_data_tables_for_charts": true,
+        "logical_heading_hierarchy": true,
+        "skip_links_enabled": true,
+        "meaningful_link_text": true
+      }
+    },
+
+    "components": [
+      {
+        "type": "gauge",
+        "id": "company_health_gauge",
+        "section": "welcome",
+        "order": 1,
+        "config": {
+          "size": "large",
+          "show_status": true,
+          "show_benchmark": false,
+          "animation": false,
+          "friendly_labels": true,
+          "label_overrides": {
+            "excellence": "We're crushing it!",
+            "proficiency": "We're doing great!",
+            "attention": "We're growing!",
+            "critical": "We're working on it!"
+          }
+        },
+        "data_binding": {
+          "primary_path": "$.scores_summary.overall_health_score",
+          "fallback_path": null,
+          "default_value": 0,
+          "label": "How We're Doing"
+        },
+        "conditional": { "render_if": "$.scores_summary.overall_health_score != null" },
+        "accessibility": { "aria_label": "Company health score: {score} out of 100", "role": "img" },
+        "print_override": { "size": "large" }
+      },
+      {
+        "type": "score_tile",
+        "id": "top_strengths",
+        "section": "what_we_do_well",
+        "order": 1,
+        "config": {
+          "size": "standard",
+          "show_trend": false,
+          "show_benchmark": false,
+          "max_items": 3,
+          "celebratory_style": true,
+          "title_override": "What We're Great At"
+        },
+        "data_binding": {
+          "primary_path": "$.findings[?(@.type=='strength')]",
+          "fallback_path": "$.chapters[*].dimensions[?(@.band=='excellence' || @.band=='proficiency')]",
+          "default_value": [],
+          "sort_by": "impact",
+          "limit": 3
+        },
+        "conditional": {
+          "render_if": "$.findings[?(@.type=='strength')].length > 0",
+          "fallback_message": "We have many strengths across the organization!"
+        },
+        "accessibility": { "aria_label": "Company strength: {title}" }
+      },
+      {
+        "type": "bar_chart",
+        "id": "how_we_compare",
+        "section": "where_we_grow",
+        "order": 1,
+        "config": {
+          "orientation": "horizontal",
+          "simple_style": true,
+          "max_items": 4,
+          "friendly_labels": true,
+          "hide_axis_labels": true,
+          "show_values_on_bars": true,
+          "label_map": {
+            "Growth Engine": "Growing the Business",
+            "Performance & Health": "Running Smoothly",
+            "People & Leadership": "Our Team",
+            "Resilience & Safeguards": "Staying Strong"
+          }
+        },
+        "data_binding": {
+          "primary_path": "$.chapters[*]",
+          "value_field": "score",
+          "label_field": "name",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "How we're doing in different areas" }
+      },
+      {
+        "type": "metric_card",
+        "id": "how_to_help",
+        "section": "team_focus",
+        "order": 1,
+        "config": {
+          "show_trend": false,
+          "layout": "grid",
+          "columns": 1,
+          "max_items": 3,
+          "action_oriented": true,
+          "title_prefix": "You can help by..."
+        },
+        "data_binding": {
+          "primary_path": "$.quick_wins[0:3]",
+          "fallback_path": "$.recommendations[?(@.priority=='critical')][0:3]",
+          "title_field": "title",
+          "description_field": "description",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.quick_wins.length > 0 || $.recommendations.length > 0",
+          "fallback_message": "Keep doing what you're doing!"
+        },
+        "accessibility": { "aria_label": "How you can contribute: {title}" }
+      }
+    ]
+  }
+}

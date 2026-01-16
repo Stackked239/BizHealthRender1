@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-30T08:42:55.901Z",
+    "submission_id": "w3x4y5z6-a7b8-9012-wxyz-ab3456789012",
+    "created_at": "2025-11-30 06:35:28.901234+00",
+    "business_overview": {
+        "company_name": "Roasted Roots Coffee Co",
+        "location": "Seattle WA",
+        "country": "United States",
+        "company_website": "roastedrootscoffee.com",
+        "industry": "accommodation_food_services",
+        "industry_other_details": "Artisan coffee roaster with retail cafes and wholesale distribution",
+        "corporate_structure": "llc",
+        "year_started": 2016,
+        "multiple_locations": true,
+        "number_of_locations": 8,
+        "executive_leadership_roles": 3,
+        "support_admin_staff": 10,
+        "full_time_employees": 38,
+        "part_time_employees": 52,
+        "contract_temp_personnel": 4,
+        "seasonal_employees": 12,
+        "last_year_revenue": 5200000,
+        "projected_revenue": 6100000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 5200000,
+        "products_services": [
+            {
+                "name": "Retail Cafe Sales",
+                "percentage": 60,
+                "type": "product"
+            },
+            {
+                "name": "Wholesale Coffee Distribution",
+                "percentage": 30,
+                "type": "product"
+            },
+            {
+                "name": "Online Subscription",
+                "percentage": 10,
+                "type": "product"
+            }
+        ],
+        "current_challenges": [
+            "human_resources",
+            "operations",
+            "financials"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Stumptown Coffee",
+                "website": "https://stumptowncoffee.com"
+            },
+            {
+                "direct_competitor": false,
+                "name": "Starbucks",
+                "website": "https://starbucks.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 5,
+        "local_market_share": 4,
+        "sales_growth_past_year": 22,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 20,
+        "business_goals_plan": 4,
+        "goals_barriers": "Real estate costs, labor market",
+        "business_plan_review": 3,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": 30,
+        "b2c_percentage": 70,
+        "wholesale_percentage": 30,
+        "retail_percentage": 70,
+        "online_percentage": 10,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 3,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 12,
+        "repeat_sales_percentage": 72,
+        "upselling_focus": 4,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 6,
+        "current_marketing_channels": "Instagram, Email, Local Events, Loyalty Program, In-Store Experience, Subscription",
+        "future_marketing_channels": "Influencer, TikTok",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 8,
+        "cac_unknown": false,
+        "customer_lifetime_value": 850,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 25,
+        "marketing_roi": 6.5,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 18000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 5,
+        "competitive_strength": 5,
+        "issue_resolution": 4,
+        "response_time_hours": 6
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Consistency across locations, inventory waste management",
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": 18,
+        "no_inventory": false,
+        "operational_reliability": 4,
+        "lean_principles": 4,
+        "space_utilization": 88,
+        "equipment_utilization": 82,
+        "personnel_utilization": 75
+    },
+    "financials": {
+        "total_debt_liabilities": 1850000,
+        "total_working_capital": 580000,
+        "debt_monitoring": 4,
+        "current_cash_available": 385000,
+        "near_term_expenses": 425000,
+        "cash_runway_months": 10,
+        "gross_profit_margin": 45,
+        "monthly_profit_estimate": 95000,
+        "profit_is_estimate": true,
+        "burn_rate": 3,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": "Lease costs, commodity price volatility"
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 5,
+        "recruiting_onboarding": 3,
+        "training_development": 4,
+        "training_resources_needed": "Barista training, customer service",
+        "employee_turnover_rate": 65,
+        "employee_engagement": 4,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 3,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 5,
+        "development_mentorship": 3
+    },
+    "technology": {
+        "technology_investment": 165000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 40,
+        "innovation_culture": 4,
+        "emerging_technologies": 3,
+        "technology_adoption": 4,
+        "automation_utilization": 3,
+        "innovation_impact": 3
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 4,
+        "cybersecurity": 3,
+        "data_management": 3,
+        "data_governance": 3,
+        "it_scalability": 4,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Supply chain disruptions, commodity price volatility",
+        "risk_identification_review": 4,
+        "risk_mitigation": 3,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 4,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 4,
+        "policy_adherence": 4,
+        "training_completion": 4,
+        "compliance_monitoring": 3,
+        "regulatory_updates": 4,
+        "compliance_documentation": 3,
+        "incident_reporting": 4,
+        "compliance_costs": 95000,
+        "compliance_cost_estimate": true
+    }
+}

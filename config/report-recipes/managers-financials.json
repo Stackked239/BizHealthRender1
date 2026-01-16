@@ -1,0 +1,345 @@
+{
+  "report_id": "managers_financials",
+  "name": "Finance Manager Report",
+  "version": "1.0.0",
+  "primary_audience": "manager_financials",
+  "description": "Detailed report for Finance managers with focus on financial health, cash management, profitability, and growth readiness.",
+  "target_page_range": {
+    "min": 8,
+    "max": 12
+  },
+  "brand_config": {
+    "primary_color": "#212653",
+    "accent_color": "#969423",
+    "font_heading": "Montserrat",
+    "font_body": "Open Sans"
+  },
+  "default_tone_tags": ["analytical", "detailed", "tactical"],
+  "sections": [
+    {
+      "id": "department_overview",
+      "title": "Financial Health Overview",
+      "description": "Performance summary for Financials dimension",
+      "data_sources": [
+        { "id": "dimension", "from": "dimensions[dimension_code=FIN]" },
+        { "id": "chapter", "from": "chapters[chapter_code=PH]" }
+      ],
+      "visual_type": "score_tiles_row"
+    },
+    {
+      "id": "financials_deep_dive",
+      "title": "Financial Assessment",
+      "description": "Detailed analysis of financial health and management practices",
+      "data_sources": [
+        { "id": "dimension", "from": "dimensions[dimension_code=FIN]" },
+        { "id": "sub_indicators", "from": "dimensions[dimension_code=FIN].sub_indicators" }
+      ],
+      "tone_tags": ["analytical", "detailed"],
+      "visual_type": "bar_chart",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "sub_indicator_breakdown",
+      "title": "Financial Sub-Indicators",
+      "description": "Performance across financial sub-indicators",
+      "data_sources": [
+        { "id": "sub_indicators", "from": "dimensions[dimension_code=FIN].sub_indicators" }
+      ],
+      "visual_type": "table"
+    },
+    {
+      "id": "findings",
+      "title": "Financial Findings",
+      "description": "Key insights from the financial assessment",
+      "data_sources": [
+        { "id": "findings", "from": "findings", "filters": [{ "dimension_codes": ["FIN"] }] }
+      ],
+      "tone_tags": ["analytical"],
+      "visual_type": "bullet_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "risk_exposure",
+      "title": "Financial Risk Exposure",
+      "description": "Financial risks and their potential impact",
+      "data_sources": [
+        { "id": "risks", "from": "risks", "filters": [{ "dimension_codes": ["FIN"] }] },
+        { "id": "rms_dim", "from": "dimensions[dimension_code=RMS]" }
+      ],
+      "tone_tags": ["analytical", "urgent"],
+      "visual_type": "risk_matrix"
+    },
+    {
+      "id": "recommendations",
+      "title": "Financial Recommendations",
+      "description": "Prioritized actions for financial improvement",
+      "data_sources": [
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "dimension_codes": ["FIN"] }], "sort": { "field": "priority_rank", "direction": "asc" } }
+      ],
+      "tone_tags": ["action_oriented", "tactical"],
+      "visual_type": "numbered_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "quick_wins",
+      "title": "Quick Wins for Finance",
+      "description": "Immediate actions for financial improvement",
+      "data_sources": [
+        { "id": "recs", "from": "recommendations", "filters": [{ "dimension_codes": ["FIN"] }, { "field": "horizon", "operator": "eq", "value": "90_days" }] }
+      ],
+      "tone_tags": ["action_oriented", "urgent"],
+      "visual_type": "checklist"
+    },
+    {
+      "id": "compliance_alignment",
+      "title": "Compliance Alignment",
+      "description": "Financial compliance considerations",
+      "data_sources": [
+        { "id": "cmp_dim", "from": "dimensions[dimension_code=CMP]" },
+        { "id": "cmp_findings", "from": "findings", "filters": [{ "dimension_codes": ["CMP"] }], "limit": 3 }
+      ],
+      "tone_tags": ["analytical"],
+      "visual_type": "bullet_list"
+    },
+    {
+      "id": "kpis",
+      "title": "Financial KPIs",
+      "description": "Key metrics to track",
+      "data_sources": [
+        { "id": "dimension", "from": "dimensions[dimension_code=FIN]" }
+      ],
+      "visual_type": "kpi_dashboard"
+    }
+  ],
+  "visuals": {
+    "version": "1.1.0",
+    "schema_version": "2025-06-01",
+
+    "global_settings": {
+      "brand_colors": true,
+      "accessibility_symbols": true,
+      "print_optimized": true,
+      "show_benchmarks": true,
+      "style_modifiers": {
+        "friendly_language": false,
+        "celebratory_style": false,
+        "action_oriented": true,
+        "simple_style": false
+      },
+      "jsonpath_config": {
+        "library": "jsonpath-plus",
+        "strict_mode": false,
+        "log_path_resolution": false,
+        "null_handling": "use_default"
+      }
+    },
+
+    "data_requirements": {
+      "required_fields": [
+        { "path": "$.dimensions[?(@.code=='FIN')]", "type": "object" }
+      ],
+      "optional_fields": [
+        { "path": "$.recommendations[?(@.dimension_code=='FIN')]", "type": "array", "default": [] },
+        { "path": "$.benchmark_data.industry_benchmark", "type": "object", "default": null, "hide_component_if_null": true }
+      ],
+      "validation_mode": "warn"
+    },
+
+    "print_configuration": {
+      "stylesheet_reference": "/styles/print.css",
+      "page_settings": {
+        "size": "letter",
+        "orientation": "portrait",
+        "margins": { "top": "0.5in", "right": "0.5in", "bottom": "0.75in", "left": "0.5in" }
+      },
+      "component_rules": {
+        "gauge": { "break_inside": "avoid", "print_size": "medium" },
+        "score_tile": { "break_inside": "avoid", "print_size": "compact" },
+        "table": { "break_inside": "avoid-page", "max_rows_per_page": 20, "repeat_header": true },
+        "bar_chart": { "break_inside": "avoid", "print_grayscale_fallback": true },
+        "waterfall": { "break_inside": "avoid" },
+        "risk_matrix": { "break_inside": "avoid", "print_patterns": true },
+        "kpi_dashboard": { "break_inside": "avoid", "print_columns": 2 }
+      },
+      "color_handling": {
+        "force_color_print": true,
+        "webkit_print_color_adjust": "exact",
+        "fallback_patterns": true
+      }
+    },
+
+    "performance_budgets": {
+      "components": {
+        "per_report": { "warning_threshold": 15, "error_threshold": 18, "action_on_exceed": "log_warning" },
+        "per_section": { "warning_threshold": 5, "error_threshold": 7, "action_on_exceed": "log_warning" }
+      },
+      "rendering": {
+        "target_time_ms": 2000,
+        "warning_time_ms": 3500,
+        "max_time_ms": 6000,
+        "lazy_load_threshold": 12,
+        "progressive_rendering": true
+      },
+      "output": {
+        "max_file_size_kb": 1200,
+        "warning_file_size_kb": 1000,
+        "max_embedded_images": 10,
+        "image_compression": "medium",
+        "image_format": "png"
+      },
+      "validation": {
+        "enforce_budgets": true,
+        "log_violations": true,
+        "fail_on_error_threshold": false,
+        "include_in_report_metadata": true
+      }
+    },
+
+    "benchmark_configuration": {
+      "primary_source": "$.benchmark_data.industry_benchmark",
+      "fallback_sources": ["$.benchmark_data.peer_comparison"],
+      "fallback_display": {
+        "text": "Benchmark unavailable",
+        "show_placeholder": true,
+        "hide_benchmark_components": false
+      },
+      "display_settings": {
+        "show_percentile_rank": true,
+        "benchmark_label": "Industry Avg",
+        "delta_format": "+X% vs benchmark"
+      },
+      "comparison_type": "industry"
+    },
+
+    "accessibility_requirements": {
+      "compliance_level": "WCAG_2.1_AA",
+      "validation_required": true,
+      "color_requirements": {
+        "min_contrast_normal_text": 4.5,
+        "colorblind_safe": true,
+        "never_color_alone": true,
+        "status_symbols": {
+          "excellence": { "symbol": "✓", "aria_label": "Excellent" },
+          "proficiency": { "symbol": "!", "aria_label": "Good" },
+          "attention": { "symbol": "⚠", "aria_label": "Attention" },
+          "critical": { "symbol": "✗", "aria_label": "Critical" }
+        }
+      },
+      "screen_reader_requirements": {
+        "all_charts_have_aria_label": true,
+        "provide_data_tables_for_charts": true
+      }
+    },
+
+    "components": [
+      {
+        "type": "gauge",
+        "id": "financials_gauge",
+        "section": "department_overview",
+        "order": 1,
+        "config": { "size": "medium", "show_status": true, "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='FIN')].score",
+          "default_value": 0,
+          "label": "Financial Health Score",
+          "benchmark_path": "$.benchmark_data.industry_benchmark.dimensions.FIN"
+        },
+        "conditional": { "render_if": "$.dimensions[?(@.code=='FIN')] != null" },
+        "accessibility": { "aria_label": "Financial health score: {score}" }
+      },
+      {
+        "type": "score_tile",
+        "id": "ph_chapter_tiles",
+        "section": "department_overview",
+        "order": 2,
+        "config": { "size": "compact", "show_trend": true, "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='FIN' || @.code=='OPS')]",
+          "default_value": []
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "{dimension_name}: {score}" }
+      },
+      {
+        "type": "bar_chart",
+        "id": "fin_sub_indicators",
+        "section": "financials_deep_dive",
+        "order": 1,
+        "config": { "orientation": "horizontal", "sort_by": "score", "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='FIN')].sub_indicators",
+          "value_field": "score",
+          "label_field": "name",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.dimensions[?(@.code=='FIN')].sub_indicators.length > 0" },
+        "accessibility": { "aria_label": "Financial sub-indicator scores" }
+      },
+      {
+        "type": "waterfall",
+        "id": "financial_breakdown",
+        "section": "financials_deep_dive",
+        "order": 2,
+        "config": { "show_labels": true, "show_totals": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='FIN')].financial_breakdown",
+          "fallback_path": null,
+          "default_value": null
+        },
+        "conditional": {
+          "render_if": "$.dimensions[?(@.code=='FIN')].financial_breakdown != null",
+          "fallback_message": "Financial breakdown data not available"
+        },
+        "accessibility": { "aria_label": "Financial metrics breakdown" }
+      },
+      {
+        "type": "table",
+        "id": "sub_indicator_table",
+        "section": "sub_indicator_breakdown",
+        "order": 1,
+        "config": { "striped": true, "highlight_column": 2 },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='FIN')].sub_indicators",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.dimensions[?(@.code=='FIN')].sub_indicators.length > 0" },
+        "accessibility": { "aria_label": "Financial sub-indicators table" }
+      },
+      {
+        "type": "risk_matrix",
+        "id": "financial_risks",
+        "section": "risk_exposure",
+        "order": 1,
+        "config": { "show_legend": true, "show_labels": true },
+        "data_binding": {
+          "primary_path": "$.risks[?(@.dimension_code=='FIN')]",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.risks[?(@.dimension_code=='FIN')].length > 0",
+          "fallback_message": "No significant financial risks identified"
+        },
+        "accessibility": { "aria_label": "Financial risk matrix" }
+      },
+      {
+        "type": "kpi_dashboard",
+        "id": "financial_kpis",
+        "section": "kpis",
+        "order": 1,
+        "config": { "columns": 2, "metrics_count": 6 },
+        "data_binding": {
+          "metrics": [
+            { "label": "Financial Score", "path": "$.dimensions[?(@.code=='FIN')].score", "default": "N/A" },
+            { "label": "Chapter Score", "path": "$.chapters[?(@.code=='PH')].score", "default": "N/A" },
+            { "label": "Open Actions", "path": "$.recommendations[?(@.dimension_code=='FIN')].length", "default": 0 },
+            { "label": "Strengths", "path": "$.findings[?(@.type=='strength' && @.dimension_code=='FIN')].length", "default": 0 },
+            { "label": "Gaps", "path": "$.findings[?(@.type=='gap' && @.dimension_code=='FIN')].length", "default": 0 },
+            { "label": "Risks", "path": "$.risks[?(@.dimension_code=='FIN')].length", "default": 0 }
+          ]
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Financial KPIs" }
+      }
+    ]
+  }
+}

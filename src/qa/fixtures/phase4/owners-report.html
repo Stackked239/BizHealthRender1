@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phase 4 Owner's Report - Reference Fixture</title>
+  <style>
+    /* Phase 4 Reference Styles */
+    :root {
+      --biz-navy: #212653;
+      --biz-green: #969423;
+      --band-excellence: #28a745;
+      --band-proficiency: #0d6efd;
+      --band-attention: #ffc107;
+      --band-critical: #dc3545;
+    }
+    body { font-family: 'Open Sans', Arial, sans-serif; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header, .header { border-bottom: 3px solid var(--biz-navy); padding: 20px 0; }
+    .health-score-section, .health-score-display { padding: 20px; background: #f8f9fa; }
+    .health-score, .health-score-circle { width: 120px; height: 120px; border-radius: 50%; background: var(--biz-navy); display: flex; align-items: center; justify-content: center; }
+    .score, .score-circle, .score-number { font-size: 32px; color: white; font-weight: bold; }
+    .status, .score-status { text-transform: uppercase; }
+    .band-badge { padding: 4px 12px; border-radius: 4px; }
+    .band-badge.Excellence { background: #d4edda; color: #155724; }
+    .band-badge.Proficiency { background: #cce5ff; color: #004085; }
+    .band-badge.Attention { background: #fff3cd; color: #856404; }
+    .band-badge.Critical { background: #f8d7da; color: #721c24; }
+    .chapter-scores, .chapter-grid, .executive-highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .chapter-item, .chapter-card, .highlight-card { padding: 20px; border-radius: 8px; background: #f8f9fa; }
+    .chapter-name, .chapter-title, .highlight-label { font-weight: 600; }
+    .chapter-score, .highlight-value { font-size: 24px; font-weight: bold; }
+    .two-column, .grid-2, .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .strengths-priorities, .strengths { border-left: 4px solid #28a745; padding-left: 20px; }
+    .priorities, .priority-areas { border-left: 4px solid #ffc107; padding-left: 20px; }
+    .risk-item, .risk-card { border-left: 4px solid #dc3545; padding: 15px; margin: 10px 0; }
+    .quick-wins { background: #f0fff4; border: 1px solid #28a745; border-radius: 8px; padding: 20px; }
+    .quick-win-item, .quick-win-card { padding: 15px; border-bottom: 1px solid #e9ecef; }
+    .executive-recommendation, .executive-summary, .callout { background: var(--biz-navy); color: white; padding: 20px; border-radius: 8px; }
+    .financial-summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .financial-card { background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; }
+    .timeline { padding-left: 20px; }
+    .timeline-item { padding: 15px 0; border-left: 3px solid var(--biz-navy); margin-left: 10px; padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Acme Corporation</h1>
+      <p>Business Owner Report - Phase 4 Reference</p>
+    </header>
+
+    <section class="health-score-section health-score-display">
+      <div class="health-score health-score-circle">
+        <span class="score score-circle score-number">72</span>
+      </div>
+      <div class="status score-status">Proficiency</div>
+      <span class="band-badge Proficiency">Proficiency</span>
+    </section>
+
+    <section class="chapter-scores chapter-grid executive-highlights">
+      <div class="chapter-item chapter-card highlight-card">
+        <div class="chapter-name chapter-title highlight-label">Growth Engine</div>
+        <div class="chapter-score highlight-value">78</div>
+      </div>
+      <div class="chapter-item chapter-card highlight-card">
+        <div class="chapter-name chapter-title highlight-label">Performance & Health</div>
+        <div class="chapter-score highlight-value">70</div>
+      </div>
+      <div class="chapter-item chapter-card highlight-card">
+        <div class="chapter-name chapter-title highlight-label">People & Leadership</div>
+        <div class="chapter-score highlight-value">75</div>
+      </div>
+      <div class="chapter-item chapter-card highlight-card">
+        <div class="chapter-name chapter-title highlight-label">Resilience & Safeguards</div>
+        <div class="chapter-score highlight-value">65</div>
+      </div>
+    </section>
+
+    <section class="two-column grid-2 grid">
+      <div class="strengths-priorities strengths">
+        <h3>Your Top Strengths</h3>
+        <ul>
+          <li>Strong Sales Pipeline</li>
+          <li>Effective Brand Positioning</li>
+          <li>Aligned Leadership Team</li>
+        </ul>
+      </div>
+      <div class="priorities priority-areas">
+        <h3>Your Priority Areas</h3>
+        <ul>
+          <li>Process Documentation Gaps</li>
+          <li>Financial Forecasting Accuracy</li>
+          <li>Key Person Dependency</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="quick-wins">
+      <h3>Quick Wins</h3>
+      <div class="quick-win-item quick-win-card">
+        <strong>Process Documentation Quick Start</strong>
+        <div class="metrics">
+          <span>Impact: 85/100</span>
+          <span>Effort: 45/100</span>
+        </div>
+      </div>
+      <div class="quick-win-item quick-win-card">
+        <strong>Financial Dashboard Implementation</strong>
+        <div class="metrics">
+          <span>Impact: 70/100</span>
+          <span>Effort: 35/100</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="risk-display">
+      <h3>Key Risks</h3>
+      <div class="risk-item risk-card">
+        <strong>Operational Risk</strong>
+        <p>Lack of process documentation creates significant operational risk during staff transitions.</p>
+      </div>
+      <div class="risk-item risk-card">
+        <strong>People Risk</strong>
+        <p>Key person dependencies in critical roles create business continuity risk.</p>
+      </div>
+    </section>
+
+    <section class="financial-summary-grid">
+      <div class="financial-card">
+        <div>Investment Required</div>
+        <div>$280K - $420K</div>
+      </div>
+      <div class="financial-card">
+        <div>Revenue Impact</div>
+        <div>$1.2M - $1.8M</div>
+      </div>
+      <div class="financial-card">
+        <div>Expected ROI</div>
+        <div>2.8x - 4.2x</div>
+      </div>
+    </section>
+
+    <section class="callout executive-recommendation executive-summary">
+      <h3>Your Recommended Actions</h3>
+      <ol>
+        <li>This Week: Review the Quick Wins section above</li>
+        <li>This Month: Schedule strategic planning session</li>
+        <li>For Detail: Review Comprehensive Report</li>
+      </ol>
+    </section>
+
+    <section class="timeline">
+      <h3>Roadmap</h3>
+      <div class="timeline-item">
+        <strong>Phase 1: Quick Wins (0-90 Days)</strong>
+        <p>Focus on immediate impact initiatives</p>
+      </div>
+      <div class="timeline-item">
+        <strong>Phase 2: Foundation Building (3-12 Months)</strong>
+        <p>Build foundational capabilities</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 BizHealth.ai - Phase 4 Reference Fixture</p>
+    </footer>
+  </div>
+</body>
+</html>

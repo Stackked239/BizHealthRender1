@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T20:15:28.345Z",
+    "submission_id": "k1l2m3n4-o5p6-7890-klmn-op1234567890",
+    "created_at": "2025-11-29 18:08:52.345678+00",
+    "business_overview": {
+        "company_name": "Elevate Fitness Studios",
+        "location": "Miami FL",
+        "country": "United States",
+        "company_website": "elevatefitnessstudios.com",
+        "industry": "other_services",
+        "industry_other_details": "Boutique fitness studio chain offering HIIT, yoga, and strength training classes",
+        "corporate_structure": "llc",
+        "year_started": 2021,
+        "multiple_locations": true,
+        "number_of_locations": 4,
+        "executive_leadership_roles": 2,
+        "support_admin_staff": 5,
+        "full_time_employees": 12,
+        "part_time_employees": 28,
+        "contract_temp_personnel": 8,
+        "seasonal_employees": 0,
+        "last_year_revenue": 1850000,
+        "projected_revenue": 2400000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 1850000,
+        "products_services": [
+            {
+                "name": "Class Memberships",
+                "percentage": 70,
+                "type": "service"
+            },
+            {
+                "name": "Personal Training",
+                "percentage": 20,
+                "type": "service"
+            },
+            {
+                "name": "Retail & Supplements",
+                "percentage": 10,
+                "type": "product"
+            }
+        ],
+        "current_challenges": [
+            "human_resources",
+            "marketing",
+            "operations"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Barry's Bootcamp",
+                "website": "https://barrys.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Orangetheory",
+                "website": "https://orangetheory.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 4,
+        "sales_growth_past_year": 42,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 35,
+        "business_goals_plan": 4,
+        "goals_barriers": null,
+        "business_plan_review": 4,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": 10,
+        "b2c_percentage": 90,
+        "wholesale_percentage": null,
+        "retail_percentage": 10,
+        "online_percentage": 90,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 4,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 165,
+        "repeat_sales_percentage": 82,
+        "upselling_focus": 5,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 6,
+        "current_marketing_channels": "Instagram, Facebook Ads, Influencer, Referral Program, Local Events, Email",
+        "future_marketing_channels": "TikTok, Google Ads",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 68,
+        "cac_unknown": false,
+        "customer_lifetime_value": 1850,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 18,
+        "marketing_roi": 5.8,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 22000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 5,
+        "competitive_strength": 4,
+        "issue_resolution": 5,
+        "response_time_hours": 3
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": "Class scheduling optimization, instructor retention",
+        "workflow_documentation": 3,
+        "inventory_turnover_rate": 15,
+        "no_inventory": false,
+        "operational_reliability": 4,
+        "lean_principles": 4,
+        "space_utilization": 88,
+        "equipment_utilization": 85,
+        "personnel_utilization": 78
+    },
+    "financials": {
+        "total_debt_liabilities": 520000,
+        "total_working_capital": 285000,
+        "debt_monitoring": 4,
+        "current_cash_available": 195000,
+        "near_term_expenses": 155000,
+        "cash_runway_months": 14,
+        "gross_profit_margin": 55,
+        "monthly_profit_estimate": 78000,
+        "profit_is_estimate": true,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 4,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 5,
+        "recruiting_onboarding": 3,
+        "training_development": 4,
+        "training_resources_needed": null,
+        "employee_turnover_rate": 38,
+        "employee_engagement": 5,
+        "performance_management": 4
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 2,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 5,
+        "development_mentorship": 3
+    },
+    "technology": {
+        "technology_investment": 95000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 55,
+        "innovation_culture": 4,
+        "emerging_technologies": 4,
+        "technology_adoption": 5,
+        "automation_utilization": 4,
+        "innovation_impact": 4
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 4,
+        "cybersecurity": 3,
+        "data_management": 4,
+        "data_governance": 3,
+        "it_scalability": 4,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Member retention, liability risks",
+        "risk_identification_review": 4,
+        "risk_mitigation": 4,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 4,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 4,
+        "policy_adherence": 4,
+        "training_completion": 4,
+        "compliance_monitoring": 3,
+        "regulatory_updates": 4,
+        "compliance_documentation": 3,
+        "incident_reporting": 4,
+        "compliance_costs": 38000,
+        "compliance_cost_estimate": true
+    }
+}

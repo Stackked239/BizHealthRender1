@@ -1,0 +1,1183 @@
+{
+  "metadata": {
+    "investigation_date": "2025-11-30T20:57:57.465698",
+    "pipeline_location": "/home/user/bizHealth-Dennis-11.29.25",
+    "investigator": "BizHealth Pipeline Investigator v1.0",
+    "purpose": "Report Content Gap Root Cause Analysis"
+  },
+  "directory_structure": {
+    "base_path_exists": true,
+    "output_dir_exists": true,
+    "src_dir_exists": true,
+    "all_files": [
+      "src/index.ts",
+      "src/phase0-index.ts",
+      "src/run-pipeline.ts",
+      "src/reports/index.ts",
+      "src/reports/report-generator.ts",
+      "src/validation/schemas.ts",
+      "src/validation/normalized.schemas.ts",
+      "src/validation/raw-input.schemas.ts",
+      "src/utils/phase-consolidator.ts",
+      "src/utils/logger.ts",
+      "src/utils/errors.ts",
+      "src/utils/security.ts",
+      "src/prompts/tier2/index.ts",
+      "src/prompts/tier2/growth-readiness.prompts.ts",
+      "src/prompts/tier2/risk-resilience.prompts.ts",
+      "src/prompts/tier2/scalability-readiness.prompts.ts",
+      "src/prompts/tier2/resource-optimization.prompts.ts",
+      "src/prompts/tier2/market-position.prompts.ts",
+      "src/prompts/tier1/index.ts",
+      "src/prompts/tier1/operational-excellence.prompts.ts",
+      "src/prompts/tier1/revenue-engine.prompts.ts",
+      "src/prompts/tier1/compliance-sustainability.prompts.ts",
+      "src/prompts/tier1/financial-strategic.prompts.ts",
+      "src/prompts/tier1/people-leadership.prompts.ts",
+      "src/services/confidence-scoring-framework.ts",
+      "src/services/raw-assessment-storage.ts",
+      "src/services/assessment-index.ts",
+      "src/services/benchmark-lookup-service.ts",
+      "src/services/lifecycle-modifier-engine.ts",
+      "src/reporting/index.ts",
+      "src/reporting/report-prompts.ts",
+      "src/reporting/report-generator.ts",
+      "src/__tests__/phase0.test.ts",
+      "src/scripts/render-pdf.ts",
+      "src/data-transformation/benchmark-service.ts",
+      "src/data-transformation/questionnaire-transformer.ts",
+      "src/data-transformation/normalized-company-profile-transformer.ts",
+      "src/data-transformation/normalized-questionnaire-transformer.ts",
+      "src/data-transformation/company-profile-transformer.ts",
+      "src/types/webhook.types.ts",
+      "src/types/raw-input.types.ts",
+      "src/types/recipe.types.ts",
+      "src/types/idm.types.ts",
+      "src/types/company-profile.types.ts",
+      "src/types/report.types.ts",
+      "src/types/normalized.types.ts",
+      "src/types/questionnaire.types.ts",
+      "src/database/index.ts",
+      "src/database/types.ts",
+      "src/database/queries.ts",
+      "src/database/db-client.ts",
+      "src/api/anthropic-client.ts",
+      "src/api/report-endpoints.ts",
+      "src/orchestration/phase1-orchestrator.ts",
+      "src/orchestration/phase0-orchestrator.ts",
+      "src/orchestration/phase5-orchestrator.ts",
+      "src/orchestration/phase4-orchestrator.ts",
+      "src/orchestration/phase3-orchestrator.ts",
+      "src/orchestration/phase2-orchestrator.ts",
+      "src/orchestration/idm-consolidator.ts",
+      "src/orchestration/reports/index.ts",
+      "src/orchestration/reports/html-template.ts",
+      "src/orchestration/reports/risk-report.builder.ts",
+      "src/orchestration/reports/executive-brief.builder.ts",
+      "src/orchestration/reports/comprehensive-report.builder.ts",
+      "src/orchestration/reports/financial-report.builder.ts",
+      "src/orchestration/reports/roadmap-report.builder.ts",
+      "src/orchestration/reports/owners-report.builder.ts",
+      "src/orchestration/reports/deep-dive-report.builder.ts",
+      "src/orchestration/reports/quick-wins-report.builder.ts",
+      "tests/recipe.test.ts",
+      "tests/idm.test.ts",
+      "investigate-pipeline.py",
+      "scripts/idm_models.py",
+      "scripts/phase4-idm-compiler.py",
+      "scripts/phase4-compiler.py",
+      "scripts/consolidate-phases.py",
+      "tests/test_idm_models.py"
+    ],
+    "report_generation_files": [
+      "src/reports/report-generator.ts",
+      "src/reporting/report-prompts.ts",
+      "src/reporting/report-generator.ts",
+      "src/types/report.types.ts",
+      "src/api/report-endpoints.ts",
+      "src/orchestration/reports/risk-report.builder.ts",
+      "src/orchestration/reports/comprehensive-report.builder.ts",
+      "src/orchestration/reports/financial-report.builder.ts",
+      "src/orchestration/reports/roadmap-report.builder.ts",
+      "src/orchestration/reports/owners-report.builder.ts",
+      "src/orchestration/reports/deep-dive-report.builder.ts",
+      "src/orchestration/reports/quick-wins-report.builder.ts",
+      "src/reports/report-generator.ts",
+      "src/reporting/report-generator.ts",
+      "src/scripts/render-pdf.ts",
+      "src/orchestration/reports/html-template.ts"
+    ],
+    "template_files": [
+      "src/orchestration/reports/html-template.ts"
+    ],
+    "phase_output_files": [
+      "output/phase1_output.json",
+      "output/phase5_output.json",
+      "output/phase4_output.json",
+      "output/phase2_output.json",
+      "output/phase3_output.json",
+      "output/phase0_output.json",
+      "output/phase2/phase2-results-af4b5782-2025-11-30T01-29-43-918Z.json",
+      "output/phase1/phase1-results-af4b5782-2025-11-30T01-27-24-467Z.json",
+      "output/phase3/phase3-results-af4b5782-2025-11-30T01-32-50-520Z.json"
+    ],
+    "idm_files": [
+      "src/types/idm.types.ts",
+      "src/orchestration/idm-consolidator.ts",
+      "tests/idm.test.ts",
+      "scripts/idm_models.py",
+      "scripts/phase4-idm-compiler.py",
+      "tests/test_idm_models.py",
+      "output/idm_output.json"
+    ],
+    "prompt_files": [
+      "src/prompts/tier2/growth-readiness.prompts.ts",
+      "src/prompts/tier2/risk-resilience.prompts.ts",
+      "src/prompts/tier2/scalability-readiness.prompts.ts",
+      "src/prompts/tier2/resource-optimization.prompts.ts",
+      "src/prompts/tier2/market-position.prompts.ts",
+      "src/prompts/tier1/operational-excellence.prompts.ts",
+      "src/prompts/tier1/revenue-engine.prompts.ts",
+      "src/prompts/tier1/compliance-sustainability.prompts.ts",
+      "src/prompts/tier1/financial-strategic.prompts.ts",
+      "src/prompts/tier1/people-leadership.prompts.ts",
+      "src/reporting/report-prompts.ts"
+    ]
+  },
+  "phase_output_analysis": {
+    "phase0": {
+      "exists": true,
+      "filepath": "output/phase0_output.json",
+      "size_bytes": 97791,
+      "top_level_keys": [
+        "success",
+        "assessment_run_id",
+        "company_profile_id",
+        "execution_time_ms",
+        "phases_completed",
+        "output",
+        "warnings"
+      ],
+      "narrative_fields_count": 77,
+      "total_narrative_chars": 5134,
+      "total_narrative_words": 918,
+      "narrative_fields": [
+        "root.output.companyProfile.basic_information.industry.industry_details",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[1].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[1].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[1].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[1].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[1].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[1].questions[7].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[2].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[2].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[2].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[2].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[2].questions[7].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[0].dimensions[3].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[0].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[0].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[0].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[0].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[0].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[0].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[1].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[1].questions[9].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[1].questions[10].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[1].dimensions[1].questions[11].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[0].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[0].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[0].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[0].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[0].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[1].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[1].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[1].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[1].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[1].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[2].dimensions[1].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[0].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[0].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[0].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[0].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[0].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[0].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[1].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[1].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[1].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[1].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[1].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[1].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[2].questions[6].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[0].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[1].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[2].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[3].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[4].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[5].original_prompt_text",
+        "root.output.questionnaireResponses.chapters[3].dimensions[3].questions[6].original_prompt_text",
+        "root.output.benchmarkData.cross_functional.growth_readiness.sustainable_annual_growth_rate.context",
+        "root.output.benchmarkData.cross_functional.growth_readiness.scaling_capacity_score.context",
+        "root.output.benchmarkData.match_description",
+        "root.output.indexEntry.paths.raw_assessment"
+      ],
+      "score_fields_count": 107,
+      "sample_narratives": [
+        {
+          "path": "root.output.companyProfile.basic_information.industry.industry_details",
+          "preview": "Fintech company that provides technology to financial services companies.  It is most like Computershare for comparison.",
+          "words": 16
+        },
+        {
+          "path": "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[0].original_prompt_text",
+          "preview": "On a scale of 1-5, how well does your company understand your 'competitive differentiators'?",
+          "words": 14
+        },
+        {
+          "path": "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[1].original_prompt_text",
+          "preview": "What share of your local market do you think you currently have?",
+          "words": 12
+        },
+        {
+          "path": "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[2].original_prompt_text",
+          "preview": "What percent has your sales grown in the past year?",
+          "words": 10
+        },
+        {
+          "path": "root.output.questionnaireResponses.chapters[0].dimensions[0].questions[3].original_prompt_text",
+          "preview": "What is your target Sales growth for the upcoming year?",
+          "words": 10
+        }
+      ]
+    },
+    "phase1": {
+      "exists": true,
+      "filepath": "output/phase1_output.json",
+      "size_bytes": 77873,
+      "top_level_keys": [
+        "phase",
+        "status",
+        "company_profile_id",
+        "tier1",
+        "tier2",
+        "metadata"
+      ],
+      "narrative_fields_count": 10,
+      "total_narrative_chars": 71130,
+      "total_narrative_words": 9746,
+      "narrative_fields": [
+        "root.tier1.revenue_engine.content",
+        "root.tier1.operational_excellence.content",
+        "root.tier1.financial_strategic.content",
+        "root.tier1.people_leadership.content",
+        "root.tier1.compliance_sustainability.content",
+        "root.tier2.growth_readiness.content",
+        "root.tier2.market_position.content",
+        "root.tier2.resource_optimization.content",
+        "root.tier2.risk_resilience.content",
+        "root.tier2.scalability_readiness.content"
+      ],
+      "score_fields_count": 0,
+      "sample_narratives": [
+        {
+          "path": "root.tier1.revenue_engine.content",
+          "preview": "# REVENUE ENGINE ANALYSIS: EWM Global\n\n## 1. Current State Assessment\n\n### Revenue Profile\nEWM Global operates as a specialized B2B fintech provider with strong fundamentals but significant growth constraints:\n- **Revenue**: $24M (2023) \u2192 $26M projected (2024), 8.33% YoY growth\n- **Revenue per Emplo",
+          "words": 849
+        },
+        {
+          "path": "root.tier1.operational_excellence.content",
+          "preview": "# OPERATIONAL EXCELLENCE ANALYSIS\n## EWM Global - Fintech Services\n\n### 1. CURRENT STATE ASSESSMENT\n\nEWM Global demonstrates a mixed operational profile with notable strengths in reliability but opportunities for efficiency improvements:\n\n**Operational Maturity Score: 3.75/5.0**\n- Operational Effici",
+          "words": 720
+        },
+        {
+          "path": "root.tier1.financial_strategic.content",
+          "preview": "# FINANCIAL STRATEGIC ANALYSIS: EWM GLOBAL\n\n## 1. CURRENT STATE ASSESSMENT\n\n### Financial Health Overview\nEWM Global presents a mixed financial profile with several concerning indicators despite positive growth trajectory:\n\n**Key Financial Metrics:**\n- **Revenue**: $24M (2024) \u2192 $26M projected (2025",
+          "words": 820
+        },
+        {
+          "path": "root.tier1.people_leadership.content",
+          "preview": "# PEOPLE LEADERSHIP ANALYSIS: EWM Global\n\n## 1. CURRENT STATE ASSESSMENT\n\n### Leadership Capability\n- **Overall Leadership Score: 2.67/5.0** - Significantly below industry benchmarks\n- **Critical Weaknesses:**\n  - Leadership effectiveness (3/5) lags industry peers (3.4 mean)\n  - Decision-making effe",
+          "words": 666
+        },
+        {
+          "path": "root.tier1.compliance_sustainability.content",
+          "preview": "# COMPLIANCE & SUSTAINABILITY ANALYSIS: EWM GLOBAL\n\n## 1. CURRENT STATE ASSESSMENT\n\n### Compliance Maturity Profile\nEWM Global demonstrates **strong compliance maturity** with an overall compliance score of **4.14/5**, significantly above the industry median of 3.6/5. As a fintech serving financial ",
+          "words": 1006
+        }
+      ]
+    },
+    "phase2": {
+      "exists": true,
+      "filepath": "output/phase2_output.json",
+      "size_bytes": 58681,
+      "top_level_keys": [
+        "phase",
+        "status",
+        "company_profile_id",
+        "phase1_reference",
+        "analyses",
+        "summary",
+        "metadata"
+      ],
+      "narrative_fields_count": 5,
+      "total_narrative_chars": 54508,
+      "total_narrative_words": 7317,
+      "narrative_fields": [
+        "root.analyses.cross.content",
+        "root.analyses.strategic.content",
+        "root.analyses.consolidated.content",
+        "root.analyses.growth.content",
+        "root.analyses.implementation.content"
+      ],
+      "score_fields_count": 0,
+      "sample_narratives": [
+        {
+          "path": "root.analyses.cross.content",
+          "preview": "# CROSS-DIMENSIONAL STRATEGIC SYNTHESIS: EWM GLOBAL\n\n## EXECUTIVE SUMMARY\n\nEWM Global presents a stark paradox: a company with world-class customer relationships and technical capabilities facing imminent collapse due to catastrophic leadership and financial management failures. This synthesis of 10",
+          "words": 1242
+        },
+        {
+          "path": "root.analyses.strategic.content",
+          "preview": "# STRATEGIC RECOMMENDATIONS FOR EWM GLOBAL\n\nBased on the comprehensive Phase 1 analyses, here are 15 prioritized strategic recommendations to address EWM Global's critical situation and transform it into a sustainable growth company.\n\n## IMMEDIATE SURVIVAL RECOMMENDATIONS (0-30 Days)\n\n### 1. **Emerg",
+          "words": 1416
+        },
+        {
+          "path": "root.analyses.consolidated.content",
+          "preview": "# COMPREHENSIVE RISK ASSESSMENT: EWM GLOBAL\n\n## EXECUTIVE SUMMARY\nEWM Global faces **15 critical and high-severity risks** that threaten its survival within 30-60 days. The most severe risk is imminent insolvency with only 1.1 months of cash runway. Multiple risks are interconnected and cascading, c",
+          "words": 1433
+        },
+        {
+          "path": "root.analyses.growth.content",
+          "preview": "# STRATEGIC GROWTH OPPORTUNITIES: EWM GLOBAL\n\n## CRITICAL CONTEXT\nEWM Global faces an immediate existential crisis with 1.1 months of cash runway. All growth opportunities must be evaluated through the lens of survival first, stabilization second, and growth third. The company possesses exceptional ",
+          "words": 1429
+        },
+        {
+          "path": "root.analyses.implementation.content",
+          "preview": "# STRATEGIC IMPLEMENTATION ROADMAP: EWM GLOBAL TRANSFORMATION\n\n## EXECUTIVE OVERVIEW\n\nEWM Global faces an immediate existential crisis requiring emergency action within 30 days. This roadmap prioritizes survival first, followed by stabilization and eventual growth. Without immediate cash infusion an",
+          "words": 1797
+        }
+      ]
+    },
+    "phase3": {
+      "exists": true,
+      "filepath": "output/phase3_output.json",
+      "size_bytes": 68712,
+      "top_level_keys": [
+        "phase",
+        "status",
+        "company_profile_id",
+        "phase2_reference",
+        "analyses",
+        "summary",
+        "metadata"
+      ],
+      "narrative_fields_count": 5,
+      "total_narrative_chars": 64108,
+      "total_narrative_words": 9190,
+      "narrative_fields": [
+        "root.analyses.executive.content",
+        "root.analyses.scorecard.content",
+        "root.analyses.action.content",
+        "root.analyses.investment.content",
+        "root.analyses.final.content"
+      ],
+      "score_fields_count": 1,
+      "sample_narratives": [
+        {
+          "path": "root.analyses.executive.content",
+          "preview": "# EXECUTIVE SUMMARY: EWM GLOBAL TRANSFORMATION IMPERATIVE\n\n## BUSINESS OVERVIEW\n\n**EWM Global** is a 24-year-old fintech services company specializing in employee benefits administration, with 170 employees across 3 locations. The company has built exceptional capabilities in compliance (4.14/5), te",
+          "words": 935
+        },
+        {
+          "path": "root.analyses.scorecard.content",
+          "preview": "# COMPREHENSIVE BUSINESS HEALTH SCORECARD: EWM GLOBAL\n\n## OVERALL BUSINESS HEALTH SCORE: 38/100 (CRITICAL)\n\n### Scoring Methodology\n- **Weighted Composite Score** based on business criticality\n- **Financial Health**: 25% weight (survival imperative)\n- **Revenue Engine**: 20% weight (growth driver)\n-",
+          "words": 1878
+        },
+        {
+          "path": "root.analyses.action.content",
+          "preview": "# PRIORITY ACTION MATRIX: EWM GLOBAL TRANSFORMATION\n\n## EXECUTIVE SUMMARY\nEWM Global faces imminent insolvency with 1.1 months cash runway. This matrix prioritizes 25 critical actions across immediate survival, stabilization, and growth phases. The highest priority actions focus on securing emergenc",
+          "words": 1894
+        },
+        {
+          "path": "root.analyses.investment.content",
+          "preview": "# INVESTMENT ROADMAP: EWM GLOBAL TRANSFORMATION\n\n## 1. INVESTMENT OVERVIEW\n\n### Total Investment Requirements\n**Emergency Capital**: $5-10M (Immediate - survival)\n**Transformation Investment**: $4.6-5.5M (18 months)\n**Total Capital Need**: $9.6-15.5M\n\n### Investment Timeline\n- **Crisis Phase** (0-30",
+          "words": 1619
+        },
+        {
+          "path": "root.analyses.final.content",
+          "preview": "# FINAL STRATEGIC RECOMMENDATIONS: EWM GLOBAL TRANSFORMATION\n\n## 1. SITUATION ASSESSMENT\n\n### Current Business Position\n\nEWM Global stands at a precipice - a company with exceptional customer relationships and technical capabilities facing imminent collapse within 45 days. The stark reality:\n\n**Crit",
+          "words": 2864
+        }
+      ]
+    },
+    "phase4": {
+      "exists": true,
+      "filepath": "output/phase4_output.json",
+      "size_bytes": 71307,
+      "top_level_keys": [
+        "phase",
+        "status",
+        "company_profile_id",
+        "phase3_reference",
+        "summaries",
+        "idm",
+        "metadata",
+        "generated_reports"
+      ],
+      "narrative_fields_count": 52,
+      "total_narrative_chars": 4657,
+      "total_narrative_words": 612,
+      "narrative_fields": [
+        "root.summaries.strength_summary",
+        "root.summaries.challenge_summary",
+        "root.summaries.findings[0].description",
+        "root.summaries.health_status.explanation",
+        "root.summaries.interdependencies[0].description",
+        "root.idm.dimensions[0].description",
+        "root.idm.dimensions[1].description",
+        "root.idm.dimensions[2].description",
+        "root.idm.dimensions[3].description",
+        "root.idm.dimensions[4].description",
+        "root.idm.dimensions[5].description",
+        "root.idm.dimensions[6].description",
+        "root.idm.dimensions[7].description",
+        "root.idm.dimensions[8].description",
+        "root.idm.dimensions[9].description",
+        "root.idm.dimensions[10].description",
+        "root.idm.dimensions[11].description",
+        "root.idm.findings[0].narrative",
+        "root.idm.findings[1].narrative",
+        "root.idm.findings[2].narrative",
+        "root.idm.findings[3].narrative",
+        "root.idm.findings[4].narrative",
+        "root.idm.findings[5].narrative",
+        "root.idm.findings[6].narrative",
+        "root.idm.findings[7].narrative",
+        "root.idm.findings[8].narrative",
+        "root.idm.findings[9].narrative",
+        "root.idm.findings[10].narrative",
+        "root.idm.findings[11].narrative",
+        "root.idm.findings[12].narrative",
+        "root.idm.findings[13].narrative",
+        "root.idm.findings[14].narrative",
+        "root.idm.findings[15].narrative",
+        "root.idm.findings[16].narrative",
+        "root.idm.findings[17].narrative",
+        "root.idm.findings[18].narrative",
+        "root.idm.findings[19].narrative",
+        "root.idm.findings[20].narrative",
+        "root.idm.findings[21].narrative",
+        "root.idm.findings[22].narrative",
+        "root.idm.findings[23].narrative",
+        "root.idm.findings[24].narrative",
+        "root.idm.findings[25].narrative",
+        "root.idm.findings[26].narrative",
+        "root.idm.findings[27].narrative",
+        "root.idm.findings[28].narrative",
+        "root.idm.findings[29].narrative",
+        "root.idm.risks[0].narrative",
+        "root.idm.risks[1].narrative",
+        "root.idm.roadmap.phases[0].narrative",
+        "root.idm.roadmap.phases[1].narrative",
+        "root.idm.roadmap.phases[2].narrative"
+      ],
+      "score_fields_count": 177,
+      "sample_narratives": [
+        {
+          "path": "root.summaries.strength_summary",
+          "preview": "Customer Retention (98%) | Operational Reliability (5/5) | Compliance Excellence (4.14/5)",
+          "words": 11
+        },
+        {
+          "path": "root.summaries.challenge_summary",
+          "preview": "Cultural Dysfunction (2.0/5) | Acquisition Efficiency (1% conversion) | Profitability Gap (32% vs 42% benchmark)",
+          "words": 15
+        },
+        {
+          "path": "root.summaries.findings[0].description",
+          "preview": "Cultural dysfunction (2.0/5.0) undermining all operations",
+          "words": 6
+        },
+        {
+          "path": "root.summaries.health_status.explanation",
+          "preview": "Overall health score indicates stable - requires strategic attention organizational state",
+          "words": 11
+        },
+        {
+          "path": "root.summaries.interdependencies[0].description",
+          "preview": "Cultural health affects all organizational dimensions",
+          "words": 6
+        }
+      ]
+    }
+  },
+  "report_generation_analysis": {
+    "files_found": [
+      {
+        "path": "src/reports/report-generator.ts",
+        "size": 26988,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.description",
+          "\\.findings",
+          "\\.content(?!Type)"
+        ],
+        "reads_score_fields": [
+          "\\.score",
+          "health_score"
+        ],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/reporting/report-prompts.ts",
+        "size": 31700,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.description"
+        ],
+        "reads_score_fields": [
+          "health_score"
+        ],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/reporting/report-generator.ts",
+        "size": 48027,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.description",
+          "\\.findings"
+        ],
+        "reads_score_fields": [
+          "\\.score",
+          "health_score"
+        ],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/types/report.types.ts",
+        "size": 11201,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [],
+        "reads_score_fields": [],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/api/report-endpoints.ts",
+        "size": 15205,
+        "reads_phase_outputs": [
+          "4",
+          "4"
+        ],
+        "reads_narrative_fields": [
+          "\\.description"
+        ],
+        "reads_score_fields": [],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/risk-report.builder.ts",
+        "size": 13135,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.findings"
+        ],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/comprehensive-report.builder.ts",
+        "size": 3862,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/financial-report.builder.ts",
+        "size": 13901,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/roadmap-report.builder.ts",
+        "size": 10840,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative"
+        ],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/owners-report.builder.ts",
+        "size": 9144,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.findings"
+        ],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/deep-dive-report.builder.ts",
+        "size": 15974,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.description",
+          "\\.findings"
+        ],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/orchestration/reports/quick-wins-report.builder.ts",
+        "size": 9174,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": [
+          "html`"
+        ]
+      },
+      {
+        "path": "src/reports/report-generator.ts",
+        "size": 26988,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.description",
+          "\\.findings",
+          "\\.content(?!Type)"
+        ],
+        "reads_score_fields": [
+          "\\.score",
+          "health_score"
+        ],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/reporting/report-generator.ts",
+        "size": 48027,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.description",
+          "\\.findings"
+        ],
+        "reads_score_fields": [
+          "\\.score",
+          "health_score"
+        ],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/scripts/render-pdf.ts",
+        "size": 9451,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [],
+        "reads_score_fields": [],
+        "html_generation_patterns": []
+      },
+      {
+        "path": "src/orchestration/reports/html-template.ts",
+        "size": 31960,
+        "reads_phase_outputs": [],
+        "reads_narrative_fields": [
+          "\\.narrative",
+          "\\.description"
+        ],
+        "reads_score_fields": [
+          "\\.score"
+        ],
+        "html_generation_patterns": []
+      }
+    ],
+    "data_sources_read": [
+      "4",
+      "4"
+    ],
+    "narrative_fields_referenced": [
+      "\\.narrative",
+      "\\.description",
+      "\\.findings",
+      "\\.content(?!Type)",
+      "\\.description",
+      "\\.narrative",
+      "\\.description",
+      "\\.findings",
+      "\\.description",
+      "\\.narrative",
+      "\\.findings",
+      "\\.narrative",
+      "\\.findings",
+      "\\.narrative",
+      "\\.description",
+      "\\.findings",
+      "\\.narrative",
+      "\\.description",
+      "\\.findings",
+      "\\.content(?!Type)",
+      "\\.narrative",
+      "\\.description",
+      "\\.findings",
+      "\\.narrative",
+      "\\.description"
+    ],
+    "score_fields_referenced": [
+      "\\.score",
+      "health_score",
+      "health_score",
+      "\\.score",
+      "health_score",
+      "\\.score",
+      "\\.score",
+      "\\.score",
+      "\\.score",
+      "\\.score",
+      "\\.score",
+      "\\.score",
+      "\\.score",
+      "health_score",
+      "\\.score",
+      "health_score",
+      "\\.score"
+    ],
+    "template_analysis": {}
+  },
+  "data_flow_trace": {
+    "imports_found": [
+      {
+        "pattern": "Phase imports",
+        "count": 3,
+        "locations": [
+          {
+            "file": "src/index.ts",
+            "line": 15,
+            "match": "import { createPhase1Orchestrator } from './orches"
+          },
+          {
+            "file": "src/orchestration/phase3-orchestrator.ts",
+            "line": 18,
+            "match": "import type { Phase2Results } from './phase"
+          },
+          {
+            "file": "src/orchestration/phase2-orchestrator.ts",
+            "line": 18,
+            "match": "import type { Phase1Results } from './phase"
+          }
+        ]
+      },
+      {
+        "pattern": "Phase requires",
+        "count": 24,
+        "locations": [
+          {
+            "file": "src/phase0-index.ts",
+            "line": 260,
+            "match": "required environment variables (none required for "
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 17,
+            "match": "requires Phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 22,
+            "match": "required for Phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 206,
+            "match": "required for Phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 261,
+            "match": "required for Phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 325,
+            "match": "required for Phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 520,
+            "match": "required outputs from previous phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 721,
+            "match": "required for Phase"
+          },
+          {
+            "file": "src/reports/report-generator.ts",
+            "line": 371,
+            "match": "requirements by phase"
+          },
+          {
+            "file": "src/prompts/tier2/growth-readiness.prompts.ts",
+            "line": 398,
+            "match": "required; current cash insufficient for 6-month gr"
+          }
+        ]
+      },
+      {
+        "pattern": "Phase file reads",
+        "count": 12,
+        "locations": [
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 411,
+            "match": "readFileSync(phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 412,
+            "match": "readFileSync(phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 413,
+            "match": "readFileSync(phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 414,
+            "match": "readFileSync(phase"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 549,
+            "match": "readFileSync(phase"
+          },
+          {
+            "file": "src/orchestration/phase5-orchestrator.ts",
+            "line": 234,
+            "match": "readFile(phase"
+          },
+          {
+            "file": "src/orchestration/phase5-orchestrator.ts",
+            "line": 242,
+            "match": "readFile(phase"
+          },
+          {
+            "file": "src/orchestration/phase5-orchestrator.ts",
+            "line": 249,
+            "match": "readFile(phase"
+          },
+          {
+            "file": "src/orchestration/phase4-orchestrator.ts",
+            "line": 227,
+            "match": "readFile(phase"
+          },
+          {
+            "file": "src/orchestration/phase4-orchestrator.ts",
+            "line": 465,
+            "match": "readFile(phase"
+          }
+        ]
+      },
+      {
+        "pattern": "JSON parsing",
+        "count": 29,
+        "locations": [
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 411,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 412,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 413,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 414,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 549,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 622,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/utils/phase-consolidator.ts",
+            "line": 103,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/utils/security.ts",
+            "line": 72,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/utils/security.ts",
+            "line": 133,
+            "match": "JSON.parse"
+          },
+          {
+            "file": "src/services/raw-assessment-storage.ts",
+            "line": 395,
+            "match": "JSON.parse"
+          }
+        ]
+      },
+      {
+        "pattern": "Score extraction",
+        "count": 173,
+        "locations": [
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 361,
+            "match": "health_score"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 361,
+            "match": "health_score"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 434,
+            "match": ".score"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 434,
+            "match": "health_score"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 435,
+            "match": ".score"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 472,
+            "match": "health_score"
+          },
+          {
+            "file": "src/run-pipeline.ts",
+            "line": 472,
+            "match": ".score"
+          },
+          {
+            "file": "src/reports/report-generator.ts",
+            "line": 444,
+            "match": ".score"
+          },
+          {
+            "file": "src/reports/report-generator.ts",
+            "line": 525,
+            "match": "health_score"
+          },
+          {
+            "file": "src/reports/report-generator.ts",
+            "line": 534,
+            "match": ".score"
+          }
+        ]
+      }
+    ],
+    "data_extraction_patterns": [],
+    "html_generation_patterns": [],
+    "missing_connections": []
+  },
+  "idm_analysis": {
+    "idm_types_found": true,
+    "idm_consolidator_found": true,
+    "idm_schema": {
+      "interfaces": [
+        "QuestionMapping"
+      ]
+    },
+    "narrative_in_idm": true
+  },
+  "prompt_analysis": {
+    "prompts_found": [
+      {
+        "path": "src/prompts/tier2/growth-readiness.prompts.ts",
+        "requests_narrative": true,
+        "requests_json": true,
+        "output_instructions": [
+          "detailed\\s+analysis"
+        ]
+      },
+      {
+        "path": "src/prompts/tier2/risk-resilience.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier2/scalability-readiness.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier2/resource-optimization.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier2/market-position.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier1/operational-excellence.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier1/revenue-engine.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier1/compliance-sustainability.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier1/financial-strategic.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/prompts/tier1/people-leadership.prompts.ts",
+        "requests_narrative": false,
+        "requests_json": true,
+        "output_instructions": []
+      },
+      {
+        "path": "src/reporting/report-prompts.ts",
+        "requests_narrative": true,
+        "requests_json": true,
+        "output_instructions": [
+          "detailed\\s+analysis"
+        ]
+      }
+    ],
+    "output_format_requested": [],
+    "narrative_instructions": []
+  },
+  "root_cause_determination": {
+    "primary_cause": "CONTENT_EXISTS_NOT_CONSUMED",
+    "evidence": [
+      "Found 27,783 words of narrative content in phase outputs"
+    ],
+    "confidence": "MEDIUM",
+    "hypothesis_scores": {
+      "CONTENT_EXISTS_NOT_CONSUMED": {
+        "score": 40,
+        "evidence": [
+          "Found 27,783 words of narrative content in phase outputs"
+        ]
+      },
+      "CONTENT_NOT_GENERATED": {
+        "score": 0,
+        "evidence": []
+      },
+      "IDM_EXCLUDES_NARRATIVES": {
+        "score": 0,
+        "evidence": []
+      },
+      "TEMPLATE_NO_PLACEHOLDERS": {
+        "score": 0,
+        "evidence": []
+      }
+    }
+  },
+  "content_inventory": {
+    "total_narrative_words_available": 27783,
+    "total_narrative_chars_available": 199537,
+    "narrative_by_phase": {
+      "phase0": 918,
+      "phase1": 9746,
+      "phase2": 7317,
+      "phase3": 9190,
+      "phase4": 612
+    },
+    "content_sufficient_for_reports": true
+  },
+  "recommendations": [
+    "Modify report generator to read analysis_text/narrative fields from phase outputs",
+    "Add template placeholders for narrative content in each report section",
+    "Create mapping between phase analysis fields and report sections"
+  ]
+}

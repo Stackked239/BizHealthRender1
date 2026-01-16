@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T18:22:15.789Z",
+    "submission_id": "i9j0k1l2-m3n4-5678-ijkl-mn9012345678",
+    "created_at": "2025-11-29 16:15:42.789012+00",
+    "business_overview": {
+        "company_name": "ProBalance CPA Group",
+        "location": "Charlotte NC",
+        "country": "United States",
+        "company_website": "probalancecpa.com",
+        "industry": "professional_scientific_technical_services",
+        "industry_other_details": "Full-service accounting and tax preparation firm serving SMBs",
+        "corporate_structure": "professional_corporation",
+        "year_started": 1998,
+        "multiple_locations": true,
+        "number_of_locations": 3,
+        "executive_leadership_roles": 4,
+        "support_admin_staff": 22,
+        "full_time_employees": 38,
+        "part_time_employees": 8,
+        "contract_temp_personnel": 15,
+        "seasonal_employees": 25,
+        "last_year_revenue": 5400000,
+        "projected_revenue": 5850000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 5400000,
+        "products_services": [
+            {
+                "name": "Tax Preparation & Planning",
+                "percentage": 45,
+                "type": "service"
+            },
+            {
+                "name": "Audit & Assurance",
+                "percentage": 30,
+                "type": "service"
+            },
+            {
+                "name": "Advisory Services",
+                "percentage": 25,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "human_resources",
+            "technology",
+            "sales"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Dixon Hughes Goodman",
+                "website": "https://dhg.com"
+            },
+            {
+                "direct_competitor": false,
+                "name": "BDO USA",
+                "website": "https://bdo.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 9,
+        "sales_growth_past_year": 6,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 10,
+        "business_goals_plan": 4,
+        "goals_barriers": null,
+        "business_plan_review": 3,
+        "growth_exit_plan": 4
+    },
+    "sales": {
+        "b2b_percentage": 100,
+        "b2c_percentage": null,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": null,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 4,
+        "average_sales_cycle_days": 60,
+        "no_sales_cycle": false,
+        "close_rate": 48,
+        "no_customer_interaction": false,
+        "average_sale_size": 28000,
+        "repeat_sales_percentage": 92,
+        "upselling_focus": 4,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 4,
+        "current_marketing_channels": "Referrals, Networking Events, Website, LinkedIn",
+        "future_marketing_channels": "Content Marketing, Email Campaigns",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 3200,
+        "cac_unknown": false,
+        "customer_lifetime_value": 125000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 28,
+        "marketing_roi": 9.5,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 8500
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 4,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 4,
+        "competitive_strength": 4,
+        "issue_resolution": 5,
+        "response_time_hours": 4
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": "Seasonal workload spikes",
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": null,
+        "no_inventory": true,
+        "operational_reliability": 5,
+        "lean_principles": 4,
+        "space_utilization": 75,
+        "equipment_utilization": 80,
+        "personnel_utilization": 85
+    },
+    "financials": {
+        "total_debt_liabilities": 850000,
+        "total_working_capital": 1200000,
+        "debt_monitoring": 5,
+        "current_cash_available": 980000,
+        "near_term_expenses": 450000,
+        "cash_runway_months": 20,
+        "gross_profit_margin": 48,
+        "monthly_profit_estimate": 155000,
+        "profit_is_estimate": false,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 5,
+        "budgeting_financial_planning": 5,
+        "financial_readiness_growth": 4,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 4,
+        "company_culture": 4,
+        "recruiting_onboarding": 3,
+        "training_development": 4,
+        "training_resources_needed": "Technology training, client service skills",
+        "employee_turnover_rate": 24,
+        "employee_engagement": 4,
+        "performance_management": 4
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 4,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 4,
+        "development_mentorship": 4
+    },
+    "technology": {
+        "technology_investment": 185000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 40,
+        "innovation_culture": 3,
+        "emerging_technologies": 3,
+        "technology_adoption": 4,
+        "automation_utilization": 4,
+        "innovation_impact": 4
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 4,
+        "network_effectiveness": 4,
+        "cybersecurity": 5,
+        "data_management": 5,
+        "data_governance": 5,
+        "it_scalability": 4,
+        "it_support_maintenance": 4
+    },
+    "risk_management": {
+        "overall_risk_outlook": 4,
+        "specific_risks_concern": null,
+        "risk_identification_review": 5,
+        "risk_mitigation": 5,
+        "contingency_plans": 4,
+        "financial_resilience": 4,
+        "operational_continuity": 5,
+        "succession_leadership_stability": 4,
+        "strategic_adaptability": 4,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 5,
+        "training_completion": 5,
+        "compliance_monitoring": 5,
+        "regulatory_updates": 5,
+        "compliance_documentation": 5,
+        "incident_reporting": 5,
+        "compliance_costs": 225000,
+        "compliance_cost_estimate": false
+    }
+}

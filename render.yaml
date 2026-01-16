@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: bizhealth-pipeline-worker
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run worker
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: POLL_INTERVAL_MS
+        value: "10000"
+      - key: DEFAULT_MODEL
+        value: claude-opus-4-20250514

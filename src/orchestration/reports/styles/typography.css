@@ -1,0 +1,328 @@
+/* ============================================
+   BIZHEALTH.AI VISUAL COMPONENTS - TYPOGRAPHY
+   Professional business/consulting typography system
+   Montserrat for headings, Open Sans for body
+   ============================================ */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* ===== FONT FAMILY DEFINITIONS ===== */
+:root {
+  --biz-font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --biz-font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --biz-font-mono: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', monospace;
+}
+
+/* ===== REPORT TITLE (Cover Page) ===== */
+.biz-title {
+  font-family: var(--biz-font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--biz-navy);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.biz-title--xl {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.biz-title--lg {
+  font-size: 36px;
+}
+
+/* ===== SECTION HEADERS ===== */
+.biz-section-header {
+  font-family: var(--biz-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--biz-navy);
+  line-height: 1.3;
+  margin: 0 0 var(--biz-space-md) 0;
+}
+
+.biz-section-header--lg {
+  font-size: 24px;
+}
+
+/* ===== SUBSECTION HEADERS ===== */
+.biz-subsection-header {
+  font-family: var(--biz-font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--biz-text-primary);
+  line-height: 1.4;
+  margin: 0 0 var(--biz-space-sm) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== COMPONENT TITLES ===== */
+.biz-component-title {
+  font-family: var(--biz-font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--biz-navy);
+  line-height: 1.3;
+  margin: 0 0 var(--biz-space-sm) 0;
+}
+
+/* ===== BODY TEXT ===== */
+.biz-body {
+  font-family: var(--biz-font-body);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--biz-text-primary);
+  line-height: 1.6;
+}
+
+.biz-body--large {
+  font-size: 14px;
+}
+
+.biz-body--small {
+  font-size: 11px;
+}
+
+.biz-body--emphasis {
+  font-weight: 600;
+  color: var(--biz-navy);
+}
+
+/* ===== LABELS ===== */
+.biz-label {
+  font-family: var(--biz-font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--biz-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.biz-label--lg {
+  font-size: 11px;
+}
+
+.biz-label--dark {
+  color: var(--biz-navy);
+}
+
+/* ===== SCORE DISPLAY ===== */
+.biz-score {
+  font-family: var(--biz-font-heading);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--biz-navy);
+}
+
+.biz-score--xl {
+  font-size: 48px;
+}
+
+.biz-score--lg {
+  font-size: 36px;
+}
+
+.biz-score--md {
+  font-size: 28px;
+}
+
+.biz-score--sm {
+  font-size: 20px;
+}
+
+.biz-score--xs {
+  font-size: 16px;
+}
+
+/* Score with color modifiers */
+.biz-score--excellence { color: var(--biz-excellent); }
+.biz-score--proficiency { color: var(--biz-proficiency); }
+.biz-score--attention { color: var(--biz-attention); }
+.biz-score--critical { color: var(--biz-critical); }
+
+/* ===== CHART TYPOGRAPHY ===== */
+.biz-chart-title {
+  font-family: var(--biz-font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--biz-text-primary);
+  margin-bottom: var(--biz-space-sm);
+}
+
+.biz-chart-subtitle {
+  font-family: var(--biz-font-body);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--biz-text-secondary);
+}
+
+.biz-chart-label {
+  font-family: var(--biz-font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--biz-text-secondary);
+}
+
+.biz-chart-value {
+  font-family: var(--biz-font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--biz-text-primary);
+}
+
+.biz-chart-axis {
+  font-family: var(--biz-font-body);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--biz-text-muted);
+}
+
+/* ===== TABLE TYPOGRAPHY ===== */
+.biz-table-header {
+  font-family: var(--biz-font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--biz-text-inverse);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.biz-table-cell {
+  font-family: var(--biz-font-body);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--biz-text-primary);
+}
+
+.biz-table-cell--emphasis {
+  font-weight: 600;
+  color: var(--biz-navy);
+}
+
+/* ===== STATUS LABELS ===== */
+.biz-status-label {
+  font-family: var(--biz-font-body);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.biz-status-label--excellence {
+  color: var(--biz-excellent-text);
+}
+
+.biz-status-label--proficiency {
+  color: var(--biz-proficiency-text);
+}
+
+.biz-status-label--attention {
+  color: var(--biz-attention-text);
+}
+
+.biz-status-label--critical {
+  color: var(--biz-critical-text);
+}
+
+/* ===== TREND INDICATORS ===== */
+.biz-trend {
+  font-family: var(--biz-font-body);
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.biz-trend--up {
+  color: var(--biz-excellent);
+}
+
+.biz-trend--down {
+  color: var(--biz-critical);
+}
+
+.biz-trend--flat {
+  color: var(--biz-neutral);
+}
+
+/* ===== ACCESSIBILITY SYMBOLS ===== */
+.biz-a11y-symbol {
+  font-family: var(--biz-font-body);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.biz-a11y-symbol--check::before { content: '✓'; }
+.biz-a11y-symbol--warning::before { content: '!'; }
+.biz-a11y-symbol--alert::before { content: '⚠'; }
+.biz-a11y-symbol--critical::before { content: '✗'; }
+
+/* ===== UTILITY CLASSES ===== */
+.biz-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.biz-text-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.biz-text-center { text-align: center; }
+.biz-text-left { text-align: left; }
+.biz-text-right { text-align: right; }
+
+.biz-text-uppercase { text-transform: uppercase; }
+.biz-text-capitalize { text-transform: capitalize; }
+
+.biz-text-nowrap { white-space: nowrap; }
+
+/* ===== PRINT TYPOGRAPHY ===== */
+@media print {
+  .biz-title {
+    font-size: 28pt;
+  }
+
+  .biz-title--xl {
+    font-size: 32pt;
+  }
+
+  .biz-section-header {
+    font-size: 16pt;
+  }
+
+  .biz-body {
+    font-size: 10pt;
+  }
+
+  .biz-body--large {
+    font-size: 11pt;
+  }
+
+  .biz-score--xl {
+    font-size: 36pt;
+  }
+
+  .biz-score--lg {
+    font-size: 28pt;
+  }
+
+  .biz-score--md {
+    font-size: 20pt;
+  }
+
+  .biz-label {
+    font-size: 8pt;
+  }
+
+  .biz-chart-label,
+  .biz-chart-axis {
+    font-size: 8pt;
+  }
+}

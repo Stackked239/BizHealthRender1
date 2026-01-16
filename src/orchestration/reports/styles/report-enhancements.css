@@ -1,0 +1,1069 @@
+/* ============================================
+   BIZHEALTH.AI CONTENT QUALITY ENHANCEMENTS
+   Transforms monochrome reports into visually engaging,
+   evidence-based consulting deliverables
+   ============================================ */
+
+/* KEY TAKEAWAYS BOX */
+.key-takeaways {
+  background: linear-gradient(135deg, #212653 0%, #2a3366 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(33, 38, 83, 0.3);
+}
+
+.key-takeaways .takeaway-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid rgba(150, 148, 35, 0.5);
+  padding-bottom: 0.75rem;
+}
+
+.key-takeaways .takeaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+}
+
+.key-takeaways .takeaway-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.key-takeaways .takeaway-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* EVIDENCE CITATION BLOCKS */
+.evidence-citation {
+  background: #f8f9fa;
+  border-left: 4px solid #969423;
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.evidence-citation .citation-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #212653;
+  margin-bottom: 0.5rem;
+}
+
+.evidence-citation .citation-icon {
+  color: #969423;
+}
+
+.evidence-citation .question-ref {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.evidence-citation .response-text {
+  color: #333;
+  font-style: italic;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #ddd;
+}
+
+.evidence-citation .benchmark-comparison {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+}
+
+.evidence-citation .benchmark-comparison.above {
+  color: #28a745;
+}
+
+.evidence-citation .benchmark-comparison.below {
+  color: #dc3545;
+}
+
+.evidence-citation .benchmark-comparison.at {
+  color: #6c757d;
+}
+
+/* BENCHMARK CALLOUT BOXES */
+.benchmark-callout {
+  background: #e7f3ff;
+  border: 1px solid #b8daff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.benchmark-callout .benchmark-icon {
+  font-size: 2rem;
+  color: #212653;
+}
+
+.benchmark-callout .benchmark-content {
+  flex: 1;
+}
+
+.benchmark-callout .benchmark-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.benchmark-callout .benchmark-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.benchmark-callout .benchmark-context {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* COLOR-CODED INSIGHT CARDS */
+.insight-card {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  border-left: 4px solid;
+}
+
+.insight-card.strength {
+  background: #d4edda;
+  border-left-color: #28a745;
+}
+
+.insight-card.strength .insight-label { color: #155724; }
+
+.insight-card.weakness {
+  background: #f8d7da;
+  border-left-color: #dc3545;
+}
+
+.insight-card.weakness .insight-label { color: #721c24; }
+
+.insight-card.opportunity {
+  background: #cce5ff;
+  border-left-color: #0d6efd;
+}
+
+.insight-card.opportunity .insight-label { color: #004085; }
+
+.insight-card.warning {
+  background: #fff3cd;
+  border-left-color: #ffc107;
+}
+
+.insight-card.warning .insight-label { color: #856404; }
+
+.insight-card .insight-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.insight-card .insight-title {
+  font-weight: 600;
+  color: #212653;
+  margin-bottom: 0.5rem;
+}
+
+.insight-card .insight-detail {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* SECTION VISUAL ENHANCEMENTS */
+.section-highlight {
+  background: linear-gradient(to right, #f8f9fa 0%, #fff 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.dimension-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dimension-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #212653;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* SCORE VISUALIZATION ENHANCEMENTS */
+.score-bar-container {
+  background: #e9ecef;
+  border-radius: 12px;
+  height: 24px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.75rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: width 0.3s ease;
+}
+
+.score-bar-fill.critical { background: linear-gradient(90deg, #dc3545, #e4606d); }
+.score-bar-fill.attention { background: linear-gradient(90deg, #ffc107, #ffcd39); color: #333; }
+.score-bar-fill.proficiency { background: linear-gradient(90deg, #969423, #b0ad2e); }
+.score-bar-fill.excellence { background: linear-gradient(90deg, #28a745, #34ce57); }
+
+/* CHAPTER SECTION ENHANCEMENTS */
+.chapter-header-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #969423;
+}
+
+.chapter-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #212653 0%, #2a3366 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(33, 38, 83, 0.3);
+}
+
+.chapter-title-group {
+  flex: 1;
+}
+
+.chapter-title-group h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #212653;
+}
+
+.chapter-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* FINDING TYPE LABELS */
+.finding-type-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.finding-type-label.strength {
+  background: #d4edda;
+  color: #155724;
+}
+
+.finding-type-label.gap {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.finding-type-label.risk {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.finding-type-label.opportunity {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* EXECUTIVE SUMMARY ENHANCEMENTS */
+.executive-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.highlight-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  border-top: 4px solid #212653;
+}
+
+.highlight-card .highlight-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card .highlight-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight-card .highlight-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .executive-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benchmark-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .key-takeaways .takeaway-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* PRINT OPTIMIZATIONS FOR NEW ELEMENTS */
+@media print {
+  .key-takeaways {
+    background: #212653 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .evidence-citation {
+    border-left-color: #969423 !important;
+    background: #f8f9fa !important;
+  }
+
+  .insight-card {
+    page-break-inside: avoid;
+  }
+
+  .insight-card.strength {
+    background: #d4edda !important;
+    border-left-color: #28a745 !important;
+  }
+
+  .insight-card.weakness {
+    background: #f8d7da !important;
+    border-left-color: #dc3545 !important;
+  }
+
+  .insight-card.opportunity {
+    background: #cce5ff !important;
+    border-left-color: #0d6efd !important;
+  }
+
+  .insight-card.warning {
+    background: #fff3cd !important;
+    border-left-color: #ffc107 !important;
+  }
+
+  .benchmark-callout {
+    page-break-inside: avoid;
+    background: #e7f3ff !important;
+  }
+
+  .chapter-icon,
+  .dimension-icon {
+    background: #212653 !important;
+  }
+
+  .score-bar-fill.critical { background: #dc3545 !important; }
+  .score-bar-fill.attention { background: #ffc107 !important; }
+  .score-bar-fill.proficiency { background: #969423 !important; }
+  .score-bar-fill.excellence { background: #28a745 !important; }
+
+  .executive-highlights {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .highlight-card {
+    border-top-color: #212653 !important;
+  }
+}
+
+/* ================================================================
+   OPUS 4.5 MARKDOWN ELEMENT STYLING
+   Added 2025-12-02 to support rich markdown output from Claude Opus 4.5
+   Handles: tables, code blocks, ASCII art, blockquotes, section dividers
+   ================================================================ */
+
+/* Responsive Table Container */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bh-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 400px;
+  background: #fff;
+}
+
+.bh-table th {
+  background: #212653;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.bh-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+  color: #333;
+}
+
+.bh-table tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.bh-table tr:hover {
+  background: #f0f4f8;
+}
+
+/* First column styling for labels */
+.bh-table td:first-child {
+  font-weight: 500;
+  color: #212653;
+}
+
+/* ASCII Visualization Container */
+.visual-framework {
+  background: #212653;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(33, 38, 83, 0.2);
+}
+
+.ascii-viz {
+  color: #e8e8e8;
+  font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  white-space: pre;
+  margin: 0;
+  overflow-x: auto;
+}
+
+/* Preserve ASCII art on smaller screens */
+.visual-framework::-webkit-scrollbar {
+  height: 8px;
+}
+
+.visual-framework::-webkit-scrollbar-track {
+  background: #1a1e40;
+  border-radius: 4px;
+}
+
+.visual-framework::-webkit-scrollbar-thumb {
+  background: #969423;
+  border-radius: 4px;
+}
+
+/* Regular Code Block */
+.bh-code {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+}
+
+.bh-code code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Blockquote/Callout */
+.bh-callout {
+  background: #f8f9fa;
+  border-left: 4px solid #969423;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #555;
+  border-radius: 0 8px 8px 0;
+}
+
+.bh-callout p {
+  margin: 0;
+}
+
+.bh-callout strong {
+  color: #212653;
+}
+
+/* Section Divider */
+.bh-section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #212653, #969423, #212653);
+  margin: 2rem 0;
+}
+
+/* Typography Classes for Markdown Elements */
+.bh-h1 {
+  font-size: 2rem;
+  color: #212653;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+  border-bottom: 3px solid #969423;
+  padding-bottom: 0.5rem;
+}
+
+.bh-h2 {
+  font-size: 1.5rem;
+  color: #212653;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+  border-bottom: 2px solid #969423;
+  padding-bottom: 0.5rem;
+}
+
+.bh-h3 {
+  font-size: 1.25rem;
+  color: #212653;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+}
+
+.bh-h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.bh-h5 {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.bh-h6 {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.bh-p {
+  margin: 1em 0;
+  line-height: 1.7;
+  color: #333;
+}
+
+.bh-ul,
+.bh-ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.bh-li {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+.bh-empty {
+  color: #999;
+  font-style: italic;
+}
+
+.bh-strong {
+  color: #212653;
+  font-weight: 600;
+}
+
+.bh-em {
+  font-style: italic;
+}
+
+/* Responsive Print Styles for Markdown Elements */
+@media print {
+  .visual-framework {
+    background: #212653 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    page-break-inside: avoid;
+  }
+
+  .ascii-viz {
+    color: #e8e8e8 !important;
+    font-size: 0.65rem;
+  }
+
+  .bh-table th {
+    background: #212653 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bh-table tr:nth-child(even) {
+    background: #f8f9fa !important;
+  }
+
+  .table-responsive {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .bh-section-divider {
+    background: #212653 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bh-callout {
+    border-left-color: #969423 !important;
+    background: #f8f9fa !important;
+    page-break-inside: avoid;
+  }
+
+  .bh-code {
+    page-break-inside: avoid;
+    background: #f8f9fa !important;
+  }
+
+  .bh-h1,
+  .bh-h2 {
+    page-break-after: avoid;
+    border-bottom-color: #969423 !important;
+  }
+}
+
+/* ================================================================
+   BIZHEALTH OWNER'S REPORT ENHANCEMENT STYLES
+   BizNavy: #212653 | BizGreen: #969423
+   ================================================================ */
+
+/* ================================================================
+   REPORT RELATIONSHIP NOTICE (Comprehensive Report)
+   ================================================================ */
+
+.report-relationship-notice {
+  display: flex;
+  gap: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  border-left: 4px solid #212653;
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.report-relationship-notice .notice-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.report-relationship-notice .notice-content {
+  flex: 1;
+}
+
+.report-relationship-notice .notice-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.report-relationship-notice .notice-content p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.report-relationship-notice strong {
+  color: #212653;
+}
+
+/* ================================================================
+   COMPREHENSIVE REPORT REFERENCE CALLOUTS (Owner's Report)
+   ================================================================ */
+
+.comprehensive-reference {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border-left: 3px solid #969423;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.comprehensive-reference .ref-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.comprehensive-reference .ref-text {
+  color: #555;
+}
+
+.comprehensive-reference .ref-text strong {
+  color: #212653;
+}
+
+.comprehensive-reference .ref-text em {
+  color: #969423;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Debug mode - missing reference styling */
+.comprehensive-reference.reference-missing {
+  border-left-color: #dc3545;
+  background: #fff5f5;
+}
+
+.comprehensive-reference.reference-missing .ref-text {
+  color: #dc3545;
+}
+
+/* Inline reference */
+.inline-ref {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.inline-ref em {
+  color: #969423;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ================================================================
+   OWNER SECTION HEADERS
+   ================================================================ */
+
+.owner-section-header {
+  margin-bottom: 1.5rem;
+}
+
+.owner-section-header h2 {
+  margin-bottom: 0.5rem;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.owner-question {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  padding-left: 0.5rem;
+  border-left: 3px solid #969423;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.owner-question .question-icon {
+  font-size: 1.1rem;
+}
+
+.owner-question em {
+  font-style: italic;
+}
+
+/* ================================================================
+   OWNER IMPLICATIONS GRID
+   ================================================================ */
+
+.owner-implications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.implication-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.implication-card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.implication-card .card-title {
+  font-weight: 600;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.implication-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.implication-card.growth { border-top: 3px solid #28a745; }
+.implication-card.risk { border-top: 3px solid #dc3545; }
+.implication-card.value { border-top: 3px solid #969423; }
+
+/* ================================================================
+   FINANCIAL SUMMARY GRID
+   ================================================================ */
+
+.financial-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.financial-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.financial-card.highlight {
+  background: linear-gradient(135deg, #212653 0%, #2d3a7a 100%);
+  color: #fff;
+  border: none;
+}
+
+.financial-card .card-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.financial-card.highlight .card-label {
+  color: rgba(255,255,255,0.8);
+}
+
+.financial-card .card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.financial-card.highlight .card-value {
+  color: #fff;
+}
+
+.financial-card .card-sublabel {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.financial-card.highlight .card-sublabel {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ================================================================
+   BUNDLE CONTENTS
+   ================================================================ */
+
+.bundle-contents {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.bundle-contents h3 {
+  margin: 0 0 1rem 0;
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.bundle-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.bundle-item.primary {
+  border-left: 3px solid #212653;
+}
+
+.bundle-item strong {
+  color: #212653;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bundle-item span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ================================================================
+   REFERENCE TABLE
+   ================================================================ */
+
+.reference-table td:first-child {
+  font-weight: 500;
+}
+
+.reference-table em {
+  color: #969423;
+  font-style: normal;
+}
+
+/* ================================================================
+   OWNER REPORT RESPONSIVE ADJUSTMENTS
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .owner-implications-grid,
+  .financial-summary-grid,
+  .bundle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-relationship-notice {
+    flex-direction: column;
+  }
+}
+
+/* ================================================================
+   OWNER REPORT PRINT OPTIMIZATIONS
+   ================================================================ */
+
+@media print {
+  .owner-implications-grid,
+  .financial-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bundle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .financial-card.highlight {
+    background: #212653 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .comprehensive-reference {
+    background: #f8f9fa !important;
+    border-left-color: #969423 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .report-relationship-notice {
+    background: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .implication-card.growth {
+    border-top-color: #28a745 !important;
+  }
+
+  .implication-card.risk {
+    border-top-color: #dc3545 !important;
+  }
+
+  .implication-card.value {
+    border-top-color: #969423 !important;
+  }
+}

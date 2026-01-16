@@ -1,0 +1,431 @@
+{
+  "report_id": "owners",
+  "name": "Owner's Business Health Report",
+  "version": "1.0.0",
+  "primary_audience": "owner",
+  "description": "Strategic overview designed for business owners with focus on overall health, key imperatives, ROI, and actionable next steps.",
+  "target_page_range": {
+    "min": 15,
+    "max": 25
+  },
+  "brand_config": {
+    "primary_color": "#212653",
+    "accent_color": "#969423",
+    "font_heading": "Montserrat",
+    "font_body": "Open Sans"
+  },
+  "default_tone_tags": ["executive", "strategic", "action_oriented"],
+  "sections": [
+    {
+      "id": "cover",
+      "title": "Business Health Assessment",
+      "description": "Cover page with health score and company information",
+      "data_sources": [
+        { "id": "meta", "from": "meta" },
+        { "id": "health_score", "from": "scores_summary.overall_health_score" },
+        { "id": "descriptor", "from": "scores_summary.descriptor" }
+      ],
+      "visual_type": "score_tile",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "executive_summary",
+      "title": "Executive Summary",
+      "description": "One-page strategic overview of business health",
+      "data_sources": [
+        { "id": "scores_summary", "from": "scores_summary" },
+        { "id": "key_imperatives", "from": "scores_summary.key_imperatives" },
+        { "id": "top_recommendations", "from": "recommendations", "sort": { "field": "priority_rank", "direction": "asc" }, "limit": 3 }
+      ],
+      "tone_tags": ["executive", "summary"],
+      "visual_type": "narrative",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "health_dashboard",
+      "title": "Business Health Dashboard",
+      "description": "Visual scorecard across all 4 chapters and 12 dimensions",
+      "data_sources": [
+        { "id": "chapters", "from": "chapters" },
+        { "id": "dimensions", "from": "dimensions" }
+      ],
+      "tone_tags": ["analytical"],
+      "visual_type": "radar_chart",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "critical_findings",
+      "title": "Critical Findings",
+      "description": "Top 5-7 findings requiring owner attention",
+      "data_sources": [
+        { "id": "critical", "from": "findings", "filters": [{ "type": "risk" }], "sort": { "field": "severity", "direction": "desc" }, "limit": 5 },
+        { "id": "gaps", "from": "findings", "filters": [{ "type": "gap" }], "limit": 2 }
+      ],
+      "tone_tags": ["urgent", "executive"],
+      "visual_type": "callout_box",
+      "layout_hints": { "highlight_threshold": 40 }
+    },
+    {
+      "id": "strengths",
+      "title": "Competitive Strengths",
+      "description": "Areas of excellence and competitive advantage",
+      "data_sources": [
+        { "id": "strengths", "from": "findings", "filters": [{ "type": "strength" }], "limit": 5 }
+      ],
+      "tone_tags": ["motivational", "summary"],
+      "visual_type": "bullet_list"
+    },
+    {
+      "id": "strategic_priorities",
+      "title": "Strategic Priorities",
+      "description": "Top strategic imperatives with expected impact",
+      "data_sources": [
+        { "id": "recommendations", "from": "recommendations", "sort": { "field": "priority_rank", "direction": "asc" }, "limit": 5 }
+      ],
+      "tone_tags": ["strategic", "action_oriented"],
+      "visual_type": "numbered_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "quick_wins",
+      "title": "Quick Wins: 30-Day Actions",
+      "description": "Immediate high-impact actions for the next 30 days",
+      "data_sources": [
+        { "id": "quick_wins", "from": "quick_wins" },
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "field": "horizon", "operator": "eq", "value": "90_days" }], "limit": 5 }
+      ],
+      "tone_tags": ["action_oriented", "urgent"],
+      "visual_type": "checklist",
+      "layout_hints": { "show_score_badge": true }
+    },
+    {
+      "id": "risk_summary",
+      "title": "Risk Summary",
+      "description": "Key business risks requiring attention",
+      "data_sources": [
+        { "id": "risks", "from": "risks", "sort": { "field": "severity", "direction": "desc" }, "limit": 5 }
+      ],
+      "tone_tags": ["executive", "urgent"],
+      "visual_type": "table",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "roadmap_overview",
+      "title": "Implementation Roadmap",
+      "description": "High-level phased approach to improvement",
+      "data_sources": [
+        { "id": "roadmap", "from": "roadmap.phases" }
+      ],
+      "tone_tags": ["strategic"],
+      "visual_type": "timeline"
+    },
+    {
+      "id": "next_steps",
+      "title": "Recommended Next Steps",
+      "description": "Immediate actions and engagement recommendations",
+      "data_sources": [
+        { "id": "top_recs", "from": "recommendations", "limit": 3 },
+        { "id": "quick_wins", "from": "quick_wins" }
+      ],
+      "tone_tags": ["action_oriented", "directive"],
+      "visual_type": "numbered_list",
+      "layout_hints": { "page_break_before": true }
+    }
+  ],
+  "visuals": {
+    "version": "1.1.0",
+    "schema_version": "2025-06-01",
+
+    "global_settings": {
+      "brand_colors": true,
+      "accessibility_symbols": true,
+      "print_optimized": true,
+      "show_benchmarks": true,
+      "style_modifiers": {
+        "friendly_language": false,
+        "celebratory_style": false,
+        "action_oriented": true,
+        "simple_style": false
+      },
+      "jsonpath_config": {
+        "library": "jsonpath-plus",
+        "strict_mode": false,
+        "log_path_resolution": false,
+        "null_handling": "use_default"
+      }
+    },
+
+    "data_requirements": {
+      "required_fields": [
+        { "path": "$.scores_summary.overall_health_score", "type": "number", "validation": "0-100" },
+        { "path": "$.chapters", "type": "array", "min_length": 4 }
+      ],
+      "optional_fields": [
+        { "path": "$.roadmap.expected_roi_percentage", "type": "number", "default": null, "display_default": "Analysis pending", "hide_component_if_null": false },
+        { "path": "$.roadmap.total_estimated_investment", "type": "number", "default": null, "display_default": "TBD", "hide_component_if_null": false },
+        { "path": "$.quick_wins", "type": "array", "default": [], "min_items_to_render": 1 },
+        { "path": "$.benchmark_data.industry_benchmark", "type": "object", "default": null, "hide_component_if_null": true }
+      ],
+      "validation_mode": "warn"
+    },
+
+    "print_configuration": {
+      "stylesheet_reference": "/styles/print.css",
+      "page_settings": {
+        "size": "letter",
+        "orientation": "portrait",
+        "margins": { "top": "0.5in", "right": "0.5in", "bottom": "0.75in", "left": "0.5in" }
+      },
+      "component_rules": {
+        "gauge": { "break_inside": "avoid", "print_size": "medium", "max_width": "150px" },
+        "heatmap": { "break_inside": "avoid", "force_new_page": false },
+        "score_tile": { "break_inside": "avoid", "print_size": "compact" },
+        "table": { "break_inside": "avoid-page", "max_rows_per_page": 25, "repeat_header": true },
+        "bar_chart": { "break_inside": "avoid", "print_grayscale_fallback": true },
+        "radar_chart": { "break_inside": "avoid", "print_size": "medium" },
+        "roadmap_timeline": { "break_before": "auto", "print_orientation": "landscape_if_wide" },
+        "action_card": { "break_inside": "avoid", "max_per_page": 3 },
+        "kpi_dashboard": { "break_inside": "avoid", "print_columns": 2 },
+        "metric_card": { "break_inside": "avoid", "print_size": "compact" }
+      },
+      "color_handling": {
+        "force_color_print": true,
+        "webkit_print_color_adjust": "exact",
+        "fallback_patterns": true,
+        "high_contrast_mode": false
+      }
+    },
+
+    "performance_budgets": {
+      "components": {
+        "per_report": { "warning_threshold": 35, "error_threshold": 45, "action_on_exceed": "log_warning" },
+        "per_section": { "warning_threshold": 8, "error_threshold": 12, "action_on_exceed": "log_warning" }
+      },
+      "rendering": {
+        "target_time_ms": 3000,
+        "warning_time_ms": 5000,
+        "max_time_ms": 8000,
+        "lazy_load_threshold": 20,
+        "progressive_rendering": true
+      },
+      "output": {
+        "max_file_size_kb": 2000,
+        "warning_file_size_kb": 1500,
+        "max_embedded_images": 15,
+        "image_compression": "medium",
+        "image_format": "png"
+      },
+      "validation": {
+        "enforce_budgets": true,
+        "log_violations": true,
+        "fail_on_error_threshold": false,
+        "include_in_report_metadata": true
+      }
+    },
+
+    "benchmark_configuration": {
+      "primary_source": "$.benchmark_data.industry_benchmark",
+      "fallback_sources": [
+        "$.benchmark_data.peer_comparison",
+        "$.benchmark_data.revenue_cohort"
+      ],
+      "fallback_display": {
+        "text": "Industry benchmark unavailable",
+        "show_placeholder": true,
+        "hide_benchmark_components": false
+      },
+      "display_settings": {
+        "show_percentile_rank": true,
+        "show_cohort_context": true,
+        "benchmark_label": "Industry Avg",
+        "delta_format": "+X% vs benchmark",
+        "percentile_bands": {
+          "top_quartile": 75,
+          "median": 50,
+          "bottom_quartile": 25
+        }
+      },
+      "comparison_type": "industry",
+      "source_documentation": "Phase 0 benchmark-service.ts retrieves from /data/benchmarks/"
+    },
+
+    "accessibility_requirements": {
+      "compliance_level": "WCAG_2.1_AA",
+      "validation_required": true,
+      "validation_tools": ["axe-core", "WAVE"],
+      "color_requirements": {
+        "min_contrast_normal_text": 4.5,
+        "min_contrast_large_text": 3.0,
+        "min_contrast_ui_components": 3.0,
+        "colorblind_safe": true,
+        "never_color_alone": true,
+        "status_symbols": {
+          "excellence": { "symbol": "✓", "aria_label": "Excellent performance" },
+          "proficiency": { "symbol": "!", "aria_label": "Good performance" },
+          "attention": { "symbol": "⚠", "aria_label": "Needs attention" },
+          "critical": { "symbol": "✗", "aria_label": "Critical issue" }
+        }
+      },
+      "screen_reader_requirements": {
+        "all_charts_have_aria_label": true,
+        "provide_data_tables_for_charts": true,
+        "logical_heading_hierarchy": true,
+        "skip_links_enabled": true,
+        "meaningful_link_text": true
+      },
+      "keyboard_requirements": {
+        "all_interactive_focusable": true,
+        "visible_focus_indicators": true,
+        "logical_tab_order": true,
+        "no_keyboard_traps": true
+      }
+    },
+
+    "components": [
+      {
+        "type": "gauge",
+        "id": "overall_health_gauge",
+        "section": "cover",
+        "order": 1,
+        "config": { "size": "large", "show_status": true, "show_benchmark": true, "animation": false },
+        "data_binding": {
+          "primary_path": "$.scores_summary.overall_health_score",
+          "fallback_path": null,
+          "default_value": 0,
+          "label": "Your Business Health Score",
+          "benchmark_path": "$.benchmark_data.industry_benchmark.overall"
+        },
+        "conditional": { "render_if": "$.scores_summary.overall_health_score != null" },
+        "accessibility": { "aria_label": "Your business health score: {score} out of 100", "role": "img" },
+        "print_override": { "size": "medium" }
+      },
+      {
+        "type": "heatmap",
+        "id": "portfolio_heatmap",
+        "section": "health_dashboard",
+        "order": 1,
+        "config": { "variant": "full", "show_symbols": true },
+        "data_binding": {
+          "primary_path": "$.chapters",
+          "fallback_path": null,
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "Health portfolio overview" }
+      },
+      {
+        "type": "score_tile",
+        "id": "dimension_tiles",
+        "section": "health_dashboard",
+        "order": 2,
+        "config": { "size": "standard", "show_trend": true, "show_benchmark": true, "repeat_for_each": "dimension" },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*]",
+          "fallback_path": null,
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "{dimension_name}: {score}" }
+      },
+      {
+        "type": "kpi_dashboard",
+        "id": "executive_kpis",
+        "section": "executive_summary",
+        "order": 1,
+        "config": { "columns": 3, "metrics_count": 6 },
+        "data_binding": {
+          "metrics": [
+            { "label": "Overall Health", "path": "$.scores_summary.overall_health_score", "default": "N/A" },
+            { "label": "Top Opportunity", "path": "$.recommendations[0].title", "default": "Analysis pending", "truncate": 30 },
+            { "label": "Critical Risks", "path": "$.risks.length", "default": 0 },
+            { "label": "Quick Wins", "path": "$.quick_wins.length", "default": 0 },
+            { "label": "Est. ROI", "path": "$.roadmap.expected_roi_percentage", "default": "TBD", "suffix": "%" },
+            { "label": "Investment", "path": "$.roadmap.total_estimated_investment", "default": "TBD", "prefix": "$" }
+          ]
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Key performance indicators" }
+      },
+      {
+        "type": "bar_chart",
+        "id": "competitive_position",
+        "section": "health_dashboard",
+        "order": 3,
+        "config": { "orientation": "horizontal", "sort_by": "score", "max_items": 6, "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*]",
+          "value_field": "score",
+          "label_field": "name"
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "Top dimension scores" }
+      },
+      {
+        "type": "roadmap_timeline",
+        "id": "action_roadmap",
+        "section": "roadmap_overview",
+        "order": 1,
+        "config": { "show_milestones": true, "show_investment": true, "max_items": 10 },
+        "data_binding": {
+          "primary_path": "$.roadmap.phases",
+          "recommendations_path": "$.recommendations",
+          "timeline_months_path": "$.roadmap.overall_timeline_months",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.roadmap.phases.length > 0",
+          "fallback_message": "Implementation roadmap being developed"
+        },
+        "accessibility": { "aria_label": "Your action roadmap" }
+      },
+      {
+        "type": "action_card",
+        "id": "quick_wins",
+        "section": "quick_wins",
+        "order": 1,
+        "config": { "variant": "full", "show_steps": true, "max_items": 5 },
+        "data_binding": {
+          "primary_path": "$.quick_wins",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.quick_wins.length > 0",
+          "fallback_message": "Quick win opportunities being analyzed"
+        },
+        "accessibility": { "aria_label": "Quick win: {title}" }
+      },
+      {
+        "type": "metric_card",
+        "id": "roi_metrics",
+        "section": "next_steps",
+        "order": 1,
+        "config": { "show_trend": false, "layout": "grid", "columns": 3 },
+        "data_binding": {
+          "metrics": [
+            { "label": "Est. Investment", "path": "$.roadmap.total_estimated_investment", "default": "TBD", "prefix": "$" },
+            { "label": "Expected ROI", "path": "$.roadmap.expected_roi_percentage", "default": "TBD", "suffix": "%" },
+            { "label": "Timeline", "path": "$.roadmap.overall_timeline_months", "default": "TBD", "suffix": " months" },
+            { "label": "Quick Wins", "path": "$.quick_wins.length", "default": 0 },
+            { "label": "High Priority", "path": "$.recommendations[?(@.priority=='critical')].length", "default": 0 },
+            { "label": "Total Actions", "path": "$.recommendations.length", "default": 0 }
+          ]
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Financial impact metrics" }
+      },
+      {
+        "type": "table",
+        "id": "priority_recommendations",
+        "section": "strategic_priorities",
+        "order": 1,
+        "config": { "compact": true, "striped": true, "max_rows": 10 },
+        "data_binding": {
+          "primary_path": "$.recommendations",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.recommendations.length > 0" },
+        "accessibility": { "aria_label": "Priority recommendations" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T21:28:55.678Z",
+    "submission_id": "l2m3n4o5-p6q7-8901-lmno-pq2345678901",
+    "created_at": "2025-11-29 19:22:33.678901+00",
+    "business_overview": {
+        "company_name": "CloudSync Analytics",
+        "location": "Seattle WA",
+        "country": "United States",
+        "company_website": "cloudsyncanalytics.com",
+        "industry": "information",
+        "industry_other_details": "B2B SaaS platform for real-time business intelligence and data analytics",
+        "corporate_structure": "c_corporation",
+        "year_started": 2018,
+        "multiple_locations": true,
+        "number_of_locations": 2,
+        "executive_leadership_roles": 5,
+        "support_admin_staff": 18,
+        "full_time_employees": 58,
+        "part_time_employees": 4,
+        "contract_temp_personnel": 12,
+        "seasonal_employees": 0,
+        "last_year_revenue": 11500000,
+        "projected_revenue": 16800000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 11500000,
+        "products_services": [
+            {
+                "name": "Enterprise Analytics Platform",
+                "percentage": 75,
+                "type": "service"
+            },
+            {
+                "name": "Professional Services",
+                "percentage": 15,
+                "type": "service"
+            },
+            {
+                "name": "Training & Support",
+                "percentage": 10,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "sales",
+            "marketing",
+            "human_resources"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Tableau",
+                "website": "https://tableau.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Looker",
+                "website": "https://looker.com"
+            },
+            {
+                "direct_competitor": false,
+                "name": "Power BI",
+                "website": "https://powerbi.microsoft.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 5,
+        "local_market_share": 3,
+        "sales_growth_past_year": 52,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 48,
+        "business_goals_plan": 5,
+        "goals_barriers": null,
+        "business_plan_review": 5,
+        "growth_exit_plan": 5
+    },
+    "sales": {
+        "b2b_percentage": 100,
+        "b2c_percentage": null,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": 100,
+        "sales_targets_alignment": 5,
+        "sales_pipeline_management": 5,
+        "average_sales_cycle_days": 75,
+        "no_sales_cycle": false,
+        "close_rate": 28,
+        "no_customer_interaction": false,
+        "average_sale_size": 48000,
+        "repeat_sales_percentage": 95,
+        "upselling_focus": 5,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 7,
+        "current_marketing_channels": "Content Marketing, SEO, Webinars, LinkedIn, Email, Events, Partner Ecosystem",
+        "future_marketing_channels": "Podcast, YouTube Channel",
+        "customer_targeting": 5,
+        "customer_acquisition_cost": 5800,
+        "cac_unknown": false,
+        "customer_lifetime_value": 185000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 4.5,
+        "marketing_roi": 8.2,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 125000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 4,
+        "competitive_strength": 5,
+        "issue_resolution": 5,
+        "response_time_hours": 2
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": null,
+        "workflow_documentation": 5,
+        "inventory_turnover_rate": null,
+        "no_inventory": true,
+        "operational_reliability": 5,
+        "lean_principles": 5,
+        "space_utilization": 78,
+        "equipment_utilization": 92,
+        "personnel_utilization": 90
+    },
+    "financials": {
+        "total_debt_liabilities": 3500000,
+        "total_working_capital": 8200000,
+        "debt_monitoring": 5,
+        "current_cash_available": 6800000,
+        "near_term_expenses": 950000,
+        "cash_runway_months": 28,
+        "gross_profit_margin": 78,
+        "monthly_profit_estimate": 285000,
+        "profit_is_estimate": false,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 5,
+        "budgeting_financial_planning": 5,
+        "financial_readiness_growth": 5,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 4,
+        "company_culture": 5,
+        "recruiting_onboarding": 4,
+        "training_development": 5,
+        "training_resources_needed": null,
+        "employee_turnover_rate": 14.5,
+        "employee_engagement": 5,
+        "performance_management": 5
+    },
+    "leadership": {
+        "leadership_effectiveness": 5,
+        "decision_making_structure": 5,
+        "leadership_board_oversight": 5,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 5,
+        "leadership_culture_effectiveness": 5,
+        "development_mentorship": 5
+    },
+    "technology": {
+        "technology_investment": 3200000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 80,
+        "innovation_culture": 5,
+        "emerging_technologies": 5,
+        "technology_adoption": 5,
+        "automation_utilization": 5,
+        "innovation_impact": 5
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 5,
+        "network_effectiveness": 5,
+        "cybersecurity": 5,
+        "data_management": 5,
+        "data_governance": 5,
+        "it_scalability": 5,
+        "it_support_maintenance": 5
+    },
+    "risk_management": {
+        "overall_risk_outlook": 4,
+        "specific_risks_concern": null,
+        "risk_identification_review": 5,
+        "risk_mitigation": 5,
+        "contingency_plans": 5,
+        "financial_resilience": 5,
+        "operational_continuity": 5,
+        "succession_leadership_stability": 4,
+        "strategic_adaptability": 5,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 5,
+        "training_completion": 5,
+        "compliance_monitoring": 5,
+        "regulatory_updates": 5,
+        "compliance_documentation": 5,
+        "incident_reporting": 5,
+        "compliance_costs": 420000,
+        "compliance_cost_estimate": false
+    }
+}

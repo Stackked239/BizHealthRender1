@@ -1,0 +1,1016 @@
+{
+  "metadata": {
+    "benchmark_version": "1.0",
+    "last_updated": "2025-12-01",
+    "description": "BizHealth.ai industry benchmark data for chapter and overall health score comparisons",
+    "source": "Aggregated SMB benchmark studies, industry surveys, and proprietary analysis"
+  },
+  "industries": {
+    "technology_consulting": {
+      "display_name": "Technology Consulting",
+      "naics_codes": ["541511", "541512", "541519"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 1000000 },
+        "growth": { "min": 1000001, "max": 10000000 },
+        "established": { "min": 10000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 892,
+          "overall_health": {
+            "mean": 42,
+            "median": 40,
+            "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 65 }
+          },
+          "chapters": {
+            "GE": { "mean": 45, "median": 43, "percentiles": { "10": 25, "25": 35, "50": 43, "75": 55, "90": 68 } },
+            "PH": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "PL": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } },
+            "RS": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1247,
+          "overall_health": {
+            "mean": 48,
+            "median": 46,
+            "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 71 }
+          },
+          "chapters": {
+            "GE": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "PH": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "PL": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "RS": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1547,
+          "overall_health": {
+            "mean": 54,
+            "median": 52,
+            "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 }
+          },
+          "chapters": {
+            "GE": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 79 } },
+            "PH": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 73 } },
+            "PL": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 71 } },
+            "RS": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 77 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 987,
+          "overall_health": {
+            "mean": 60,
+            "median": 58,
+            "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 81 }
+          },
+          "chapters": {
+            "GE": { "mean": 62, "median": 60, "percentiles": { "10": 42, "25": 52, "50": 60, "75": 72, "90": 83 } },
+            "PH": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 79 } },
+            "PL": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 79 } },
+            "RS": { "mean": 62, "median": 60, "percentiles": { "10": 42, "25": 52, "50": 60, "75": 72, "90": 83 } }
+          }
+        }
+      }
+    },
+    "restaurant_food_service": {
+      "display_name": "Restaurant & Food Service",
+      "naics_codes": ["722511", "722513", "722515"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 500000 },
+        "growth": { "min": 500001, "max": 3000000 },
+        "established": { "min": 3000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 2341,
+          "overall_health": {
+            "mean": 38,
+            "median": 36,
+            "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 }
+          },
+          "chapters": {
+            "GE": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 32, "median": 30, "percentiles": { "10": 12, "25": 22, "50": 30, "75": 42, "90": 54 } },
+            "RS": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1876,
+          "overall_health": {
+            "mean": 44,
+            "median": 42,
+            "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 }
+          },
+          "chapters": {
+            "GE": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } },
+            "RS": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1123,
+          "overall_health": {
+            "mean": 50,
+            "median": 48,
+            "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 }
+          },
+          "chapters": {
+            "GE": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "RS": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 654,
+          "overall_health": {
+            "mean": 56,
+            "median": 54,
+            "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 }
+          },
+          "chapters": {
+            "GE": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "RS": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 } }
+          }
+        }
+      }
+    },
+    "manufacturing": {
+      "display_name": "Manufacturing",
+      "naics_codes": ["31-33"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 99 },
+        "medium": { "min_employees": 100, "max_employees": 499 },
+        "large": { "min_employees": 500, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 2000000 },
+        "growth": { "min": 2000001, "max": 20000000 },
+        "established": { "min": 20000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1456,
+          "overall_health": {
+            "mean": 40,
+            "median": 38,
+            "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 }
+          },
+          "chapters": {
+            "GE": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } },
+            "PH": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "PL": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "RS": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1834,
+          "overall_health": {
+            "mean": 46,
+            "median": 44,
+            "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 }
+          },
+          "chapters": {
+            "GE": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "PH": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "PL": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1243,
+          "overall_health": {
+            "mean": 52,
+            "median": 50,
+            "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 }
+          },
+          "chapters": {
+            "GE": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "PH": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } },
+            "PL": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 876,
+          "overall_health": {
+            "mean": 58,
+            "median": 56,
+            "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 }
+          },
+          "chapters": {
+            "GE": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 } },
+            "PH": { "mean": 64, "median": 62, "percentiles": { "10": 44, "25": 54, "50": 62, "75": 74, "90": 85 } },
+            "PL": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        }
+      }
+    },
+    "healthcare_services": {
+      "display_name": "Healthcare Services",
+      "naics_codes": ["621111", "621210", "621310", "621340", "621399"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 1000000 },
+        "growth": { "min": 1000001, "max": 5000000 },
+        "established": { "min": 5000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1567,
+          "overall_health": {
+            "mean": 44,
+            "median": 42,
+            "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 }
+          },
+          "chapters": {
+            "GE": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1987,
+          "overall_health": {
+            "mean": 50,
+            "median": 48,
+            "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 }
+          },
+          "chapters": {
+            "GE": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1234,
+          "overall_health": {
+            "mean": 56,
+            "median": 54,
+            "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 }
+          },
+          "chapters": {
+            "GE": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 765,
+          "overall_health": {
+            "mean": 62,
+            "median": 60,
+            "percentiles": { "10": 42, "25": 52, "50": 60, "75": 72, "90": 84 }
+          },
+          "chapters": {
+            "GE": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PH": { "mean": 66, "median": 64, "percentiles": { "10": 46, "25": 56, "50": 64, "75": 76, "90": 87 } },
+            "PL": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } },
+            "RS": { "mean": 64, "median": 62, "percentiles": { "10": 44, "25": 54, "50": 62, "75": 74, "90": 85 } }
+          }
+        }
+      }
+    },
+    "retail_ecommerce": {
+      "display_name": "Retail & E-commerce",
+      "naics_codes": ["44-45", "454110"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 500000 },
+        "growth": { "min": 500001, "max": 5000000 },
+        "established": { "min": 5000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 2876,
+          "overall_health": {
+            "mean": 36,
+            "median": 34,
+            "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 }
+          },
+          "chapters": {
+            "GE": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "PH": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } },
+            "PL": { "mean": 30, "median": 28, "percentiles": { "10": 10, "25": 20, "50": 28, "75": 40, "90": 52 } },
+            "RS": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 2134,
+          "overall_health": {
+            "mean": 42,
+            "median": 40,
+            "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 }
+          },
+          "chapters": {
+            "GE": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "PH": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "PL": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "RS": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1456,
+          "overall_health": {
+            "mean": 48,
+            "median": 46,
+            "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 }
+          },
+          "chapters": {
+            "GE": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "PH": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "PL": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "RS": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 876,
+          "overall_health": {
+            "mean": 54,
+            "median": 52,
+            "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 }
+          },
+          "chapters": {
+            "GE": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } },
+            "PH": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 } },
+            "PL": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "RS": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } }
+          }
+        }
+      }
+    },
+    "construction": {
+      "display_name": "Construction",
+      "naics_codes": ["23"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 1000000 },
+        "growth": { "min": 1000001, "max": 10000000 },
+        "established": { "min": 10000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1987,
+          "overall_health": {
+            "mean": 38,
+            "median": 36,
+            "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 }
+          },
+          "chapters": {
+            "GE": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "PH": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "PL": { "mean": 32, "median": 30, "percentiles": { "10": 12, "25": 22, "50": 30, "75": 42, "90": 54 } },
+            "RS": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1654,
+          "overall_health": {
+            "mean": 44,
+            "median": 42,
+            "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 }
+          },
+          "chapters": {
+            "GE": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PH": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "PL": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1123,
+          "overall_health": {
+            "mean": 50,
+            "median": 48,
+            "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 }
+          },
+          "chapters": {
+            "GE": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PH": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 } },
+            "PL": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 765,
+          "overall_health": {
+            "mean": 56,
+            "median": 54,
+            "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 }
+          },
+          "chapters": {
+            "GE": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PH": { "mean": 62, "median": 60, "percentiles": { "10": 42, "25": 52, "50": 60, "75": 72, "90": 84 } },
+            "PL": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        }
+      }
+    },
+    "professional_services": {
+      "display_name": "Professional Services",
+      "naics_codes": ["541110", "541211", "541219", "541430", "541611", "541810", "524210"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 500000 },
+        "growth": { "min": 500001, "max": 5000000 },
+        "established": { "min": 5000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 2456,
+          "overall_health": {
+            "mean": 42,
+            "median": 40,
+            "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 }
+          },
+          "chapters": {
+            "GE": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "PH": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "PL": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "RS": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 2134,
+          "overall_health": {
+            "mean": 48,
+            "median": 46,
+            "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 }
+          },
+          "chapters": {
+            "GE": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "PH": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "PL": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "RS": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 1567,
+          "overall_health": {
+            "mean": 54,
+            "median": 52,
+            "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 }
+          },
+          "chapters": {
+            "GE": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 } },
+            "PH": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } },
+            "PL": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "RS": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 987,
+          "overall_health": {
+            "mean": 60,
+            "median": 58,
+            "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 }
+          },
+          "chapters": {
+            "GE": { "mean": 62, "median": 60, "percentiles": { "10": 42, "25": 52, "50": 60, "75": 72, "90": 84 } },
+            "PH": { "mean": 64, "median": 62, "percentiles": { "10": 44, "25": 54, "50": 62, "75": 74, "90": 86 } },
+            "PL": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "RS": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } }
+          }
+        }
+      }
+    },
+    "fitness_wellness": {
+      "display_name": "Fitness & Wellness",
+      "naics_codes": ["713940", "812191"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 300000 },
+        "growth": { "min": 300001, "max": 2000000 },
+        "established": { "min": 2000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1876,
+          "overall_health": {
+            "mean": 36,
+            "median": 34,
+            "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 }
+          },
+          "chapters": {
+            "GE": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "PH": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "PL": { "mean": 32, "median": 30, "percentiles": { "10": 12, "25": 22, "50": 30, "75": 42, "90": 54 } },
+            "RS": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1456,
+          "overall_health": {
+            "mean": 42,
+            "median": 40,
+            "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 }
+          },
+          "chapters": {
+            "GE": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 38, "median": 36, "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 } },
+            "RS": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 876,
+          "overall_health": {
+            "mean": 48,
+            "median": 46,
+            "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 }
+          },
+          "chapters": {
+            "GE": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "RS": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 543,
+          "overall_health": {
+            "mean": 54,
+            "median": 52,
+            "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 }
+          },
+          "chapters": {
+            "GE": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "RS": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } }
+          }
+        }
+      }
+    },
+    "automotive_services": {
+      "display_name": "Automotive Services",
+      "naics_codes": ["811111", "811112", "811118"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 500000 },
+        "growth": { "min": 500001, "max": 3000000 },
+        "established": { "min": 3000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1765,
+          "overall_health": {
+            "mean": 38,
+            "median": 36,
+            "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 }
+          },
+          "chapters": {
+            "GE": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 34, "median": 32, "percentiles": { "10": 14, "25": 24, "50": 32, "75": 44, "90": 56 } },
+            "RS": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1432,
+          "overall_health": {
+            "mean": 44,
+            "median": 42,
+            "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 }
+          },
+          "chapters": {
+            "GE": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 876,
+          "overall_health": {
+            "mean": 50,
+            "median": 48,
+            "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 }
+          },
+          "chapters": {
+            "GE": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 543,
+          "overall_health": {
+            "mean": 56,
+            "median": 54,
+            "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 }
+          },
+          "chapters": {
+            "GE": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        }
+      }
+    },
+    "real_estate": {
+      "display_name": "Real Estate",
+      "naics_codes": ["531210", "531311", "531312"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 500000 },
+        "growth": { "min": 500001, "max": 5000000 },
+        "established": { "min": 5000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1654,
+          "overall_health": {
+            "mean": 40,
+            "median": 38,
+            "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 }
+          },
+          "chapters": {
+            "GE": { "mean": 44, "median": 42, "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 34, "median": 32, "percentiles": { "10": 14, "25": 24, "50": 32, "75": 44, "90": 56 } },
+            "RS": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1432,
+          "overall_health": {
+            "mean": 46,
+            "median": 44,
+            "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 }
+          },
+          "chapters": {
+            "GE": { "mean": 50, "median": 48, "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 876,
+          "overall_health": {
+            "mean": 52,
+            "median": 50,
+            "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 }
+          },
+          "chapters": {
+            "GE": { "mean": 56, "median": 54, "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 543,
+          "overall_health": {
+            "mean": 58,
+            "median": 56,
+            "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 }
+          },
+          "chapters": {
+            "GE": { "mean": 62, "median": 60, "percentiles": { "10": 42, "25": 52, "50": 60, "75": 72, "90": 84 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        }
+      }
+    },
+    "logistics_transportation": {
+      "display_name": "Logistics & Transportation",
+      "naics_codes": ["484110", "484121", "488510", "493110"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 1000000 },
+        "growth": { "min": 1000001, "max": 10000000 },
+        "established": { "min": 10000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1234,
+          "overall_health": {
+            "mean": 38,
+            "median": 36,
+            "percentiles": { "10": 18, "25": 28, "50": 36, "75": 48, "90": 60 }
+          },
+          "chapters": {
+            "GE": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 34, "median": 32, "percentiles": { "10": 14, "25": 24, "50": 32, "75": 44, "90": 56 } },
+            "RS": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1098,
+          "overall_health": {
+            "mean": 44,
+            "median": 42,
+            "percentiles": { "10": 24, "25": 34, "50": 42, "75": 54, "90": 66 }
+          },
+          "chapters": {
+            "GE": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 765,
+          "overall_health": {
+            "mean": 50,
+            "median": 48,
+            "percentiles": { "10": 30, "25": 40, "50": 48, "75": 60, "90": 72 }
+          },
+          "chapters": {
+            "GE": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 456,
+          "overall_health": {
+            "mean": 56,
+            "median": 54,
+            "percentiles": { "10": 36, "25": 46, "50": 54, "75": 66, "90": 78 }
+          },
+          "chapters": {
+            "GE": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        }
+      }
+    },
+    "education_services": {
+      "display_name": "Education & Training Services",
+      "naics_codes": ["611110", "611310", "611430", "611691"],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 300000 },
+        "growth": { "min": 300001, "max": 2000000 },
+        "established": { "min": 2000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 1543,
+          "overall_health": {
+            "mean": 40,
+            "median": 38,
+            "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 }
+          },
+          "chapters": {
+            "GE": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 36, "median": 34, "percentiles": { "10": 16, "25": 26, "50": 34, "75": 46, "90": 58 } },
+            "RS": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 1234,
+          "overall_health": {
+            "mean": 46,
+            "median": 44,
+            "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 }
+          },
+          "chapters": {
+            "GE": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "RS": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 765,
+          "overall_health": {
+            "mean": 52,
+            "median": 50,
+            "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 }
+          },
+          "chapters": {
+            "GE": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "RS": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 456,
+          "overall_health": {
+            "mean": 58,
+            "median": 56,
+            "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 }
+          },
+          "chapters": {
+            "GE": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "RS": { "mean": 58, "median": 56, "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 } }
+          }
+        }
+      }
+    },
+    "general_smb": {
+      "display_name": "General SMB (All Industries)",
+      "naics_codes": [],
+      "size_tiers": {
+        "small": { "min_employees": 1, "max_employees": 49 },
+        "medium": { "min_employees": 50, "max_employees": 249 },
+        "large": { "min_employees": 250, "max_employees": null }
+      },
+      "revenue_tiers": {
+        "startup": { "min": 0, "max": 1000000 },
+        "growth": { "min": 1000001, "max": 10000000 },
+        "established": { "min": 10000001, "max": null }
+      },
+      "benchmarks": {
+        "small_startup": {
+          "sample_size": 15678,
+          "overall_health": {
+            "mean": 40,
+            "median": 38,
+            "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 }
+          },
+          "chapters": {
+            "GE": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PH": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } },
+            "PL": { "mean": 34, "median": 32, "percentiles": { "10": 14, "25": 24, "50": 32, "75": 44, "90": 56 } },
+            "RS": { "mean": 42, "median": 40, "percentiles": { "10": 22, "25": 32, "50": 40, "75": 52, "90": 64 } }
+          }
+        },
+        "small_growth": {
+          "sample_size": 12345,
+          "overall_health": {
+            "mean": 46,
+            "median": 44,
+            "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 }
+          },
+          "chapters": {
+            "GE": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PH": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } },
+            "PL": { "mean": 40, "median": 38, "percentiles": { "10": 20, "25": 30, "50": 38, "75": 50, "90": 62 } },
+            "RS": { "mean": 48, "median": 46, "percentiles": { "10": 28, "25": 38, "50": 46, "75": 58, "90": 70 } }
+          }
+        },
+        "medium_growth": {
+          "sample_size": 8765,
+          "overall_health": {
+            "mean": 52,
+            "median": 50,
+            "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 }
+          },
+          "chapters": {
+            "GE": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PH": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } },
+            "PL": { "mean": 46, "median": 44, "percentiles": { "10": 26, "25": 36, "50": 44, "75": 56, "90": 68 } },
+            "RS": { "mean": 54, "median": 52, "percentiles": { "10": 34, "25": 44, "50": 52, "75": 64, "90": 76 } }
+          }
+        },
+        "medium_established": {
+          "sample_size": 5432,
+          "overall_health": {
+            "mean": 58,
+            "median": 56,
+            "percentiles": { "10": 38, "25": 48, "50": 56, "75": 68, "90": 80 }
+          },
+          "chapters": {
+            "GE": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PH": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } },
+            "PL": { "mean": 52, "median": 50, "percentiles": { "10": 32, "25": 42, "50": 50, "75": 62, "90": 74 } },
+            "RS": { "mean": 60, "median": 58, "percentiles": { "10": 40, "25": 50, "50": 58, "75": 70, "90": 82 } }
+          }
+        }
+      }
+    }
+  },
+  "industry_aliases": {
+    "technology": "technology_consulting",
+    "tech": "technology_consulting",
+    "software": "technology_consulting",
+    "saas": "technology_consulting",
+    "it_services": "technology_consulting",
+    "consulting": "technology_consulting",
+    "information": "technology_consulting",
+    "information_technology": "technology_consulting",
+    "it": "technology_consulting",
+    "tech_services": "technology_consulting",
+    "digital_services": "technology_consulting",
+    "ai": "technology_consulting",
+    "artificial_intelligence": "technology_consulting",
+    "machine_learning": "technology_consulting",
+    "restaurant": "restaurant_food_service",
+    "food_service": "restaurant_food_service",
+    "food": "restaurant_food_service",
+    "hospitality": "restaurant_food_service",
+    "brewery": "restaurant_food_service",
+    "coffee": "restaurant_food_service",
+    "accommodation_food_services": "restaurant_food_service",
+    "accommodation": "restaurant_food_service",
+    "food_services": "restaurant_food_service",
+    "hotel": "restaurant_food_service",
+    "lodging": "restaurant_food_service",
+    "healthcare": "healthcare_services",
+    "medical": "healthcare_services",
+    "clinic": "healthcare_services",
+    "dental": "healthcare_services",
+    "veterinary": "healthcare_services",
+    "health_care": "healthcare_services",
+    "health_care_social_assistance": "healthcare_services",
+    "health_services": "healthcare_services",
+    "medical_services": "healthcare_services",
+    "medical_practice": "healthcare_services",
+    "retail": "retail_ecommerce",
+    "ecommerce": "retail_ecommerce",
+    "e-commerce": "retail_ecommerce",
+    "boutique": "retail_ecommerce",
+    "fashion": "retail_ecommerce",
+    "professional_services": "professional_services",
+    "accounting": "professional_services",
+    "law": "professional_services",
+    "legal": "professional_services",
+    "marketing_agency": "professional_services",
+    "insurance": "professional_services",
+    "graphic_design": "professional_services",
+    "fitness": "fitness_wellness",
+    "wellness": "fitness_wellness",
+    "gym": "fitness_wellness",
+    "studio": "fitness_wellness",
+    "auto": "automotive_services",
+    "automotive": "automotive_services",
+    "auto_repair": "automotive_services",
+    "plumbing": "construction",
+    "electrical": "construction",
+    "hvac": "construction",
+    "trades": "construction",
+    "logistics": "logistics_transportation",
+    "transportation": "logistics_transportation",
+    "trucking": "logistics_transportation",
+    "shipping": "logistics_transportation",
+    "education": "education_services",
+    "training": "education_services",
+    "tutoring": "education_services",
+    "agricultural": "general_smb",
+    "farming": "general_smb",
+    "agriculture": "general_smb"
+  }
+}

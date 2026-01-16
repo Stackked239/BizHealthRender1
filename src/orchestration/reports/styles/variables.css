@@ -1,0 +1,163 @@
+/* ============================================
+   BIZHEALTH.AI VISUAL COMPONENTS - CSS VARIABLES
+   Design tokens for consistent styling across all
+   visual components. Business intelligence focused.
+   ============================================ */
+
+:root {
+  /* ===== STATUS COLORS ===== */
+  /* Excellence (80-100) - Green */
+  --biz-excellent: #22C55E;
+  --biz-excellent-bg: #DCFCE7;
+  --biz-excellent-border: #86EFAC;
+  --biz-excellent-text: #166534;
+
+  /* Proficiency (60-79) - Green (alias for excellent) */
+  --biz-proficiency: #22C55E;
+  --biz-proficiency-bg: #DCFCE7;
+  --biz-proficiency-border: #86EFAC;
+  --biz-proficiency-text: #166534;
+
+  /* Attention (40-59) - Yellow/Amber */
+  --biz-attention: #EAB308;
+  --biz-attention-bg: #FEF9C3;
+  --biz-attention-border: #FDE047;
+  --biz-attention-text: #854D0E;
+
+  /* Critical (0-39) - Red */
+  --biz-critical: #EF4444;
+  --biz-critical-bg: #FEE2E2;
+  --biz-critical-border: #FCA5A5;
+  --biz-critical-text: #991B1B;
+
+  /* Neutral */
+  --biz-neutral: #6B7280;
+  --biz-neutral-bg: #F3F4F6;
+  --biz-neutral-border: #D1D5DB;
+  --biz-neutral-text: #374151;
+
+  /* ===== BRAND COLORS ===== */
+  /* BizNavy - Primary */
+  --biz-navy: #212653;
+  --biz-navy-light: #2D3466;
+  --biz-navy-dark: #1A1E42;
+  --biz-navy-rgb: 33, 38, 83;
+
+  /* BizGreen - Accent */
+  --biz-green: #969423;
+  --biz-green-light: #B5B23A;
+  --biz-green-dark: #7A7A1D;
+  --biz-green-rgb: 150, 148, 35;
+
+  /* ===== CHART COLORS ===== */
+  /* Primary data series */
+  --biz-chart-primary: #212653;
+  --biz-chart-secondary: #969423;
+  --biz-chart-tertiary: #3B82F6;
+  --biz-chart-quaternary: #8B5CF6;
+
+  /* Benchmark/comparison */
+  --biz-benchmark: #6B7280;
+  --biz-benchmark-line: #9CA3AF;
+
+  /* Positive/Negative for waterfall/variance */
+  --biz-positive: #22C55E;
+  --biz-negative: #EF4444;
+
+  /* ===== UI COLORS ===== */
+  --biz-background: #FAFBFC;
+  --biz-surface: #FFFFFF;
+  --biz-surface-elevated: #FFFFFF;
+  --biz-border: #E5E7EB;
+  --biz-border-light: #F3F4F6;
+  --biz-border-strong: #D1D5DB;
+
+  --biz-text-primary: #111827;
+  --biz-text-secondary: #6B7280;
+  --biz-text-muted: #9CA3AF;
+  --biz-text-inverse: #FFFFFF;
+
+  /* ===== SPACING SCALE ===== */
+  --biz-space-2xs: 2px;
+  --biz-space-xs: 4px;
+  --biz-space-sm: 8px;
+  --biz-space-md: 16px;
+  --biz-space-lg: 24px;
+  --biz-space-xl: 32px;
+  --biz-space-2xl: 48px;
+  --biz-space-3xl: 64px;
+
+  /* ===== BORDER RADIUS ===== */
+  --biz-radius-xs: 2px;
+  --biz-radius-sm: 4px;
+  --biz-radius-md: 8px;
+  --biz-radius-lg: 12px;
+  --biz-radius-xl: 16px;
+  --biz-radius-full: 9999px;
+
+  /* ===== SHADOWS ===== */
+  --biz-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --biz-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --biz-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --biz-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --biz-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Colored shadows for emphasis */
+  --biz-shadow-navy: 0 4px 12px rgba(33, 38, 83, 0.15);
+  --biz-shadow-green: 0 4px 12px rgba(150, 148, 35, 0.15);
+
+  /* ===== TRANSITIONS ===== */
+  --biz-transition-fast: 150ms ease;
+  --biz-transition-normal: 250ms ease;
+  --biz-transition-slow: 350ms ease;
+
+  /* ===== Z-INDEX SCALE ===== */
+  --biz-z-base: 0;
+  --biz-z-dropdown: 100;
+  --biz-z-overlay: 200;
+  --biz-z-modal: 300;
+  --biz-z-tooltip: 400;
+
+  /* ===== COMPONENT DIMENSIONS ===== */
+  /* Gauge sizes */
+  --biz-gauge-large: 200px;
+  --biz-gauge-medium: 120px;
+  --biz-gauge-small: 80px;
+
+  /* Score tile */
+  --biz-tile-width: 180px;
+  --biz-tile-height: 120px;
+  --biz-tile-compact-width: 140px;
+
+  /* Metric card */
+  --biz-metric-card-width: 150px;
+  --biz-metric-card-height: 100px;
+
+  /* Risk matrix cell */
+  --biz-risk-cell: 60px;
+
+  /* Chart heights */
+  --biz-chart-height-sm: 200px;
+  --biz-chart-height-md: 300px;
+  --biz-chart-height-lg: 400px;
+
+  /* ===== BREAKPOINTS (for reference) ===== */
+  --biz-breakpoint-sm: 640px;
+  --biz-breakpoint-md: 768px;
+  --biz-breakpoint-lg: 1024px;
+  --biz-breakpoint-xl: 1280px;
+}
+
+/* ===== DARK MODE OVERRIDES (future-proofing) ===== */
+@media (prefers-color-scheme: dark) {
+  :root.dark-mode {
+    --biz-background: #1A1E42;
+    --biz-surface: #212653;
+    --biz-surface-elevated: #2D3466;
+    --biz-border: #3D4275;
+    --biz-border-light: #2D3466;
+    --biz-text-primary: #F3F4F6;
+    --biz-text-secondary: #9CA3AF;
+    --biz-text-muted: #6B7280;
+  }
+}

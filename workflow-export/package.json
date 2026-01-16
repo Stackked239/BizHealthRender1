@@ -1,0 +1,30 @@
+{
+  "name": "bizhealth-workflow-export",
+  "version": "1.0.0",
+  "description": "BizHealth Owner and Comprehensive Report Bundle Configuration and Validation",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "validate:reports": "npx tsx src/orchestration/reports/validation/validate-reports.ts",
+    "test": "jest",
+    "test:mappings": "jest section-mapping.test.ts",
+    "validate:all": "npm run test:mappings && npm run validate:reports"
+  },
+  "keywords": [
+    "bizhealth",
+    "reports",
+    "business-analysis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.2",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "report_id": "comprehensive",
+  "name": "Comprehensive Business Health Report",
+  "version": "1.0.0",
+  "primary_audience": "owner",
+  "description": "Complete business health assessment covering all 12 dimensions with detailed analysis, findings, and recommendations. The definitive reference document.",
+  "target_page_range": {
+    "min": 35,
+    "max": 50
+  },
+  "brand_config": {
+    "primary_color": "#212653",
+    "accent_color": "#969423",
+    "font_heading": "Montserrat",
+    "font_body": "Open Sans"
+  },
+  "default_tone_tags": ["executive", "detailed", "analytical"],
+  "sections": [
+    {
+      "id": "cover",
+      "title": "Business Health Assessment",
+      "description": "Cover page with company information and assessment metadata",
+      "data_sources": [
+        { "id": "meta", "from": "meta" },
+        { "id": "health_score", "from": "scores_summary.overall_health_score" }
+      ],
+      "visual_type": "none",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "table_of_contents",
+      "title": "Table of Contents",
+      "data_sources": [],
+      "visual_type": "none",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "executive_overview",
+      "title": "Executive Overview",
+      "description": "High-level summary of business health status, trajectory, and key imperatives",
+      "data_sources": [
+        { "id": "scores_summary", "from": "scores_summary" },
+        { "id": "chapters", "from": "chapters" },
+        { "id": "top_findings", "from": "findings", "filters": [{ "type": "risk" }], "sort": { "field": "severity", "direction": "desc" }, "limit": 5 }
+      ],
+      "tone_tags": ["executive", "strategic", "summary"],
+      "visual_type": "score_tiles_row",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "health_scorecard",
+      "title": "Business Health Scorecard",
+      "description": "Visual dashboard of all dimension scores with tier classifications",
+      "data_sources": [
+        { "id": "dimensions", "from": "dimensions" },
+        { "id": "chapters", "from": "chapters" }
+      ],
+      "tone_tags": ["analytical"],
+      "visual_type": "radar_chart",
+      "layout_hints": { "page_break_after": true }
+    },
+    {
+      "id": "chapter_ge",
+      "title": "Growth Engine",
+      "description": "Deep dive into Strategy, Sales, Marketing, and Customer Experience",
+      "data_sources": [
+        { "id": "chapter", "from": "chapters[chapter_code=GE]" },
+        { "id": "dimensions", "from": "dimensions", "filters": [{ "chapter_codes": ["GE"] }] },
+        { "id": "findings", "from": "findings", "filters": [{ "dimension_codes": ["STR", "SAL", "MKT", "CXP"] }] },
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "dimension_codes": ["STR", "SAL", "MKT", "CXP"] }] }
+      ],
+      "tone_tags": ["detailed", "analytical"],
+      "visual_type": "bar_chart",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "chapter_ph",
+      "title": "Performance & Health",
+      "description": "Deep dive into Operations and Financials",
+      "data_sources": [
+        { "id": "chapter", "from": "chapters[chapter_code=PH]" },
+        { "id": "dimensions", "from": "dimensions", "filters": [{ "chapter_codes": ["PH"] }] },
+        { "id": "findings", "from": "findings", "filters": [{ "dimension_codes": ["OPS", "FIN"] }] },
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "dimension_codes": ["OPS", "FIN"] }] }
+      ],
+      "tone_tags": ["detailed", "analytical"],
+      "visual_type": "bar_chart",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "chapter_pl",
+      "title": "People & Leadership",
+      "description": "Deep dive into Human Resources and Leadership & Governance",
+      "data_sources": [
+        { "id": "chapter", "from": "chapters[chapter_code=PL]" },
+        { "id": "dimensions", "from": "dimensions", "filters": [{ "chapter_codes": ["PL"] }] },
+        { "id": "findings", "from": "findings", "filters": [{ "dimension_codes": ["HRS", "LDG"] }] },
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "dimension_codes": ["HRS", "LDG"] }] }
+      ],
+      "tone_tags": ["detailed", "analytical"],
+      "visual_type": "bar_chart",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "chapter_rs",
+      "title": "Resilience & Safeguards",
+      "description": "Deep dive into Technology, IT, Risk Management, and Compliance",
+      "data_sources": [
+        { "id": "chapter", "from": "chapters[chapter_code=RS]" },
+        { "id": "dimensions", "from": "dimensions", "filters": [{ "chapter_codes": ["RS"] }] },
+        { "id": "findings", "from": "findings", "filters": [{ "dimension_codes": ["TIN", "IDS", "RMS", "CMP"] }] },
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "dimension_codes": ["TIN", "IDS", "RMS", "CMP"] }] }
+      ],
+      "tone_tags": ["detailed", "analytical"],
+      "visual_type": "bar_chart",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "findings_summary",
+      "title": "Key Findings Summary",
+      "description": "Consolidated view of all strengths, gaps, risks, and opportunities",
+      "data_sources": [
+        { "id": "strengths", "from": "findings", "filters": [{ "type": "strength" }], "limit": 10 },
+        { "id": "gaps", "from": "findings", "filters": [{ "type": "gap" }], "limit": 10 },
+        { "id": "risks", "from": "findings", "filters": [{ "type": "risk" }], "limit": 10 },
+        { "id": "opportunities", "from": "findings", "filters": [{ "type": "opportunity" }], "limit": 10 }
+      ],
+      "tone_tags": ["analytical", "summary"],
+      "visual_type": "table",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "recommendations",
+      "title": "Strategic Recommendations",
+      "description": "Prioritized recommendations with action steps and expected outcomes",
+      "data_sources": [
+        { "id": "all_recommendations", "from": "recommendations", "sort": { "field": "priority_rank", "direction": "asc" } }
+      ],
+      "tone_tags": ["action_oriented", "strategic"],
+      "visual_type": "numbered_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "quick_wins",
+      "title": "Quick Wins",
+      "description": "High-impact, low-effort actions for immediate implementation",
+      "data_sources": [
+        { "id": "quick_wins", "from": "quick_wins" },
+        { "id": "recommendations", "from": "recommendations" }
+      ],
+      "tone_tags": ["action_oriented", "urgent"],
+      "visual_type": "checklist",
+      "layout_hints": { "show_score_badge": true }
+    },
+    {
+      "id": "risk_register",
+      "title": "Risk Register",
+      "description": "Identified risks with severity, likelihood, and mitigation recommendations",
+      "data_sources": [
+        { "id": "risks", "from": "risks", "sort": { "field": "severity", "direction": "desc" } }
+      ],
+      "tone_tags": ["analytical", "urgent"],
+      "visual_type": "risk_matrix",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "implementation_roadmap",
+      "title": "Implementation Roadmap",
+      "description": "Phased implementation plan with timeline and milestones",
+      "data_sources": [
+        { "id": "roadmap", "from": "roadmap.phases" },
+        { "id": "recommendations", "from": "recommendations" }
+      ],
+      "tone_tags": ["strategic", "action_oriented"],
+      "visual_type": "roadmap_timeline",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix: Methodology & Scoring",
+      "description": "Assessment methodology, scoring framework, and data sources",
+      "data_sources": [
+        { "id": "meta", "from": "meta" }
+      ],
+      "tone_tags": ["technical", "detailed"],
+      "visual_type": "text_block",
+      "layout_hints": { "page_break_before": true }
+    }
+  ],
+  "visuals": {
+    "version": "1.1.0",
+    "schema_version": "2025-06-01",
+
+    "global_settings": {
+      "brand_colors": true,
+      "accessibility_symbols": true,
+      "print_optimized": true,
+      "show_benchmarks": true,
+      "style_modifiers": {
+        "friendly_language": false,
+        "celebratory_style": false,
+        "action_oriented": false,
+        "simple_style": false
+      },
+      "jsonpath_config": {
+        "library": "jsonpath-plus",
+        "strict_mode": false,
+        "log_path_resolution": false,
+        "null_handling": "use_default"
+      }
+    },
+
+    "data_requirements": {
+      "required_fields": [
+        { "path": "$.scores_summary.overall_health_score", "type": "number", "validation": "0-100" },
+        { "path": "$.chapters", "type": "array", "min_length": 4 },
+        { "path": "$.findings", "type": "array", "min_length": 0 }
+      ],
+      "optional_fields": [
+        { "path": "$.roadmap.expected_roi_percentage", "type": "number", "default": null, "display_default": "ROI pending", "hide_component_if_null": false },
+        { "path": "$.benchmark_data.industry_benchmark", "type": "object", "default": null, "display_default": "Industry benchmark unavailable", "hide_component_if_null": true },
+        { "path": "$.quick_wins", "type": "array", "default": [], "min_items_to_render": 1 },
+        { "path": "$.risks", "type": "array", "default": [], "min_items_to_render": 1 }
+      ],
+      "validation_mode": "warn"
+    },
+
+    "print_configuration": {
+      "stylesheet_reference": "/styles/print.css",
+      "page_settings": {
+        "size": "letter",
+        "orientation": "portrait",
+        "margins": { "top": "0.5in", "right": "0.5in", "bottom": "0.75in", "left": "0.5in" }
+      },
+      "component_rules": {
+        "gauge": { "break_inside": "avoid", "print_size": "medium", "max_width": "150px" },
+        "heatmap": { "break_inside": "avoid", "force_new_page": false, "print_variant": "condensed" },
+        "score_tile": { "break_inside": "avoid", "print_size": "compact" },
+        "table": { "break_inside": "avoid-page", "max_rows_per_page": 25, "repeat_header": true },
+        "bar_chart": { "break_inside": "avoid", "print_grayscale_fallback": true },
+        "radar_chart": { "break_inside": "avoid", "print_size": "medium" },
+        "roadmap_timeline": { "break_before": "page", "print_orientation": "landscape_if_wide" },
+        "risk_matrix": { "break_inside": "avoid", "print_patterns": true },
+        "sparkline": { "print_size": "compact", "max_width": "40px", "height": "16px" },
+        "waterfall": { "break_inside": "avoid" },
+        "funnel": { "break_inside": "avoid", "print_labels": true },
+        "metric_card": { "break_inside": "avoid", "print_size": "compact" },
+        "action_card": { "break_inside": "avoid", "max_per_page": 3 },
+        "kpi_dashboard": { "break_inside": "avoid", "print_columns": 2 },
+        "benchmark_bar": { "break_inside": "avoid", "print_patterns": true }
+      },
+      "color_handling": {
+        "force_color_print": true,
+        "webkit_print_color_adjust": "exact",
+        "fallback_patterns": true,
+        "high_contrast_mode": false
+      }
+    },
+
+    "performance_budgets": {
+      "components": {
+        "per_report": { "warning_threshold": 60, "error_threshold": 75, "action_on_exceed": "log_warning" },
+        "per_section": { "warning_threshold": 10, "error_threshold": 15, "action_on_exceed": "log_warning" }
+      },
+      "rendering": {
+        "target_time_ms": 5000,
+        "warning_time_ms": 8000,
+        "max_time_ms": 15000,
+        "lazy_load_threshold": 30,
+        "progressive_rendering": true
+      },
+      "output": {
+        "max_file_size_kb": 3000,
+        "warning_file_size_kb": 2500,
+        "max_embedded_images": 30,
+        "image_compression": "medium",
+        "image_format": "png"
+      },
+      "validation": {
+        "enforce_budgets": true,
+        "log_violations": true,
+        "fail_on_error_threshold": false,
+        "include_in_report_metadata": true
+      }
+    },
+
+    "benchmark_configuration": {
+      "primary_source": "$.benchmark_data.industry_benchmark",
+      "fallback_sources": [
+        "$.benchmark_data.peer_comparison",
+        "$.benchmark_data.revenue_cohort",
+        "$.benchmark_data.national_average"
+      ],
+      "fallback_display": {
+        "text": "Industry benchmark unavailable",
+        "show_placeholder": true,
+        "hide_benchmark_components": false
+      },
+      "display_settings": {
+        "show_percentile_rank": true,
+        "show_cohort_context": true,
+        "benchmark_label": "Industry Avg",
+        "delta_format": "+X% vs benchmark",
+        "percentile_bands": {
+          "top_quartile": 75,
+          "median": 50,
+          "bottom_quartile": 25
+        }
+      },
+      "comparison_type": "industry",
+      "source_documentation": "Phase 0 benchmark-service.ts retrieves from /data/benchmarks/"
+    },
+
+    "accessibility_requirements": {
+      "compliance_level": "WCAG_2.1_AA",
+      "validation_required": true,
+      "validation_tools": ["axe-core", "WAVE"],
+      "color_requirements": {
+        "min_contrast_normal_text": 4.5,
+        "min_contrast_large_text": 3.0,
+        "min_contrast_ui_components": 3.0,
+        "colorblind_safe": true,
+        "never_color_alone": true,
+        "status_symbols": {
+          "excellence": { "symbol": "✓", "aria_label": "Excellent performance" },
+          "proficiency": { "symbol": "!", "aria_label": "Good performance" },
+          "attention": { "symbol": "⚠", "aria_label": "Needs attention" },
+          "critical": { "symbol": "✗", "aria_label": "Critical issue" }
+        }
+      },
+      "screen_reader_requirements": {
+        "all_charts_have_aria_label": true,
+        "provide_data_tables_for_charts": true,
+        "logical_heading_hierarchy": true,
+        "skip_links_enabled": true,
+        "meaningful_link_text": true
+      },
+      "keyboard_requirements": {
+        "all_interactive_focusable": true,
+        "visible_focus_indicators": true,
+        "logical_tab_order": true,
+        "no_keyboard_traps": true
+      },
+      "audit_checkpoints": [
+        {
+          "phase": "component_implementation",
+          "tool": "axe-core",
+          "max_violations": 0,
+          "categories": ["wcag2a", "wcag2aa"]
+        },
+        {
+          "phase": "report_generation",
+          "tool": "WAVE",
+          "max_errors": 0,
+          "max_warnings": 5
+        },
+        {
+          "phase": "pdf_export",
+          "manual_checks": ["color_contrast", "reading_order", "alt_text"]
+        }
+      ]
+    },
+
+    "components": [
+      {
+        "type": "gauge",
+        "id": "overall_health_gauge",
+        "section": "executive_overview",
+        "order": 1,
+        "config": { "size": "large", "show_status": true, "show_benchmark": true, "animation": false },
+        "data_binding": {
+          "primary_path": "$.scores_summary.overall_health_score",
+          "fallback_path": null,
+          "default_value": 0,
+          "on_error": "show_placeholder",
+          "label": "Overall Business Health",
+          "benchmark_path": "$.benchmark_data.industry_benchmark.overall",
+          "benchmark_default": null
+        },
+        "conditional": {
+          "render_if": "$.scores_summary.overall_health_score != null",
+          "fallback_behavior": "show_message",
+          "fallback_message": "Health score calculation in progress"
+        },
+        "accessibility": { "aria_label": "Business health score: {score} out of 100", "role": "img" },
+        "print_override": { "size": "medium", "show_animation": false }
+      },
+      {
+        "type": "heatmap",
+        "id": "portfolio_heatmap",
+        "section": "health_scorecard",
+        "order": 1,
+        "config": { "variant": "full", "show_symbols": true },
+        "data_binding": {
+          "primary_path": "$.chapters",
+          "fallback_path": null,
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "Business health portfolio showing all 12 dimensions" }
+      },
+      {
+        "type": "score_tile",
+        "id": "dimension_tiles",
+        "section": "executive_overview",
+        "order": 2,
+        "config": { "size": "standard", "show_trend": true, "show_benchmark": true, "repeat_for_each": "dimension" },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*]",
+          "fallback_path": null,
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters[*].dimensions.length > 0" },
+        "accessibility": { "aria_label": "{dimension_name} score: {score}" }
+      },
+      {
+        "type": "radar_chart",
+        "id": "growth_engine_radar",
+        "section": "chapter_ge",
+        "order": 2,
+        "config": { "size": "large", "show_benchmark": true, "max_dimensions": 6 },
+        "data_binding": {
+          "primary_path": "$.chapters[?(@.code=='GE')].dimensions",
+          "fallback_path": "$.chapters[0].dimensions",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.chapters[?(@.code=='GE')].dimensions.length >= 3",
+          "fallback_message": "Insufficient data for radar visualization"
+        },
+        "accessibility": { "aria_label": "Growth Engine balance across {count} dimensions" }
+      },
+      {
+        "type": "radar_chart",
+        "id": "resilience_radar",
+        "section": "chapter_rs",
+        "order": 2,
+        "config": { "size": "large", "show_benchmark": true, "max_dimensions": 6 },
+        "data_binding": {
+          "primary_path": "$.chapters[?(@.code=='RS')].dimensions",
+          "fallback_path": "$.chapters[3].dimensions",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters[?(@.code=='RS')].dimensions.length >= 3" },
+        "accessibility": { "aria_label": "Resilience balance across dimensions" }
+      },
+      {
+        "type": "bar_chart",
+        "id": "all_dimensions_chart",
+        "section": "findings_summary",
+        "order": 1,
+        "config": { "orientation": "horizontal", "sort_by": "score", "max_items": 12 },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*]",
+          "value_field": "score",
+          "label_field": "name"
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "Dimension scores comparison" }
+      },
+      {
+        "type": "benchmark_bar",
+        "id": "benchmark_comparison",
+        "section": "health_scorecard",
+        "order": 2,
+        "config": { "show_delta": true, "sort_by": "delta", "max_items": 6 },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*]",
+          "score_field": "score",
+          "benchmark_path": "$.benchmark_data.industry_benchmark.by_dimension"
+        },
+        "conditional": {
+          "render_if": "$.benchmark_data.industry_benchmark != null",
+          "fallback_message": "Industry benchmark data not available"
+        },
+        "accessibility": { "aria_label": "Performance vs industry benchmark" }
+      },
+      {
+        "type": "risk_matrix",
+        "id": "strategic_risks",
+        "section": "risk_register",
+        "order": 1,
+        "config": { "show_legend": true, "show_labels": true },
+        "data_binding": {
+          "primary_path": "$.risks",
+          "fallback_path": null,
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.risks.length > 0",
+          "fallback_message": "No significant risks identified",
+          "fallback_component": {
+            "type": "metric_card",
+            "config": { "label": "Risk Status", "value": "Low Risk Profile" }
+          }
+        },
+        "accessibility": { "aria_label": "Risk assessment matrix with {count} identified risks" }
+      },
+      {
+        "type": "roadmap_timeline",
+        "id": "implementation_roadmap",
+        "section": "implementation_roadmap",
+        "order": 1,
+        "config": { "show_milestones": true, "show_investment": true },
+        "data_binding": {
+          "primary_path": "$.roadmap.phases",
+          "timeline_months_path": "$.roadmap.overall_timeline_months",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.roadmap.phases.length > 0",
+          "fallback_message": "Implementation roadmap in development"
+        },
+        "accessibility": { "aria_label": "Implementation roadmap spanning {months} months" }
+      },
+      {
+        "type": "waterfall",
+        "id": "score_decomposition",
+        "section": "findings_summary",
+        "order": 3,
+        "config": {},
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*]",
+          "start_value": 100
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "Score breakdown by dimension" }
+      },
+      {
+        "type": "table",
+        "id": "findings_table",
+        "section": "findings_summary",
+        "order": 2,
+        "config": { "striped": true, "highlight_column": 3 },
+        "data_binding": {
+          "primary_path": "$.findings",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.findings.length > 0" },
+        "accessibility": { "aria_label": "Detailed findings table" }
+      },
+      {
+        "type": "table",
+        "id": "recommendations_table",
+        "section": "recommendations",
+        "order": 1,
+        "config": { "striped": true },
+        "data_binding": {
+          "primary_path": "$.recommendations",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.recommendations.length > 0" },
+        "accessibility": { "aria_label": "Strategic recommendations table" }
+      },
+      {
+        "type": "action_card",
+        "id": "quick_wins",
+        "section": "quick_wins",
+        "order": 1,
+        "config": { "variant": "full", "show_steps": true, "max_items": 5 },
+        "data_binding": {
+          "primary_path": "$.quick_wins",
+          "default_value": []
+        },
+        "conditional": {
+          "render_if": "$.quick_wins.length > 0",
+          "fallback_message": "Quick wins analysis in progress"
+        },
+        "accessibility": { "aria_label": "Top {count} quick win opportunities" }
+      },
+      {
+        "type": "kpi_dashboard",
+        "id": "key_metrics",
+        "section": "executive_overview",
+        "order": 3,
+        "config": { "columns": 4, "metrics_count": 8 },
+        "data_binding": {
+          "metrics": [
+            { "label": "Health Score", "path": "$.scores_summary.overall_health_score", "default": "N/A" },
+            { "label": "Strengths", "path": "$.findings[?(@.type=='strength')].length", "default": 0 },
+            { "label": "Gaps", "path": "$.findings[?(@.type=='gap')].length", "default": 0 },
+            { "label": "Quick Wins", "path": "$.quick_wins.length", "default": 0 },
+            { "label": "Risks", "path": "$.risks.length", "default": 0 },
+            { "label": "Recommendations", "path": "$.recommendations.length", "default": 0 },
+            { "label": "Est. ROI", "path": "$.roadmap.expected_roi_percentage", "default": "TBD", "suffix": "%" },
+            { "label": "Timeline", "path": "$.roadmap.overall_timeline_months", "default": "TBD", "suffix": " months" }
+          ]
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Key business metrics dashboard" }
+      },
+      {
+        "type": "sparkline",
+        "id": "dimension_trends",
+        "section": "chapter_ge",
+        "order": 3,
+        "config": { "data_points": 6, "repeat_for_each": "dimension" },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[*].trajectory",
+          "default_value": null
+        },
+        "conditional": {
+          "render_if": "$.chapters[*].dimensions[*].trajectory != null",
+          "hide_if_null": true
+        },
+        "accessibility": { "aria_label": "{dimension_name} trend indicator" }
+      }
+    ]
+  }
+}

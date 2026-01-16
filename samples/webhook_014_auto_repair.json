@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-29T23:42:33.234Z",
+    "submission_id": "n4o5p6q7-r8s9-0123-nopq-rs4567890123",
+    "created_at": "2025-11-29 21:35:18.234567+00",
+    "business_overview": {
+        "company_name": "Premier Auto Care Centers",
+        "location": "Dallas TX",
+        "country": "United States",
+        "company_website": "premierautocare.com",
+        "industry": "other_services",
+        "industry_other_details": "Multi-location auto repair and maintenance service centers",
+        "corporate_structure": "s_corporation",
+        "year_started": 2005,
+        "multiple_locations": true,
+        "number_of_locations": 6,
+        "executive_leadership_roles": 3,
+        "support_admin_staff": 8,
+        "full_time_employees": 42,
+        "part_time_employees": 6,
+        "contract_temp_personnel": 2,
+        "seasonal_employees": 0,
+        "last_year_revenue": 6200000,
+        "projected_revenue": 6800000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 6200000,
+        "products_services": [
+            {
+                "name": "General Repair & Maintenance",
+                "percentage": 60,
+                "type": "service"
+            },
+            {
+                "name": "Tire Services",
+                "percentage": 25,
+                "type": "service"
+            },
+            {
+                "name": "Parts Sales",
+                "percentage": 15,
+                "type": "product"
+            }
+        ],
+        "current_challenges": [
+            "human_resources",
+            "operations",
+            "technology"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Jiffy Lube",
+                "website": "https://jiffylube.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "Midas",
+                "website": "https://midas.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 7,
+        "sales_growth_past_year": 12,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 10,
+        "business_goals_plan": 3,
+        "goals_barriers": "Technician shortage, competition from dealerships",
+        "business_plan_review": 3,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": 20,
+        "b2c_percentage": 80,
+        "wholesale_percentage": null,
+        "retail_percentage": 80,
+        "online_percentage": 5,
+        "sales_targets_alignment": 3,
+        "sales_pipeline_management": 3,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 385,
+        "repeat_sales_percentage": 68,
+        "upselling_focus": 4,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 5,
+        "current_marketing_channels": "Local SEO, Direct Mail, Radio, Referral Program, Social Media",
+        "future_marketing_channels": "Digital Advertising, Email Marketing",
+        "customer_targeting": 3,
+        "customer_acquisition_cost": 45,
+        "cac_unknown": false,
+        "customer_lifetime_value": 2400,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 22,
+        "marketing_roi": 6.2,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 18500
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 4,
+        "feedback_challenges": null,
+        "customer_satisfaction": 4,
+        "no_feedback_method": false,
+        "net_promoter_score": 4,
+        "customer_effort_score": 4,
+        "competitive_strength": 4,
+        "issue_resolution": 4,
+        "response_time_hours": 6
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Scheduling efficiency, parts inventory management",
+        "workflow_documentation": 3,
+        "inventory_turnover_rate": 14,
+        "no_inventory": false,
+        "operational_reliability": 4,
+        "lean_principles": 3,
+        "space_utilization": 78,
+        "equipment_utilization": 82,
+        "personnel_utilization": 75
+    },
+    "financials": {
+        "total_debt_liabilities": 1450000,
+        "total_working_capital": 850000,
+        "debt_monitoring": 4,
+        "current_cash_available": 520000,
+        "near_term_expenses": 485000,
+        "cash_runway_months": 13,
+        "gross_profit_margin": 42,
+        "monthly_profit_estimate": 145000,
+        "profit_is_estimate": true,
+        "burn_rate": 3,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 3,
+        "recruiting_onboarding": 2,
+        "training_development": 3,
+        "training_resources_needed": "Technical certification programs, customer service training",
+        "employee_turnover_rate": 45,
+        "employee_engagement": 3,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 3,
+        "decision_making_structure": 3,
+        "leadership_board_oversight": 3,
+        "has_advisory_board": false,
+        "decision_making_effectiveness": 3,
+        "leadership_culture_effectiveness": 3,
+        "development_mentorship": 3
+    },
+    "technology": {
+        "technology_investment": 125000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 30,
+        "innovation_culture": 3,
+        "emerging_technologies": 2,
+        "technology_adoption": 3,
+        "automation_utilization": 3,
+        "innovation_impact": 3
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 3,
+        "network_effectiveness": 3,
+        "cybersecurity": 3,
+        "data_management": 3,
+        "data_governance": 3,
+        "it_scalability": 3,
+        "it_support_maintenance": 3
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Liability claims, technician retention",
+        "risk_identification_review": 4,
+        "risk_mitigation": 4,
+        "contingency_plans": 3,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 3,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 4,
+        "policy_adherence": 4,
+        "training_completion": 4,
+        "compliance_monitoring": 4,
+        "regulatory_updates": 4,
+        "compliance_documentation": 4,
+        "incident_reporting": 4,
+        "compliance_costs": 85000,
+        "compliance_cost_estimate": true
+    }
+}

@@ -1,0 +1,215 @@
+{
+      "event": "new_questionnaire_response",
+      "timestamp": "2025-10-31T13:04:20.575Z",
+      "submission_id": "571c08d8-d8f0-4b6b-8bde-b84ebfc299bb",
+      "created_at": "2025-10-06 04:40:10.214143+00",
+      "business_overview": {
+          "company_name": "EWM Global",
+          "location": "Stamford CT",
+          "country": "United States",
+          "company_website": "ewmglobal.com",
+          "industry": "information",
+          "industry_other_details": "Fintech company that provides technology to financial services companies.  It is most like Computershare for comparison.",
+          "corporate_structure": "c_corporation",
+          "year_started": 2001,
+          "multiple_locations": true,
+          "number_of_locations": 3,
+          "executive_leadership_roles": 4,
+          "support_admin_staff": 81,
+          "full_time_employees": 85,
+          "part_time_employees": 0,
+          "contract_temp_personnel": 0,
+          "seasonal_employees": 0,
+          "last_year_revenue": 24000000,
+          "projected_revenue": 26000000,
+          "highest_sales_year": 2024,
+          "highest_annual_sales": 24000000,
+          "products_services": [
+              {
+                  "name": "Deferred Cash Plan Administration",
+                  "percentage": 69,
+                  "type": "service"
+              },
+              {
+                  "name": "Share Plan Administration",
+                  "percentage": 1,
+                  "type": "service"
+              },
+              {
+                  "name": "Carry/Coinvestment Plan Administration",
+                  "percentage": 30,
+                  "type": "service"
+              }
+          ],
+          "current_challenges": [
+              "sales",
+              "marketing",
+              "financials",
+              "leadership",
+              "strategy",
+              "technology",
+              "operations",
+              "human_resources"
+          ],
+          "competitors": [
+              {
+                  "direct_competitor": false,
+                  "name": "Computershare",
+                  "website": "https://www-us.computershare.com/"
+              },
+              {
+                  "direct_competitor": true,
+                  "name": "GPx",
+                  "website": "https://www.gppowerx.com/"
+              },
+              {
+                  "direct_competitor": true,
+                  "name": "HRSoft",
+                  "website": "https://hrsoft.com/"
+              }
+          ]
+      },
+      "strategy": {
+          "competitive_differentiators_understanding": 3,
+          "local_market_share": 10,
+          "sales_growth_past_year": 15,
+          "sales_growth_past_year_estimate": false,
+          "target_sales_growth": 20,
+          "business_goals_plan": 4,
+          "goals_barriers": null,
+          "business_plan_review": 3,
+          "growth_exit_plan": 4
+      },
+      "sales": {
+          "b2b_percentage": 100,
+          "b2c_percentage": null,
+          "wholesale_percentage": null,
+          "retail_percentage": null,
+          "online_percentage": null,
+          "sales_targets_alignment": 5,
+          "sales_pipeline_management": 4,
+          "average_sales_cycle_days": 270,
+          "no_sales_cycle": false,
+          "close_rate": 10,
+          "no_customer_interaction": false,
+          "average_sale_size": 70000,
+          "repeat_sales_percentage": 98,
+          "upselling_focus": 4,
+          "upselling_obstacles": null
+      },
+      "marketing": {
+          "brand_awareness": 4,
+          "marketing_methods_count": 4,
+          "current_marketing_channels": "Email Marketing, Content, Events/Conferences, SEO",
+          "future_marketing_channels": null,
+          "customer_targeting": 4,
+          "customer_acquisition_cost": 54000,
+          "cac_unknown": true,
+          "customer_lifetime_value": 1000000,
+          "ltv_unknown": false,
+          "awareness_conversion_rate": 1,
+          "marketing_roi": 7.2,
+          "marketing_roi_unknown": true,
+          "monthly_marketing_spend": 14999.99
+      },
+      "customer_experience": {
+          "customer_feedback_tracking": 3,
+          "feedback_challenges": null,
+          "customer_satisfaction": 4,
+          "no_feedback_method": true,
+          "net_promoter_score": 4,
+          "customer_effort_score": 4,
+          "competitive_strength": 4,
+          "issue_resolution": 3,
+          "response_time_hours": 24
+      },
+      "operations": {
+          "operational_efficiency": 3,
+          "operational_challenges": null,
+          "workflow_documentation": 4,
+          "inventory_turnover_rate": null,
+          "no_inventory": true,
+          "operational_reliability": 5,
+          "lean_principles": 3,
+          "space_utilization": 75,
+          "equipment_utilization": 50,
+          "personnel_utilization": 80
+      },
+      "financials": {
+          "total_debt_liabilities": null,
+          "total_working_capital": 1500000,
+          "debt_monitoring": 3,
+          "current_cash_available": 1500000,
+          "near_term_expenses": 3499999.97,
+          "cash_runway_months": null,
+          "gross_profit_margin": 32,
+          "monthly_profit_estimate": 640000,
+          "profit_is_estimate": true,
+          "burn_rate": 4,
+          "cash_flow_forecasting": 4,
+          "budgeting_financial_planning": 4,
+          "financial_readiness_growth": 4,
+          "financial_concerns": null
+      },
+      "human_resources": {
+          "hr_infrastructure": 3,
+          "company_culture": 2,
+          "recruiting_onboarding": 3,
+          "training_development": 3,
+          "training_resources_needed": null,
+          "employee_turnover_rate": 19.9,
+          "employee_engagement": 3,
+          "performance_management": 3
+      },
+      "leadership": {
+          "leadership_effectiveness": 3,
+          "decision_making_structure": 3,
+          "leadership_board_oversight": 2,
+          "has_advisory_board": false,
+          "decision_making_effectiveness": 2,
+          "leadership_culture_effectiveness": 3,
+          "development_mentorship": 3
+      },
+      "technology": {
+          "technology_investment": 2500000,
+          "tech_investment_estimate": false,
+          "innovation_pipeline_percentage": 70,
+          "innovation_culture": 4,
+          "emerging_technologies": 4,
+          "technology_adoption": 4,
+          "automation_utilization": 3,
+          "innovation_impact": 4
+      },
+      "it_infrastructure": {
+          "it_infrastructure": 5,
+          "network_effectiveness": 5,
+          "cybersecurity": 4,
+          "data_management": 5,
+          "data_governance": 5,
+          "it_scalability": 4,
+          "it_support_maintenance": 4
+      },
+      "risk_management": {
+          "overall_risk_outlook": 3,
+          "specific_risks_concern": null,
+          "risk_identification_review": 4,
+          "risk_mitigation": 4,
+          "contingency_plans": 4,
+          "financial_resilience": 2,
+          "operational_continuity": 4,
+          "succession_leadership_stability": 3,
+          "strategic_adaptability": 3,
+          "disruption_impact": null
+      },
+      "compliance": {
+          "compliance_awareness": 5,
+          "policy_adherence": 4,
+          "training_completion": 4,
+          "compliance_monitoring": 3,
+          "regulatory_updates": 4,
+          "compliance_documentation": 4,
+          "incident_reporting": 5,
+          "compliance_costs": 280000,
+          "compliance_cost_estimate": true
+      }
+  }

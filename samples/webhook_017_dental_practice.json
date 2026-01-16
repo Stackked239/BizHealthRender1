@@ -1,0 +1,205 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-30T02:32:48.123Z",
+    "submission_id": "q7r8s9t0-u1v2-3456-qrst-uv7890123456",
+    "created_at": "2025-11-30 00:25:22.123456+00",
+    "business_overview": {
+        "company_name": "Bright Smile Dental Group",
+        "location": "Nashville TN",
+        "country": "United States",
+        "company_website": "brightsmiledental.com",
+        "industry": "health_care_social_assistance",
+        "industry_other_details": "Multi-location dental practice offering general and cosmetic dentistry",
+        "corporate_structure": "professional_corporation",
+        "year_started": 2013,
+        "multiple_locations": true,
+        "number_of_locations": 4,
+        "executive_leadership_roles": 3,
+        "support_admin_staff": 16,
+        "full_time_employees": 32,
+        "part_time_employees": 8,
+        "contract_temp_personnel": 4,
+        "seasonal_employees": 0,
+        "last_year_revenue": 4200000,
+        "projected_revenue": 4850000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 4200000,
+        "products_services": [
+            {
+                "name": "General Dentistry",
+                "percentage": 55,
+                "type": "service"
+            },
+            {
+                "name": "Cosmetic Dentistry",
+                "percentage": 30,
+                "type": "service"
+            },
+            {
+                "name": "Orthodontics",
+                "percentage": 15,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "marketing",
+            "human_resources",
+            "technology"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "Aspen Dental",
+                "website": "https://aspendental.com"
+            },
+            {
+                "direct_competitor": false,
+                "name": "Heartland Dental",
+                "website": "https://heartland.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 8,
+        "sales_growth_past_year": 16,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 18,
+        "business_goals_plan": 4,
+        "goals_barriers": null,
+        "business_plan_review": 4,
+        "growth_exit_plan": 3
+    },
+    "sales": {
+        "b2b_percentage": 5,
+        "b2c_percentage": 95,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": null,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 3,
+        "average_sales_cycle_days": null,
+        "no_sales_cycle": true,
+        "close_rate": null,
+        "no_customer_interaction": false,
+        "average_sale_size": 420,
+        "repeat_sales_percentage": 88,
+        "upselling_focus": 4,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 4,
+        "marketing_methods_count": 5,
+        "current_marketing_channels": "Local SEO, Google Ads, Social Media, Patient Referrals, Community Events",
+        "future_marketing_channels": "Video Marketing, Email Campaigns",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 125,
+        "cac_unknown": false,
+        "customer_lifetime_value": 5200,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 28,
+        "marketing_roi": 8.5,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 16500
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 5,
+        "feedback_challenges": null,
+        "customer_satisfaction": 5,
+        "no_feedback_method": false,
+        "net_promoter_score": 5,
+        "customer_effort_score": 5,
+        "competitive_strength": 5,
+        "issue_resolution": 5,
+        "response_time_hours": 2
+    },
+    "operations": {
+        "operational_efficiency": 4,
+        "operational_challenges": null,
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": 20,
+        "no_inventory": false,
+        "operational_reliability": 5,
+        "lean_principles": 4,
+        "space_utilization": 85,
+        "equipment_utilization": 88,
+        "personnel_utilization": 82
+    },
+    "financials": {
+        "total_debt_liabilities": 1850000,
+        "total_working_capital": 720000,
+        "debt_monitoring": 4,
+        "current_cash_available": 485000,
+        "near_term_expenses": 350000,
+        "cash_runway_months": 15,
+        "gross_profit_margin": 58,
+        "monthly_profit_estimate": 125000,
+        "profit_is_estimate": false,
+        "burn_rate": 4,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 4,
+        "financial_concerns": null
+    },
+    "human_resources": {
+        "hr_infrastructure": 4,
+        "company_culture": 5,
+        "recruiting_onboarding": 4,
+        "training_development": 4,
+        "training_resources_needed": null,
+        "employee_turnover_rate": 18,
+        "employee_engagement": 5,
+        "performance_management": 4
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 3,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 5,
+        "development_mentorship": 4
+    },
+    "technology": {
+        "technology_investment": 280000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 50,
+        "innovation_culture": 4,
+        "emerging_technologies": 4,
+        "technology_adoption": 5,
+        "automation_utilization": 4,
+        "innovation_impact": 4
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 4,
+        "network_effectiveness": 4,
+        "cybersecurity": 5,
+        "data_management": 5,
+        "data_governance": 5,
+        "it_scalability": 4,
+        "it_support_maintenance": 4
+    },
+    "risk_management": {
+        "overall_risk_outlook": 4,
+        "specific_risks_concern": null,
+        "risk_identification_review": 4,
+        "risk_mitigation": 4,
+        "contingency_plans": 4,
+        "financial_resilience": 4,
+        "operational_continuity": 5,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 4,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 5,
+        "training_completion": 5,
+        "compliance_monitoring": 5,
+        "regulatory_updates": 5,
+        "compliance_documentation": 5,
+        "incident_reporting": 5,
+        "compliance_costs": 165000,
+        "compliance_cost_estimate": false
+    }
+}

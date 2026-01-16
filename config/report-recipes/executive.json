@@ -1,0 +1,312 @@
+{
+  "report_id": "executive",
+  "name": "Executive Summary Report",
+  "version": "1.0.0",
+  "primary_audience": "executive",
+  "description": "Concise C-suite oriented report with strategic insights, key metrics, and board-ready presentation format.",
+  "target_page_range": {
+    "min": 5,
+    "max": 10
+  },
+  "brand_config": {
+    "primary_color": "#212653",
+    "accent_color": "#969423",
+    "font_heading": "Montserrat",
+    "font_body": "Open Sans"
+  },
+  "default_tone_tags": ["executive", "strategic", "summary"],
+  "sections": [
+    {
+      "id": "headline",
+      "title": "Business Health Assessment",
+      "description": "Headline metrics and health status",
+      "data_sources": [
+        { "id": "health_score", "from": "scores_summary.overall_health_score" },
+        { "id": "descriptor", "from": "scores_summary.descriptor" },
+        { "id": "trajectory", "from": "scores_summary.trajectory" }
+      ],
+      "visual_type": "metric_card",
+      "layout_hints": { "columns": 3, "alignment": "center" }
+    },
+    {
+      "id": "chapter_scores",
+      "title": "Performance by Chapter",
+      "description": "Scores across the four main business chapters",
+      "data_sources": [
+        { "id": "chapters", "from": "chapters" }
+      ],
+      "visual_type": "score_tiles_row",
+      "layout_hints": { "columns": 4 }
+    },
+    {
+      "id": "key_imperatives",
+      "title": "Key Strategic Imperatives",
+      "description": "Top 3 strategic priorities",
+      "data_sources": [
+        { "id": "imperatives", "from": "scores_summary.key_imperatives" }
+      ],
+      "tone_tags": ["executive", "strategic"],
+      "visual_type": "bullet_list"
+    },
+    {
+      "id": "critical_risks",
+      "title": "Critical Risks",
+      "description": "Risks requiring immediate executive attention",
+      "data_sources": [
+        { "id": "risks", "from": "risks", "sort": { "field": "severity", "direction": "desc" }, "limit": 3 }
+      ],
+      "tone_tags": ["urgent", "executive"],
+      "visual_type": "callout_box",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "strengths_weaknesses",
+      "title": "Strengths & Challenges",
+      "description": "Balanced view of highest and lowest performing areas",
+      "data_sources": [
+        { "id": "top_dims", "from": "dimensions", "sort": { "field": "score_overall", "direction": "desc" }, "limit": 3 },
+        { "id": "bottom_dims", "from": "dimensions", "sort": { "field": "score_overall", "direction": "asc" }, "limit": 3 }
+      ],
+      "tone_tags": ["analytical", "summary"],
+      "visual_type": "comparison_table"
+    },
+    {
+      "id": "recommendations_preview",
+      "title": "Priority Recommendations",
+      "description": "Top 3 strategic recommendations",
+      "data_sources": [
+        { "id": "recommendations", "from": "recommendations", "sort": { "field": "priority_rank", "direction": "asc" }, "limit": 3 }
+      ],
+      "tone_tags": ["strategic", "action_oriented"],
+      "visual_type": "numbered_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "roadmap_summary",
+      "title": "Implementation Timeline",
+      "description": "High-level roadmap phases",
+      "data_sources": [
+        { "id": "phases", "from": "roadmap.phases" }
+      ],
+      "visual_type": "timeline"
+    },
+    {
+      "id": "call_to_action",
+      "title": "Recommended Next Steps",
+      "description": "Immediate executive actions",
+      "data_sources": [
+        { "id": "quick_wins", "from": "quick_wins" }
+      ],
+      "tone_tags": ["directive", "action_oriented"],
+      "visual_type": "checklist"
+    }
+  ],
+  "visuals": {
+    "version": "1.1.0",
+    "schema_version": "2025-06-01",
+
+    "global_settings": {
+      "brand_colors": true,
+      "accessibility_symbols": true,
+      "print_optimized": true,
+      "show_benchmarks": false,
+      "style_modifiers": {
+        "friendly_language": false,
+        "celebratory_style": false,
+        "action_oriented": true,
+        "simple_style": true
+      },
+      "jsonpath_config": {
+        "library": "jsonpath-plus",
+        "strict_mode": false,
+        "log_path_resolution": false,
+        "null_handling": "use_default"
+      }
+    },
+
+    "data_requirements": {
+      "required_fields": [
+        { "path": "$.scores_summary.overall_health_score", "type": "number", "validation": "0-100" },
+        { "path": "$.chapters", "type": "array", "min_length": 4 }
+      ],
+      "optional_fields": [
+        { "path": "$.roadmap.total_estimated_investment", "type": "number", "default": null, "display_default": "TBD", "hide_component_if_null": false },
+        { "path": "$.quick_wins", "type": "array", "default": [], "min_items_to_render": 1 }
+      ],
+      "validation_mode": "warn"
+    },
+
+    "print_configuration": {
+      "stylesheet_reference": "/styles/print.css",
+      "page_settings": {
+        "size": "letter",
+        "orientation": "portrait",
+        "margins": { "top": "0.5in", "right": "0.5in", "bottom": "0.75in", "left": "0.5in" }
+      },
+      "component_rules": {
+        "gauge": { "break_inside": "avoid", "print_size": "medium", "max_width": "150px" },
+        "heatmap": { "break_inside": "avoid", "print_variant": "condensed" },
+        "score_tile": { "break_inside": "avoid", "print_size": "compact" },
+        "table": { "break_inside": "avoid-page", "max_rows_per_page": 15, "repeat_header": true },
+        "bar_chart": { "break_inside": "avoid", "print_grayscale_fallback": true },
+        "kpi_dashboard": { "break_inside": "avoid", "print_columns": 2 },
+        "metric_card": { "break_inside": "avoid", "print_size": "compact" }
+      },
+      "color_handling": {
+        "force_color_print": true,
+        "webkit_print_color_adjust": "exact",
+        "fallback_patterns": true,
+        "high_contrast_mode": false
+      }
+    },
+
+    "performance_budgets": {
+      "components": {
+        "per_report": { "warning_threshold": 12, "error_threshold": 15, "action_on_exceed": "log_warning" },
+        "per_section": { "warning_threshold": 5, "error_threshold": 8, "action_on_exceed": "log_warning" }
+      },
+      "rendering": {
+        "target_time_ms": 1500,
+        "warning_time_ms": 3000,
+        "max_time_ms": 5000,
+        "lazy_load_threshold": 10,
+        "progressive_rendering": false
+      },
+      "output": {
+        "max_file_size_kb": 800,
+        "warning_file_size_kb": 600,
+        "max_embedded_images": 8,
+        "image_compression": "medium",
+        "image_format": "png"
+      },
+      "validation": {
+        "enforce_budgets": true,
+        "log_violations": true,
+        "fail_on_error_threshold": false,
+        "include_in_report_metadata": true
+      }
+    },
+
+    "benchmark_configuration": {
+      "primary_source": "$.benchmark_data.industry_benchmark",
+      "fallback_sources": [],
+      "fallback_display": {
+        "text": "Benchmark unavailable",
+        "show_placeholder": false,
+        "hide_benchmark_components": true
+      },
+      "display_settings": {
+        "show_percentile_rank": false,
+        "show_cohort_context": false,
+        "benchmark_label": "Industry",
+        "delta_format": "+X%"
+      },
+      "comparison_type": "industry"
+    },
+
+    "accessibility_requirements": {
+      "compliance_level": "WCAG_2.1_AA",
+      "validation_required": true,
+      "validation_tools": ["axe-core"],
+      "color_requirements": {
+        "min_contrast_normal_text": 4.5,
+        "min_contrast_large_text": 3.0,
+        "colorblind_safe": true,
+        "never_color_alone": true,
+        "status_symbols": {
+          "excellence": { "symbol": "✓", "aria_label": "Excellent" },
+          "proficiency": { "symbol": "!", "aria_label": "Good" },
+          "attention": { "symbol": "⚠", "aria_label": "Attention" },
+          "critical": { "symbol": "✗", "aria_label": "Critical" }
+        }
+      },
+      "screen_reader_requirements": {
+        "all_charts_have_aria_label": true,
+        "provide_data_tables_for_charts": true,
+        "logical_heading_hierarchy": true
+      }
+    },
+
+    "components": [
+      {
+        "type": "gauge",
+        "id": "overall_health_gauge",
+        "section": "headline",
+        "order": 1,
+        "config": { "size": "large", "show_status": true, "show_benchmark": false, "animation": false },
+        "data_binding": {
+          "primary_path": "$.scores_summary.overall_health_score",
+          "fallback_path": null,
+          "default_value": 0,
+          "label": "Business Health"
+        },
+        "conditional": { "render_if": "$.scores_summary.overall_health_score != null" },
+        "accessibility": { "aria_label": "Business health: {score}", "role": "img" },
+        "print_override": { "size": "medium" }
+      },
+      {
+        "type": "heatmap",
+        "id": "condensed_heatmap",
+        "section": "chapter_scores",
+        "order": 1,
+        "config": { "variant": "condensed", "show_symbols": true },
+        "data_binding": {
+          "primary_path": "$.chapters",
+          "fallback_path": null,
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.chapters.length > 0" },
+        "accessibility": { "aria_label": "Health overview" }
+      },
+      {
+        "type": "score_tile",
+        "id": "critical_dimensions",
+        "section": "strengths_weaknesses",
+        "order": 1,
+        "config": { "size": "compact", "show_trend": true, "show_benchmark": false, "max_items": 4 },
+        "data_binding": {
+          "primary_path": "$.chapters[*].dimensions[?(@.band=='critical' || @.band=='attention')]",
+          "fallback_path": "$.chapters[*].dimensions",
+          "default_value": [],
+          "sort_by": "score",
+          "sort_order": "asc",
+          "limit": 4
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Areas requiring attention" }
+      },
+      {
+        "type": "kpi_dashboard",
+        "id": "key_metrics",
+        "section": "headline",
+        "order": 2,
+        "config": { "columns": 2, "metrics_count": 4 },
+        "data_binding": {
+          "metrics": [
+            { "label": "Health Score", "path": "$.scores_summary.overall_health_score", "default": "N/A" },
+            { "label": "Critical Issues", "path": "$.findings[?(@.impact=='high')].length", "default": 0 },
+            { "label": "Top Priority", "path": "$.recommendations[0].title", "default": "Pending", "truncate": 30 },
+            { "label": "Est. Investment", "path": "$.roadmap.total_estimated_investment", "default": "TBD", "prefix": "$" }
+          ]
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Key metrics" }
+      },
+      {
+        "type": "metric_card",
+        "id": "strategic_priorities",
+        "section": "recommendations_preview",
+        "order": 1,
+        "config": { "show_trend": false, "layout": "list", "max_items": 4 },
+        "data_binding": {
+          "primary_path": "$.recommendations[0:4]",
+          "title_field": "title",
+          "value_field": "priority",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.recommendations.length > 0" },
+        "accessibility": { "aria_label": "Strategic priority: {title}" }
+      }
+    ]
+  }
+}

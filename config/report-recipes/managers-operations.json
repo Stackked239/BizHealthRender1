@@ -1,0 +1,326 @@
+{
+  "report_id": "managers_operations",
+  "name": "Operations Manager Report",
+  "version": "1.0.0",
+  "primary_audience": "manager_operations",
+  "description": "Detailed report for Operations managers with focus on Operations efficiency, process optimization, and resource utilization.",
+  "target_page_range": {
+    "min": 8,
+    "max": 12
+  },
+  "brand_config": {
+    "primary_color": "#212653",
+    "accent_color": "#969423",
+    "font_heading": "Montserrat",
+    "font_body": "Open Sans"
+  },
+  "default_tone_tags": ["tactical", "action_oriented", "detailed"],
+  "sections": [
+    {
+      "id": "department_overview",
+      "title": "Operations Overview",
+      "description": "Performance summary for Operations dimension",
+      "data_sources": [
+        { "id": "dimension", "from": "dimensions[dimension_code=OPS]" },
+        { "id": "chapter", "from": "chapters[chapter_code=PH]" }
+      ],
+      "visual_type": "score_tiles_row"
+    },
+    {
+      "id": "operations_deep_dive",
+      "title": "Operational Efficiency Assessment",
+      "description": "Detailed analysis of operational performance and processes",
+      "data_sources": [
+        { "id": "dimension", "from": "dimensions[dimension_code=OPS]" },
+        { "id": "sub_indicators", "from": "dimensions[dimension_code=OPS].sub_indicators" }
+      ],
+      "tone_tags": ["analytical", "detailed"],
+      "visual_type": "bar_chart",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "sub_indicator_breakdown",
+      "title": "Sub-Indicator Analysis",
+      "description": "Performance across operational sub-indicators",
+      "data_sources": [
+        { "id": "sub_indicators", "from": "dimensions[dimension_code=OPS].sub_indicators" }
+      ],
+      "visual_type": "table"
+    },
+    {
+      "id": "findings",
+      "title": "Operational Findings",
+      "description": "Key insights from the operations assessment",
+      "data_sources": [
+        { "id": "findings", "from": "findings", "filters": [{ "dimension_codes": ["OPS"] }] }
+      ],
+      "tone_tags": ["analytical"],
+      "visual_type": "bullet_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "technology_alignment",
+      "title": "Technology & Systems Alignment",
+      "description": "How technology supports operational efficiency",
+      "data_sources": [
+        { "id": "tech_dim", "from": "dimensions[dimension_code=TIN]" },
+        { "id": "ids_dim", "from": "dimensions[dimension_code=IDS]" }
+      ],
+      "tone_tags": ["analytical"],
+      "visual_type": "comparison_table"
+    },
+    {
+      "id": "recommendations",
+      "title": "Operations Recommendations",
+      "description": "Prioritized actions for operational improvement",
+      "data_sources": [
+        { "id": "recommendations", "from": "recommendations", "filters": [{ "dimension_codes": ["OPS"] }], "sort": { "field": "priority_rank", "direction": "asc" } }
+      ],
+      "tone_tags": ["action_oriented", "tactical"],
+      "visual_type": "numbered_list",
+      "layout_hints": { "page_break_before": true }
+    },
+    {
+      "id": "quick_wins",
+      "title": "Quick Wins for Operations",
+      "description": "Immediate actions for operational improvement",
+      "data_sources": [
+        { "id": "recs", "from": "recommendations", "filters": [{ "dimension_codes": ["OPS"] }, { "field": "horizon", "operator": "eq", "value": "90_days" }] }
+      ],
+      "tone_tags": ["action_oriented", "urgent"],
+      "visual_type": "checklist"
+    },
+    {
+      "id": "risks",
+      "title": "Operational Risks",
+      "description": "Risks affecting operations",
+      "data_sources": [
+        { "id": "risks", "from": "risks", "filters": [{ "dimension_codes": ["OPS"] }] }
+      ],
+      "tone_tags": ["analytical", "urgent"],
+      "visual_type": "table"
+    },
+    {
+      "id": "kpis",
+      "title": "Operations KPIs",
+      "description": "Key metrics to track",
+      "data_sources": [
+        { "id": "dimension", "from": "dimensions[dimension_code=OPS]" }
+      ],
+      "visual_type": "kpi_dashboard"
+    }
+  ],
+  "visuals": {
+    "version": "1.1.0",
+    "schema_version": "2025-06-01",
+
+    "global_settings": {
+      "brand_colors": true,
+      "accessibility_symbols": true,
+      "print_optimized": true,
+      "show_benchmarks": true,
+      "style_modifiers": {
+        "friendly_language": false,
+        "celebratory_style": false,
+        "action_oriented": true,
+        "simple_style": false
+      },
+      "jsonpath_config": {
+        "library": "jsonpath-plus",
+        "strict_mode": false,
+        "log_path_resolution": false,
+        "null_handling": "use_default"
+      }
+    },
+
+    "data_requirements": {
+      "required_fields": [
+        { "path": "$.dimensions[?(@.code=='OPS')]", "type": "object" }
+      ],
+      "optional_fields": [
+        { "path": "$.recommendations[?(@.dimension_code=='OPS')]", "type": "array", "default": [] },
+        { "path": "$.benchmark_data.industry_benchmark", "type": "object", "default": null, "hide_component_if_null": true }
+      ],
+      "validation_mode": "warn"
+    },
+
+    "print_configuration": {
+      "stylesheet_reference": "/styles/print.css",
+      "page_settings": {
+        "size": "letter",
+        "orientation": "portrait",
+        "margins": { "top": "0.5in", "right": "0.5in", "bottom": "0.75in", "left": "0.5in" }
+      },
+      "component_rules": {
+        "gauge": { "break_inside": "avoid", "print_size": "medium" },
+        "score_tile": { "break_inside": "avoid", "print_size": "compact" },
+        "table": { "break_inside": "avoid-page", "max_rows_per_page": 20, "repeat_header": true },
+        "bar_chart": { "break_inside": "avoid", "print_grayscale_fallback": true },
+        "sparkline": { "print_size": "compact", "max_width": "40px" },
+        "kpi_dashboard": { "break_inside": "avoid", "print_columns": 2 }
+      },
+      "color_handling": {
+        "force_color_print": true,
+        "webkit_print_color_adjust": "exact",
+        "fallback_patterns": true
+      }
+    },
+
+    "performance_budgets": {
+      "components": {
+        "per_report": { "warning_threshold": 16, "error_threshold": 20, "action_on_exceed": "log_warning" },
+        "per_section": { "warning_threshold": 5, "error_threshold": 7, "action_on_exceed": "log_warning" }
+      },
+      "rendering": {
+        "target_time_ms": 2000,
+        "warning_time_ms": 3500,
+        "max_time_ms": 6000,
+        "lazy_load_threshold": 12,
+        "progressive_rendering": true
+      },
+      "output": {
+        "max_file_size_kb": 1200,
+        "warning_file_size_kb": 1000,
+        "max_embedded_images": 10,
+        "image_compression": "medium",
+        "image_format": "png"
+      },
+      "validation": {
+        "enforce_budgets": true,
+        "log_violations": true,
+        "fail_on_error_threshold": false,
+        "include_in_report_metadata": true
+      }
+    },
+
+    "benchmark_configuration": {
+      "primary_source": "$.benchmark_data.industry_benchmark",
+      "fallback_sources": ["$.benchmark_data.peer_comparison"],
+      "fallback_display": {
+        "text": "Benchmark unavailable",
+        "show_placeholder": true,
+        "hide_benchmark_components": false
+      },
+      "display_settings": {
+        "show_percentile_rank": true,
+        "benchmark_label": "Industry Avg",
+        "delta_format": "+X% vs benchmark"
+      },
+      "comparison_type": "industry"
+    },
+
+    "accessibility_requirements": {
+      "compliance_level": "WCAG_2.1_AA",
+      "validation_required": true,
+      "color_requirements": {
+        "min_contrast_normal_text": 4.5,
+        "colorblind_safe": true,
+        "never_color_alone": true,
+        "status_symbols": {
+          "excellence": { "symbol": "✓", "aria_label": "Excellent" },
+          "proficiency": { "symbol": "!", "aria_label": "Good" },
+          "attention": { "symbol": "⚠", "aria_label": "Attention" },
+          "critical": { "symbol": "✗", "aria_label": "Critical" }
+        }
+      },
+      "screen_reader_requirements": {
+        "all_charts_have_aria_label": true,
+        "provide_data_tables_for_charts": true
+      }
+    },
+
+    "components": [
+      {
+        "type": "gauge",
+        "id": "operations_gauge",
+        "section": "department_overview",
+        "order": 1,
+        "config": { "size": "medium", "show_status": true, "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='OPS')].score",
+          "default_value": 0,
+          "label": "Operations Score",
+          "benchmark_path": "$.benchmark_data.industry_benchmark.dimensions.OPS"
+        },
+        "conditional": { "render_if": "$.dimensions[?(@.code=='OPS')] != null" },
+        "accessibility": { "aria_label": "Operations score: {score}" }
+      },
+      {
+        "type": "score_tile",
+        "id": "ph_chapter_tiles",
+        "section": "department_overview",
+        "order": 2,
+        "config": { "size": "compact", "show_trend": true, "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='OPS' || @.code=='FIN')]",
+          "default_value": []
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "{dimension_name}: {score}" }
+      },
+      {
+        "type": "bar_chart",
+        "id": "ops_sub_indicators",
+        "section": "operations_deep_dive",
+        "order": 1,
+        "config": { "orientation": "horizontal", "sort_by": "score", "show_benchmark": true },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='OPS')].sub_indicators",
+          "value_field": "score",
+          "label_field": "name",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.dimensions[?(@.code=='OPS')].sub_indicators.length > 0" },
+        "accessibility": { "aria_label": "Operations sub-indicator scores" }
+      },
+      {
+        "type": "sparkline",
+        "id": "ops_trends",
+        "section": "operations_deep_dive",
+        "order": 2,
+        "config": { "data_points": 6, "repeat_for_each": "sub_indicator" },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='OPS')].sub_indicators[*].trajectory",
+          "default_value": null
+        },
+        "conditional": {
+          "render_if": "$.dimensions[?(@.code=='OPS')].sub_indicators[*].trajectory != null",
+          "hide_if_null": true
+        },
+        "accessibility": { "aria_label": "Operations trend indicator" }
+      },
+      {
+        "type": "table",
+        "id": "sub_indicator_table",
+        "section": "sub_indicator_breakdown",
+        "order": 1,
+        "config": { "striped": true, "highlight_column": 2 },
+        "data_binding": {
+          "primary_path": "$.dimensions[?(@.code=='OPS')].sub_indicators",
+          "default_value": []
+        },
+        "conditional": { "render_if": "$.dimensions[?(@.code=='OPS')].sub_indicators.length > 0" },
+        "accessibility": { "aria_label": "Operations sub-indicators table" }
+      },
+      {
+        "type": "kpi_dashboard",
+        "id": "operations_kpis",
+        "section": "kpis",
+        "order": 1,
+        "config": { "columns": 2, "metrics_count": 6 },
+        "data_binding": {
+          "metrics": [
+            { "label": "Operations Score", "path": "$.dimensions[?(@.code=='OPS')].score", "default": "N/A" },
+            { "label": "Chapter Score", "path": "$.chapters[?(@.code=='PH')].score", "default": "N/A" },
+            { "label": "Open Actions", "path": "$.recommendations[?(@.dimension_code=='OPS')].length", "default": 0 },
+            { "label": "Strengths", "path": "$.findings[?(@.type=='strength' && @.dimension_code=='OPS')].length", "default": 0 },
+            { "label": "Gaps", "path": "$.findings[?(@.type=='gap' && @.dimension_code=='OPS')].length", "default": 0 },
+            { "label": "Risks", "path": "$.risks[?(@.dimension_code=='OPS')].length", "default": 0 }
+          ]
+        },
+        "conditional": { "render_if": "true" },
+        "accessibility": { "aria_label": "Operations KPIs" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "version": "v1.0.0",
+  "last_updated": "2026-01-07T02:08:04.022Z",
+  "entries": {
+    "86a66ed1-6c1a-4733-b862-350680f45471": {
+      "assessment_run_id": "86a66ed1-6c1a-4733-b862-350680f45471",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "76a5a329-205d-4c10-9bd3-56c57c67ee4f",
+      "created_at": "2025-12-05T03:29:50.779Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/86a66ed1-6c1a-4733-b862-350680f45471.json",
+        "normalized_company_profile": "data/normalized/a09f21a0-021a-480d-bbf1-c138e83500df/cp-76a5a329-205d-4c10-9bd3-56c57c67ee4f.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-86a66ed1-6c1a-4733-b862-350680f45471.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-86a66ed1-6c1a-4733-b862-350680f45471.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "922cbec0-b9bf-4a97-b5c7-14e766246855": {
+      "assessment_run_id": "922cbec0-b9bf-4a97-b5c7-14e766246855",
+      "company_profile_id": "summit-build-group-a9388fa3",
+      "cp_snapshot_id": "099ee905-a2f7-4129-93df-8e5b743077ba",
+      "created_at": "2025-12-05T22:37:10.303Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/summit-build-group-a9388fa3/922cbec0-b9bf-4a97-b5c7-14e766246855.json",
+        "normalized_company_profile": "data/normalized/7c359250-dfad-4fd3-ac65-b6e1b9dc5ef8/cp-099ee905-a2f7-4129-93df-8e5b743077ba.json",
+        "normalized_questionnaire_responses": "data/normalized/summit-build-group-a9388fa3/qr-922cbec0-b9bf-4a97-b5c7-14e766246855.json",
+        "benchmark_data": "data/normalized/summit-build-group-a9388fa3/benchmark-922cbec0-b9bf-4a97-b5c7-14e766246855.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "493ec10e-94f7-4d9a-90ac-204ebeef0adc": {
+      "assessment_run_id": "493ec10e-94f7-4d9a-90ac-204ebeef0adc",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "ba553d0e-aa6b-4f46-8991-cb7305e6f5f1",
+      "created_at": "2025-12-09T03:13:14.826Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/493ec10e-94f7-4d9a-90ac-204ebeef0adc.json",
+        "normalized_company_profile": "data/normalized/6852b241-4634-4d3e-9098-b47bced1335a/cp-ba553d0e-aa6b-4f46-8991-cb7305e6f5f1.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-493ec10e-94f7-4d9a-90ac-204ebeef0adc.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-493ec10e-94f7-4d9a-90ac-204ebeef0adc.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "1b449422-26e5-42a2-80d4-5d281add0fd6": {
+      "assessment_run_id": "1b449422-26e5-42a2-80d4-5d281add0fd6",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "c17fb777-93ef-446a-b273-083caa774497",
+      "created_at": "2025-12-10T07:59:53.416Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/1b449422-26e5-42a2-80d4-5d281add0fd6.json",
+        "normalized_company_profile": "data/normalized/ce43c2d1-98e9-494f-9f69-a53f88f757f0/cp-c17fb777-93ef-446a-b273-083caa774497.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-1b449422-26e5-42a2-80d4-5d281add0fd6.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-1b449422-26e5-42a2-80d4-5d281add0fd6.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "2ce8b2cd-a21f-4748-9176-bead67290e57": {
+      "assessment_run_id": "2ce8b2cd-a21f-4748-9176-bead67290e57",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "6e3e926b-7d7c-4bb5-be6a-2781b5dfe952",
+      "created_at": "2025-12-10T08:00:23.237Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/2ce8b2cd-a21f-4748-9176-bead67290e57.json",
+        "normalized_company_profile": "data/normalized/cb0b155a-2693-40e2-a1fd-9d91627a188d/cp-6e3e926b-7d7c-4bb5-be6a-2781b5dfe952.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-2ce8b2cd-a21f-4748-9176-bead67290e57.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-2ce8b2cd-a21f-4748-9176-bead67290e57.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "e7eeb77b-ca4c-4555-a348-93e6b1eec8cb": {
+      "assessment_run_id": "e7eeb77b-ca4c-4555-a348-93e6b1eec8cb",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "982efcb1-c78a-4be6-b740-12e8d5901695",
+      "created_at": "2025-12-11T03:26:56.169Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/e7eeb77b-ca4c-4555-a348-93e6b1eec8cb.json",
+        "normalized_company_profile": "data/normalized/c4b28b97-e1ea-4148-a3be-e7c028786e91/cp-982efcb1-c78a-4be6-b740-12e8d5901695.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-e7eeb77b-ca4c-4555-a348-93e6b1eec8cb.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-e7eeb77b-ca4c-4555-a348-93e6b1eec8cb.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "de266181-c2d5-47f2-9e13-d5e374aa2a77": {
+      "assessment_run_id": "de266181-c2d5-47f2-9e13-d5e374aa2a77",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "f796a3a3-3db6-47cf-8860-b58ac1a2ee63",
+      "created_at": "2025-12-11T03:40:02.614Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/de266181-c2d5-47f2-9e13-d5e374aa2a77.json",
+        "normalized_company_profile": "data/normalized/de078b45-4de5-429e-b185-13647bbc3e74/cp-f796a3a3-3db6-47cf-8860-b58ac1a2ee63.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-de266181-c2d5-47f2-9e13-d5e374aa2a77.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-de266181-c2d5-47f2-9e13-d5e374aa2a77.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "ea49fdde-c397-4522-8605-f7353687959e": {
+      "assessment_run_id": "ea49fdde-c397-4522-8605-f7353687959e",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "f3dd7b25-d39e-4b5f-bf2d-248041ff5afb",
+      "created_at": "2025-12-11T03:57:46.106Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/ea49fdde-c397-4522-8605-f7353687959e.json",
+        "normalized_company_profile": "data/normalized/96052385-291e-4409-a05b-881007eca4b2/cp-f3dd7b25-d39e-4b5f-bf2d-248041ff5afb.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-ea49fdde-c397-4522-8605-f7353687959e.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-ea49fdde-c397-4522-8605-f7353687959e.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "9e916fa5-ab8c-4b5b-85d9-554b3eec7461": {
+      "assessment_run_id": "9e916fa5-ab8c-4b5b-85d9-554b3eec7461",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "7bdc9f2c-3d42-40f3-9425-7dc98f295308",
+      "created_at": "2025-12-11T04:13:11.203Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/9e916fa5-ab8c-4b5b-85d9-554b3eec7461.json",
+        "normalized_company_profile": "data/normalized/ffc914fb-c452-40ce-a5f4-5a04d4cb5498/cp-7bdc9f2c-3d42-40f3-9425-7dc98f295308.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-9e916fa5-ab8c-4b5b-85d9-554b3eec7461.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-9e916fa5-ab8c-4b5b-85d9-554b3eec7461.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "497b50aa-abb7-4173-b4f8-b1ec81547979": {
+      "assessment_run_id": "497b50aa-abb7-4173-b4f8-b1ec81547979",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "1e4f5d68-8847-42d6-a6ac-c9a859626f14",
+      "created_at": "2025-12-11T04:30:13.522Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/497b50aa-abb7-4173-b4f8-b1ec81547979.json",
+        "normalized_company_profile": "data/normalized/6c03153d-9b3c-4432-aa99-4ce0201f21d9/cp-1e4f5d68-8847-42d6-a6ac-c9a859626f14.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-497b50aa-abb7-4173-b4f8-b1ec81547979.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-497b50aa-abb7-4173-b4f8-b1ec81547979.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "18527ec0-1d8e-4d06-b8e4-31032f5395b4": {
+      "assessment_run_id": "18527ec0-1d8e-4d06-b8e4-31032f5395b4",
+      "company_profile_id": "hopcraft-brewing-co-8ce360ae",
+      "cp_snapshot_id": "73867c21-355f-4957-bbf6-4d490fa6ec2d",
+      "created_at": "2025-12-11T06:17:28.507Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/hopcraft-brewing-co-8ce360ae/18527ec0-1d8e-4d06-b8e4-31032f5395b4.json",
+        "normalized_company_profile": "data/normalized/9359d594-d42d-45a7-9d13-c7c64b983590/cp-73867c21-355f-4957-bbf6-4d490fa6ec2d.json",
+        "normalized_questionnaire_responses": "data/normalized/hopcraft-brewing-co-8ce360ae/qr-18527ec0-1d8e-4d06-b8e4-31032f5395b4.json",
+        "benchmark_data": "data/normalized/hopcraft-brewing-co-8ce360ae/benchmark-18527ec0-1d8e-4d06-b8e4-31032f5395b4.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "d8af6bb8-9ead-4e58-8d30-620983705802": {
+      "assessment_run_id": "d8af6bb8-9ead-4e58-8d30-620983705802",
+      "company_profile_id": "hopcraft-brewing-co-8ce360ae",
+      "cp_snapshot_id": "18efbef7-c095-446a-bc17-0bfb044f3838",
+      "created_at": "2025-12-11T07:06:25.440Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/hopcraft-brewing-co-8ce360ae/d8af6bb8-9ead-4e58-8d30-620983705802.json",
+        "normalized_company_profile": "data/normalized/d136967a-b97f-48b4-abe3-b96bfc656535/cp-18efbef7-c095-446a-bc17-0bfb044f3838.json",
+        "normalized_questionnaire_responses": "data/normalized/hopcraft-brewing-co-8ce360ae/qr-d8af6bb8-9ead-4e58-8d30-620983705802.json",
+        "benchmark_data": "data/normalized/hopcraft-brewing-co-8ce360ae/benchmark-d8af6bb8-9ead-4e58-8d30-620983705802.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "f96d04ed-4717-4e2b-8521-c0c7f9637240": {
+      "assessment_run_id": "f96d04ed-4717-4e2b-8521-c0c7f9637240",
+      "company_profile_id": "ewm-global-478cbd43",
+      "cp_snapshot_id": "e6405e97-8bfc-4dd4-8391-e0f677870fad",
+      "created_at": "2025-12-11T18:34:20.159Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/ewm-global-478cbd43/f96d04ed-4717-4e2b-8521-c0c7f9637240.json",
+        "normalized_company_profile": "data/normalized/2a18e217-ec08-48b6-a2c9-6dac2c5a6b95/cp-e6405e97-8bfc-4dd4-8391-e0f677870fad.json",
+        "normalized_questionnaire_responses": "data/normalized/ewm-global-478cbd43/qr-f96d04ed-4717-4e2b-8521-c0c7f9637240.json",
+        "benchmark_data": "data/normalized/ewm-global-478cbd43/benchmark-f96d04ed-4717-4e2b-8521-c0c7f9637240.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "6986e6e2-187b-41ac-a1f3-643391f8b733": {
+      "assessment_run_id": "6986e6e2-187b-41ac-a1f3-643391f8b733",
+      "company_profile_id": "hopcraft-brewing-co-8ce360ae",
+      "cp_snapshot_id": "5f04814f-e677-4c44-b1e1-1b748b8fe3c5",
+      "created_at": "2025-12-12T04:08:27.685Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/hopcraft-brewing-co-8ce360ae/6986e6e2-187b-41ac-a1f3-643391f8b733.json",
+        "normalized_company_profile": "data/normalized/9cba0559-da75-4845-9074-3c548eac29b7/cp-5f04814f-e677-4c44-b1e1-1b748b8fe3c5.json",
+        "normalized_questionnaire_responses": "data/normalized/hopcraft-brewing-co-8ce360ae/qr-6986e6e2-187b-41ac-a1f3-643391f8b733.json",
+        "benchmark_data": "data/normalized/hopcraft-brewing-co-8ce360ae/benchmark-6986e6e2-187b-41ac-a1f3-643391f8b733.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "6a65dd01-060b-47a4-9d85-59b6ad282eb2": {
+      "assessment_run_id": "6a65dd01-060b-47a4-9d85-59b6ad282eb2",
+      "company_profile_id": "hopcraft-brewing-co-8ce360ae",
+      "cp_snapshot_id": "e6d0c207-869a-4394-a5a3-dcaee60ffaeb",
+      "created_at": "2025-12-12T05:01:00.924Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/hopcraft-brewing-co-8ce360ae/6a65dd01-060b-47a4-9d85-59b6ad282eb2.json",
+        "normalized_company_profile": "data/normalized/0b0f44e6-f2f9-4cb7-b32f-edba02011556/cp-e6d0c207-869a-4394-a5a3-dcaee60ffaeb.json",
+        "normalized_questionnaire_responses": "data/normalized/hopcraft-brewing-co-8ce360ae/qr-6a65dd01-060b-47a4-9d85-59b6ad282eb2.json",
+        "benchmark_data": "data/normalized/hopcraft-brewing-co-8ce360ae/benchmark-6a65dd01-060b-47a4-9d85-59b6ad282eb2.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "e3676b3a-ad77-4922-b9ce-8321f411a823": {
+      "assessment_run_id": "e3676b3a-ad77-4922-b9ce-8321f411a823",
+      "company_profile_id": "wellness-first-medical-group-7fbf0152",
+      "cp_snapshot_id": "e5605982-a2b9-4e8d-b036-014786e3514a",
+      "created_at": "2025-12-13T23:41:35.935Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/wellness-first-medical-group-7fbf0152/e3676b3a-ad77-4922-b9ce-8321f411a823.json",
+        "normalized_company_profile": "data/normalized/2d32151b-3cab-4a06-b241-14c26322cd95/cp-e5605982-a2b9-4e8d-b036-014786e3514a.json",
+        "normalized_questionnaire_responses": "data/normalized/wellness-first-medical-group-7fbf0152/qr-e3676b3a-ad77-4922-b9ce-8321f411a823.json",
+        "benchmark_data": "data/normalized/wellness-first-medical-group-7fbf0152/benchmark-e3676b3a-ad77-4922-b9ce-8321f411a823.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "0820fa97-2cea-4054-b494-e83c74258f83": {
+      "assessment_run_id": "0820fa97-2cea-4054-b494-e83c74258f83",
+      "company_profile_id": "flowmaster-plumbing-services-2058a14e",
+      "cp_snapshot_id": "63de0f43-1977-4fec-9a13-dd9a6076ad80",
+      "created_at": "2025-12-15T03:25:48.891Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/flowmaster-plumbing-services-2058a14e/0820fa97-2cea-4054-b494-e83c74258f83.json",
+        "normalized_company_profile": "data/normalized/9fa0f3e3-f536-4f25-a609-cfa77d9a8ff8/cp-63de0f43-1977-4fec-9a13-dd9a6076ad80.json",
+        "normalized_questionnaire_responses": "data/normalized/flowmaster-plumbing-services-2058a14e/qr-0820fa97-2cea-4054-b494-e83c74258f83.json",
+        "benchmark_data": "data/normalized/flowmaster-plumbing-services-2058a14e/benchmark-0820fa97-2cea-4054-b494-e83c74258f83.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "2f37c4ff-6161-4631-99ca-b678f7d59e8e": {
+      "assessment_run_id": "2f37c4ff-6161-4631-99ca-b678f7d59e8e",
+      "company_profile_id": "flowmaster-plumbing-services-2058a14e",
+      "cp_snapshot_id": "68f030c9-e53b-4e6c-8659-99f598a65481",
+      "created_at": "2025-12-15T05:18:47.484Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/flowmaster-plumbing-services-2058a14e/2f37c4ff-6161-4631-99ca-b678f7d59e8e.json",
+        "normalized_company_profile": "data/normalized/a07ab709-4ad5-4619-818d-2e75480d3dc8/cp-68f030c9-e53b-4e6c-8659-99f598a65481.json",
+        "normalized_questionnaire_responses": "data/normalized/flowmaster-plumbing-services-2058a14e/qr-2f37c4ff-6161-4631-99ca-b678f7d59e8e.json",
+        "benchmark_data": "data/normalized/flowmaster-plumbing-services-2058a14e/benchmark-2f37c4ff-6161-4631-99ca-b678f7d59e8e.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "7910436d-e7ea-4d2b-b507-b7e8d3e9052b": {
+      "assessment_run_id": "7910436d-e7ea-4d2b-b507-b7e8d3e9052b",
+      "company_profile_id": "sterling-associates-law-d4f33e1b",
+      "cp_snapshot_id": "45427deb-51e5-4255-8577-41728be2e634",
+      "created_at": "2025-12-16T20:12:23.079Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/sterling-associates-law-d4f33e1b/7910436d-e7ea-4d2b-b507-b7e8d3e9052b.json",
+        "normalized_company_profile": "data/normalized/7a6fa8e3-07e3-4037-84b4-54bb458fbb02/cp-45427deb-51e5-4255-8577-41728be2e634.json",
+        "normalized_questionnaire_responses": "data/normalized/sterling-associates-law-d4f33e1b/qr-7910436d-e7ea-4d2b-b507-b7e8d3e9052b.json",
+        "benchmark_data": "data/normalized/sterling-associates-law-d4f33e1b/benchmark-7910436d-e7ea-4d2b-b507-b7e8d3e9052b.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "b84f4c66-d9ff-4061-a04f-e96b25792b9d": {
+      "assessment_run_id": "b84f4c66-d9ff-4061-a04f-e96b25792b9d",
+      "company_profile_id": "sterling-associates-law-d4f33e1b",
+      "cp_snapshot_id": "2a63ca71-781e-4564-84e8-abe26a591487",
+      "created_at": "2025-12-16T20:58:26.241Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/sterling-associates-law-d4f33e1b/b84f4c66-d9ff-4061-a04f-e96b25792b9d.json",
+        "normalized_company_profile": "data/normalized/4c30cc52-bcde-4254-b605-efd781e58571/cp-2a63ca71-781e-4564-84e8-abe26a591487.json",
+        "normalized_questionnaire_responses": "data/normalized/sterling-associates-law-d4f33e1b/qr-b84f4c66-d9ff-4061-a04f-e96b25792b9d.json",
+        "benchmark_data": "data/normalized/sterling-associates-law-d4f33e1b/benchmark-b84f4c66-d9ff-4061-a04f-e96b25792b9d.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "268140f5-a575-4245-983f-1f5b1a63b210": {
+      "assessment_run_id": "268140f5-a575-4245-983f-1f5b1a63b210",
+      "company_profile_id": "premier-auto-care-centers-00318459",
+      "cp_snapshot_id": "de42c7c4-6b28-45c9-b3a0-22cd4eca0a0a",
+      "created_at": "2025-12-18T06:40:42.295Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/premier-auto-care-centers-00318459/268140f5-a575-4245-983f-1f5b1a63b210.json",
+        "normalized_company_profile": "data/normalized/39b24866-e5c4-4e19-b9a5-e7f57b534856/cp-de42c7c4-6b28-45c9-b3a0-22cd4eca0a0a.json",
+        "normalized_questionnaire_responses": "data/normalized/premier-auto-care-centers-00318459/qr-268140f5-a575-4245-983f-1f5b1a63b210.json",
+        "benchmark_data": "data/normalized/premier-auto-care-centers-00318459/benchmark-268140f5-a575-4245-983f-1f5b1a63b210.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "0d018775-542f-490b-9512-de0f12d690d8": {
+      "assessment_run_id": "0d018775-542f-490b-9512-de0f12d690d8",
+      "company_profile_id": "premier-auto-care-centers-00318459",
+      "cp_snapshot_id": "c9e73ff1-23f0-4f76-b792-716907f708c3",
+      "created_at": "2025-12-30T02:32:54.589Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/premier-auto-care-centers-00318459/0d018775-542f-490b-9512-de0f12d690d8.json",
+        "normalized_company_profile": "data/normalized/e2721f63-e481-4128-8074-a74c2d4318c2/cp-c9e73ff1-23f0-4f76-b792-716907f708c3.json",
+        "normalized_questionnaire_responses": "data/normalized/premier-auto-care-centers-00318459/qr-0d018775-542f-490b-9512-de0f12d690d8.json",
+        "benchmark_data": "data/normalized/premier-auto-care-centers-00318459/benchmark-0d018775-542f-490b-9512-de0f12d690d8.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "67dbf525-7928-4442-9d8b-e6596af7261c": {
+      "assessment_run_id": "67dbf525-7928-4442-9d8b-e6596af7261c",
+      "company_profile_id": "heritage-valley-farms-90acd9e7",
+      "cp_snapshot_id": "edac4db5-861b-4e0a-9d8c-aa241ab97daf",
+      "created_at": "2025-12-31T05:43:20.522Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/heritage-valley-farms-90acd9e7/67dbf525-7928-4442-9d8b-e6596af7261c.json",
+        "normalized_company_profile": "data/normalized/f36fca2a-23ec-4131-9ded-36c2cd87b8be/cp-edac4db5-861b-4e0a-9d8c-aa241ab97daf.json",
+        "normalized_questionnaire_responses": "data/normalized/heritage-valley-farms-90acd9e7/qr-67dbf525-7928-4442-9d8b-e6596af7261c.json",
+        "benchmark_data": "data/normalized/heritage-valley-farms-90acd9e7/benchmark-67dbf525-7928-4442-9d8b-e6596af7261c.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "84eaf450-4e7e-4e5c-86c5-dbdc14c1d078": {
+      "assessment_run_id": "84eaf450-4e7e-4e5c-86c5-dbdc14c1d078",
+      "company_profile_id": "elevate-fitness-studios-07a51288",
+      "cp_snapshot_id": "726b410e-9351-4baa-af93-59da6d540370",
+      "created_at": "2026-01-05T08:25:43.204Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/elevate-fitness-studios-07a51288/84eaf450-4e7e-4e5c-86c5-dbdc14c1d078.json",
+        "normalized_company_profile": "data/normalized/728fd273-cb11-4eb6-92ca-c847f758f076/cp-726b410e-9351-4baa-af93-59da6d540370.json",
+        "normalized_questionnaire_responses": "data/normalized/elevate-fitness-studios-07a51288/qr-84eaf450-4e7e-4e5c-86c5-dbdc14c1d078.json",
+        "benchmark_data": "data/normalized/elevate-fitness-studios-07a51288/benchmark-84eaf450-4e7e-4e5c-86c5-dbdc14c1d078.json"
+      },
+      "status": "ready_for_analysis"
+    },
+    "ece4c558-a49c-4379-b5a8-a05d95d7420b": {
+      "assessment_run_id": "ece4c558-a49c-4379-b5a8-a05d95d7420b",
+      "company_profile_id": "brightminds-learning-centers-7543d797",
+      "cp_snapshot_id": "a491dc06-7539-48a1-b766-5dcf3dee0366",
+      "created_at": "2026-01-07T02:08:04.015Z",
+      "questionnaire_version": "v2025-09-16",
+      "cp_version": "v2025-09-16",
+      "cp_transformation_version": "v1.0.0",
+      "qr_transformation_version": "v1.0.0",
+      "paths": {
+        "raw_assessment": "data/raw/brightminds-learning-centers-7543d797/ece4c558-a49c-4379-b5a8-a05d95d7420b.json",
+        "normalized_company_profile": "data/normalized/20193f62-f654-4795-b8b6-42f9040949b6/cp-a491dc06-7539-48a1-b766-5dcf3dee0366.json",
+        "normalized_questionnaire_responses": "data/normalized/brightminds-learning-centers-7543d797/qr-ece4c558-a49c-4379-b5a8-a05d95d7420b.json",
+        "benchmark_data": "data/normalized/brightminds-learning-centers-7543d797/benchmark-ece4c558-a49c-4379-b5a8-a05d95d7420b.json"
+      },
+      "status": "ready_for_analysis"
+    }
+  }
+}

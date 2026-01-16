@@ -1,0 +1,206 @@
+{
+    "event": "new_questionnaire_response",
+    "timestamp": "2025-11-30T01:25:12.890Z",
+    "submission_id": "p6q7r8s9-t0u1-2345-pqrs-tu6789012345",
+    "created_at": "2025-11-29 23:18:48.890123+00",
+    "business_overview": {
+        "company_name": "Velocity Logistics Group",
+        "location": "Atlanta GA",
+        "country": "United States",
+        "company_website": "velocitylogistics.com",
+        "industry": "transportation_warehousing",
+        "industry_other_details": "Third-party logistics provider offering freight brokerage and warehousing services",
+        "corporate_structure": "c_corporation",
+        "year_started": 2009,
+        "multiple_locations": true,
+        "number_of_locations": 8,
+        "executive_leadership_roles": 5,
+        "support_admin_staff": 38,
+        "full_time_employees": 125,
+        "part_time_employees": 22,
+        "contract_temp_personnel": 45,
+        "seasonal_employees": 35,
+        "last_year_revenue": 32500000,
+        "projected_revenue": 38000000,
+        "highest_sales_year": 2024,
+        "highest_annual_sales": 32500000,
+        "products_services": [
+            {
+                "name": "Freight Brokerage",
+                "percentage": 55,
+                "type": "service"
+            },
+            {
+                "name": "Warehousing & Distribution",
+                "percentage": 30,
+                "type": "service"
+            },
+            {
+                "name": "Supply Chain Consulting",
+                "percentage": 15,
+                "type": "service"
+            }
+        ],
+        "current_challenges": [
+            "operations",
+            "technology",
+            "human_resources",
+            "financials"
+        ],
+        "competitors": [
+            {
+                "direct_competitor": true,
+                "name": "C.H. Robinson",
+                "website": "https://chrobinson.com"
+            },
+            {
+                "direct_competitor": true,
+                "name": "XPO Logistics",
+                "website": "https://xpo.com"
+            }
+        ]
+    },
+    "strategy": {
+        "competitive_differentiators_understanding": 4,
+        "local_market_share": 6,
+        "sales_growth_past_year": 22,
+        "sales_growth_past_year_estimate": false,
+        "target_sales_growth": 18,
+        "business_goals_plan": 4,
+        "goals_barriers": "Driver shortage, fuel cost volatility",
+        "business_plan_review": 3,
+        "growth_exit_plan": 4
+    },
+    "sales": {
+        "b2b_percentage": 100,
+        "b2c_percentage": null,
+        "wholesale_percentage": null,
+        "retail_percentage": null,
+        "online_percentage": null,
+        "sales_targets_alignment": 4,
+        "sales_pipeline_management": 4,
+        "average_sales_cycle_days": 60,
+        "no_sales_cycle": false,
+        "close_rate": 38,
+        "no_customer_interaction": false,
+        "average_sale_size": 85000,
+        "repeat_sales_percentage": 82,
+        "upselling_focus": 4,
+        "upselling_obstacles": null
+    },
+    "marketing": {
+        "brand_awareness": 3,
+        "marketing_methods_count": 4,
+        "current_marketing_channels": "Industry Events, Direct Sales, LinkedIn, Email Marketing",
+        "future_marketing_channels": "Content Marketing, Webinars",
+        "customer_targeting": 4,
+        "customer_acquisition_cost": 12500,
+        "cac_unknown": false,
+        "customer_lifetime_value": 420000,
+        "ltv_unknown": false,
+        "awareness_conversion_rate": 16,
+        "marketing_roi": 7.8,
+        "marketing_roi_unknown": false,
+        "monthly_marketing_spend": 45000
+    },
+    "customer_experience": {
+        "customer_feedback_tracking": 4,
+        "feedback_challenges": null,
+        "customer_satisfaction": 4,
+        "no_feedback_method": false,
+        "net_promoter_score": 4,
+        "customer_effort_score": 4,
+        "competitive_strength": 4,
+        "issue_resolution": 4,
+        "response_time_hours": 3
+    },
+    "operations": {
+        "operational_efficiency": 3,
+        "operational_challenges": "Route optimization, carrier capacity management",
+        "workflow_documentation": 4,
+        "inventory_turnover_rate": 24,
+        "no_inventory": false,
+        "operational_reliability": 4,
+        "lean_principles": 3,
+        "space_utilization": 88,
+        "equipment_utilization": 82,
+        "personnel_utilization": 80
+    },
+    "financials": {
+        "total_debt_liabilities": 8200000,
+        "total_working_capital": 4850000,
+        "debt_monitoring": 4,
+        "current_cash_available": 2850000,
+        "near_term_expenses": 2650000,
+        "cash_runway_months": 11,
+        "gross_profit_margin": 18,
+        "monthly_profit_estimate": 385000,
+        "profit_is_estimate": true,
+        "burn_rate": 3,
+        "cash_flow_forecasting": 4,
+        "budgeting_financial_planning": 4,
+        "financial_readiness_growth": 3,
+        "financial_concerns": "Fuel cost exposure, carrier payment terms"
+    },
+    "human_resources": {
+        "hr_infrastructure": 3,
+        "company_culture": 3,
+        "recruiting_onboarding": 3,
+        "training_development": 3,
+        "training_resources_needed": "Safety training, technology systems training",
+        "employee_turnover_rate": 38,
+        "employee_engagement": 3,
+        "performance_management": 3
+    },
+    "leadership": {
+        "leadership_effectiveness": 4,
+        "decision_making_structure": 4,
+        "leadership_board_oversight": 4,
+        "has_advisory_board": true,
+        "decision_making_effectiveness": 4,
+        "leadership_culture_effectiveness": 3,
+        "development_mentorship": 3
+    },
+    "technology": {
+        "technology_investment": 1850000,
+        "tech_investment_estimate": false,
+        "innovation_pipeline_percentage": 50,
+        "innovation_culture": 4,
+        "emerging_technologies": 4,
+        "technology_adoption": 4,
+        "automation_utilization": 4,
+        "innovation_impact": 4
+    },
+    "it_infrastructure": {
+        "it_infrastructure": 4,
+        "network_effectiveness": 4,
+        "cybersecurity": 4,
+        "data_management": 4,
+        "data_governance": 4,
+        "it_scalability": 4,
+        "it_support_maintenance": 4
+    },
+    "risk_management": {
+        "overall_risk_outlook": 3,
+        "specific_risks_concern": "Carrier reliability, cargo claims, economic downturn",
+        "risk_identification_review": 4,
+        "risk_mitigation": 4,
+        "contingency_plans": 4,
+        "financial_resilience": 3,
+        "operational_continuity": 4,
+        "succession_leadership_stability": 3,
+        "strategic_adaptability": 4,
+        "disruption_impact": null
+    },
+    "compliance": {
+        "compliance_awareness": 5,
+        "policy_adherence": 5,
+        "training_completion": 4,
+        "compliance_monitoring": 4,
+        "regulatory_updates": 5,
+        "compliance_documentation": 4,
+        "incident_reporting": 5,
+        "compliance_costs": 285000,
+        "compliance_cost_estimate": false
+    }
+}
