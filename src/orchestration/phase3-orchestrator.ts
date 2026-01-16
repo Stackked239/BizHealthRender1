@@ -127,9 +127,9 @@ export class Phase3Orchestrator {
     });
 
     this.config = {
-      model: config.model || process.env.DEFAULT_MODEL || 'claude-opus-4-5-20251101',
-      maxTokens: config.maxTokens || Number(process.env.DEFAULT_MAX_TOKENS) || 64000,
-      thinkingBudgetTokens: config.thinkingBudgetTokens || Number(process.env.DEFAULT_THINKING_TOKENS) || 32000,
+      model: config.model || process.env.DEFAULT_MODEL || 'claude-opus-4-20250514',
+      maxTokens: config.maxTokens || Number(process.env.DEFAULT_MAX_TOKENS) || 16000,
+      thinkingBudgetTokens: config.thinkingBudgetTokens || Number(process.env.DEFAULT_THINKING_TOKENS) || 10000,
       temperature: config.temperature || Number(process.env.DEFAULT_TEMPERATURE) || 1.0,
       pollIntervalMs: config.pollIntervalMs || Number(process.env.BATCH_POLL_INTERVAL_MS) || 30000,
       maxWaitTimeMs: config.maxWaitTimeMs || Number(process.env.BATCH_TIMEOUT_MS) || 3600000,

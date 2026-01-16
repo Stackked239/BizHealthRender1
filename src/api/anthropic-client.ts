@@ -219,8 +219,8 @@ export class AnthropicBatchClient {
 
     this.config = {
       model: config.model || 'claude-opus-4-20250514',
-      maxTokens: config.maxTokens || 64000,
-      thinkingBudgetTokens: config.thinkingBudgetTokens || 32000,
+      maxTokens: config.maxTokens || 16000,  // Safe default for claude-opus-4 (max 32K)
+      thinkingBudgetTokens: config.thinkingBudgetTokens || 10000,
       temperature: config.temperature || 0.3,
       maxRetries: config.maxRetries || 3,
       pollIntervalMs: config.pollIntervalMs || 30000,
