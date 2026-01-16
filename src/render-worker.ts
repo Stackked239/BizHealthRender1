@@ -8,7 +8,8 @@
 import { config as dotenvConfig } from 'dotenv';
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
-import { runPipeline } from './run-pipeline.js';
+import { runPipeline, type PipelineConfig } from './run-pipeline.js';
+import { ReportType } from './reports/report-generator.js';
 import { logger } from './utils/logger.js';
 import { formatError } from './utils/errors.js';
 import * as fs from 'fs';
@@ -122,8 +123,18 @@ async function processJob(job: any): Promise<void> {
       throw new Error(`Failed to fetch questionnaire: ${fetchError?.message || 'Not found'}`);
     }
 
-    // Convert to webhook payload format
-    const webhookPayload = convertToWebhookPayload(questionnaire);
+    // Extract webhook payload - use pipeline_payload.raw_questionnaire if available (from edge function)
+    // Otherwise, fall back to converting the questionnaire data
+    let webhookPayload;
+    if (questionnaire.pipeline_payload?.raw_questionnaire) {
+      // Edge function already prepared the webhook format
+      webhookPayload = questionnaire.pipeline_payload.raw_questionnaire;
+      logger.info({ jobId }, 'Using pre-formatted webhook payload from pipeline_payload');
+    } else {
+      // Fall back to converting questionnaire data
+      webhookPayload = convertToWebhookPayload(questionnaire);
+      logger.info({ jobId }, 'Converted questionnaire to webhook payload');
+    }
 
     // Create a temporary file for the webhook payload
     const tempDir = path.join(process.cwd(), 'temp');
@@ -137,14 +148,22 @@ async function processJob(job: any): Promise<void> {
 
     // Run the full pipeline
     const outputDir = path.join(process.cwd(), 'output', jobId);
-    await runPipeline({
-      inputFile: payloadPath,
+    const pipelineConfig: PipelineConfig = {
+      webhookPath: payloadPath,
       outputDir: outputDir,
       startPhase: 0,
       endPhase: 5,
       skipPhase15: false,
       skipPhase45: false,
-    });
+      skipDatabase: true,
+      generateReports: true,
+      reportTypes: [
+        ReportType.COMPREHENSIVE_REPORT,
+        ReportType.OWNERS_REPORT,
+        ReportType.QUICK_WINS_REPORT,
+      ],
+    };
+    await runPipeline(pipelineConfig);
 
     // Find generated reports
     const reportsDir = path.join(outputDir, 'phase5');

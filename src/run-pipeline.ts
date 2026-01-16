@@ -1564,9 +1564,9 @@ async function runPipeline(config: PipelineConfig): Promise<void> {
       company: webhookPayload.business_overview?.company_name,
     }, 'Loaded webhook payload');
   } catch (error) {
-    console.error(`ERROR: Failed to load webhook data from ${config.webhookPath}`);
-    console.error(error instanceof Error ? error.message : String(error));
-    process.exit(1);
+    const errorMsg = `Failed to load webhook data from ${config.webhookPath}: ${error instanceof Error ? error.message : String(error)}`;
+    console.error(`ERROR: ${errorMsg}`);
+    throw new Error(errorMsg);
   }
 
   // Execute phases using a Map to support Phase 1.5 and Phase 4.5
@@ -1690,7 +1690,10 @@ async function runPipeline(config: PipelineConfig): Promise<void> {
     totalDuration,
   }, 'Pipeline completed');
 
-  process.exit(failedCount > 0 ? 1 : 0);
+  // Throw error if pipeline failed (don't exit process - let caller handle it)
+  if (failedCount > 0) {
+    throw new Error(`Pipeline failed: ${failedCount} phase(s) failed`);
+  }
 }
 
 // ============================================================================
@@ -1710,6 +1713,7 @@ async function main(): Promise<void> {
     }
 
     await runPipeline(config);
+    process.exit(0); // Explicit success exit for CLI usage
   } catch (error) {
     pipelineLogger.error({ error: formatError(error) }, 'Pipeline error');
     console.error('\nERROR:', error instanceof Error ? error.message : String(error));
@@ -1723,3 +1727,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { runPipeline, parseArgs };
+export type { PipelineConfig };
