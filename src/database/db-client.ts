@@ -103,9 +103,10 @@ interface DatabaseConfig {
 }
 
 function getDatabaseConfig(): DatabaseConfig {
-  const connectionString = process.env.DATABASE_URL;
+  // Support both DATABASE_URL and SUPABASE_URL for flexibility
+  const connectionString = process.env.DATABASE_URL || process.env.SUPABASE_URL;
   if (!connectionString) {
-    throw new Error('DATABASE_URL environment variable is required');
+    throw new Error('DATABASE_URL or SUPABASE_URL environment variable is required');
   }
 
   return {

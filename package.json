@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsc --noEmit false || true",
-    "start": "tsx src/index.ts",
+    "start": "tsx src/render-worker.ts",
     "worker": "tsx src/render-worker.ts",
     "pipeline": "tsx src/run-pipeline.ts",
     "test": "vitest",
