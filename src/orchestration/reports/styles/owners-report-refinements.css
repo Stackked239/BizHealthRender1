@@ -1,0 +1,269 @@
+/**
+ * Owner's Report Refinements CSS
+ *
+ * Scoped styling improvements for the Owner's Report only.
+ * Implements 5 targeted refinements for enhanced UX.
+ *
+ * Created: 2026-01-02
+ *
+ * REFINEMENTS:
+ * 1. Category Interdependencies BLUF styling
+ * 2. Aggregate Financial Impact contrast fixes
+ * 3. Risk Heatmap (verification only - no CSS needed)
+ * 4. BLUF color-coded text
+ * 5. Responsive visualization layout (no horizontal scroll)
+ */
+
+/* ===================================================================== */
+/* REFINEMENT 1: SECTION BLUF STYLING                                    */
+/* ===================================================================== */
+
+.section-bluf.interdependencies-bluf {
+  background-color: rgba(150, 148, 35, 0.06); /* BizGreen with 6% opacity */
+  border-left: 4px solid #969423; /* BizGreen */
+  padding: 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+  max-width: 100%;
+}
+
+.section-bluf.interdependencies-bluf p {
+  margin-bottom: 0.875rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.section-bluf.interdependencies-bluf p:last-child {
+  margin-bottom: 0;
+}
+
+.section-bluf.interdependencies-bluf strong {
+  color: #212653; /* BizNavy */
+  font-weight: 600;
+}
+
+.interdependencies-bluf .bluf-intro {
+  color: #555;
+}
+
+.interdependencies-bluf .bluf-patterns,
+.interdependencies-bluf .bluf-action {
+  color: #333;
+}
+
+/* ===================================================================== */
+/* REFINEMENT 2: AGGREGATE FINANCIAL IMPACT CONTRAST FIXES               */
+/* WCAG AA compliance - minimum 4.5:1 contrast ratio                     */
+/* ===================================================================== */
+
+/* Fix label contrast - was rgba(255,255,255,0.7), now 0.95 */
+#financial-impact .card-label,
+.financial-dashboard .card-label {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Fix secondary text contrast - was 0.6/0.8, now 0.9 */
+#financial-impact .card-detail,
+.financial-dashboard .card-detail {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Add subtle card separation for better visual hierarchy */
+.financial-dashboard .financial-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure value text remains bright and bold with text shadow for readability */
+.financial-dashboard .card-value {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================================================== */
+/* REFINEMENT 4: BLUF COLOR CODING                                       */
+/* Semantic highlighting for executive scanability                        */
+/* ===================================================================== */
+
+#executive-bluf .bluf-content,
+.bluf-section .bluf-content {
+  line-height: 1.7;
+}
+
+/* Negative/Critical emphasis */
+.bluf-negative,
+.bluf-critical {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.bluf-score-critical {
+  color: #dc3545;
+  font-weight: 700;
+  background: rgba(220, 53, 69, 0.1);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+/* Warning emphasis */
+.bluf-warning,
+.bluf-score-warning {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+/* Positive/Strength emphasis */
+.bluf-positive,
+.bluf-strength {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.bluf-score-positive {
+  color: #28a745;
+  font-weight: 700;
+  background: rgba(40, 167, 69, 0.1);
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+/* Action emphasis */
+.bluf-action-text {
+  color: #212653; /* BizNavy */
+  font-weight: 600;
+}
+
+/* Accessibility: High contrast mode support */
+@media (prefers-contrast: more) {
+  .bluf-negative,
+  .bluf-critical,
+  .bluf-score-critical {
+    text-decoration: underline;
+    text-decoration-color: #dc3545;
+  }
+
+  .bluf-positive,
+  .bluf-strength,
+  .bluf-score-positive {
+    text-decoration: underline;
+    text-decoration-color: #28a745;
+  }
+}
+
+/* Print styling - ensure colors print */
+@media print {
+  .bluf-negative,
+  .bluf-critical,
+  .bluf-score-critical {
+    color: #dc3545 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bluf-positive,
+  .bluf-strength,
+  .bluf-score-positive {
+    color: #28a745 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bluf-warning,
+  .bluf-score-warning {
+    color: #e67e22 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bluf-action-text {
+    color: #212653 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ===================================================================== */
+/* REFINEMENT 5: RESPONSIVE VISUALIZATION LAYOUT                         */
+/* Fix horizontal scroll issues on visualizations                         */
+/* ===================================================================== */
+
+/* Stack by default (mobile-first) */
+.visualization-row.two-column {
+  display: grid !important;
+  grid-template-columns: 1fr !important; /* Stack vertically */
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+/* SVGs should scale to container width */
+.visualization-row.two-column .visualization-container {
+  width: 100%;
+  overflow: visible; /* Remove any overflow scrolling */
+}
+
+.visualization-row.two-column svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Only show side-by-side on ultra-wide monitors (1600px+) */
+@media (min-width: 1600px) {
+  .visualization-row.two-column {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Ensure no horizontal scroll at any breakpoint */
+.visualization-row.two-column .visualization-container > div {
+  overflow-x: visible !important;
+}
+
+/* Print: Always stack for consistent page layout */
+@media print {
+  .visualization-row.two-column {
+    grid-template-columns: 1fr !important;
+  }
+
+  .visualization-row.two-column svg {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
+
+/* ===================================================================== */
+/* RISK HEATMAP PRINT VISIBILITY (Refinement 3 verification)             */
+/* Ensure risk heatmap renders in print                                   */
+/* ===================================================================== */
+
+@media print {
+  .risk-heatmap-section {
+    page-break-inside: avoid;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .risk-heatmap-section svg {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ===================================================================== */
+/* ADDITIONAL OWNER REPORT ENHANCEMENTS                                   */
+/* ===================================================================== */
+
+/* Ensure proper spacing for network diagram */
+#cross-category-insights .visualization-container {
+  margin: 1.5rem 0;
+}
+
+/* Improve readability of section introductions */
+#cross-category-insights .section-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1.5rem;
+}

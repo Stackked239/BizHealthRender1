@@ -1,0 +1,133 @@
+/**
+ * Phase 4.5 BLUF (Bottom Line Up Front) Styles
+ *
+ * Styles for AI-generated executive summaries and section BLUFs.
+ * Integrated with BizHealth report theming.
+ */
+
+.bluf-summary {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-left: 4px solid #212653;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.executive-bluf {
+  padding: 2.5rem;
+  margin: 3rem 0;
+  border-left-width: 6px;
+}
+
+.section-bluf {
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left-width: 4px;
+}
+
+.bluf-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #969423;
+  padding-bottom: 0.75rem;
+}
+
+.bluf-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212653;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.executive-bluf .bluf-title {
+  font-size: 1.75rem;
+}
+
+.bluf-content {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.bluf-content p {
+  margin: 0 0 1.25rem 0;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.bluf-content p:last-child {
+  margin-bottom: 0;
+}
+
+.executive-bluf .bluf-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.bluf-metadata {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.875rem;
+  color: #666;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bluf-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* BLUF Section Container */
+.bluf-section {
+  page-break-inside: avoid;
+}
+
+.bluf-executive-section {
+  page-break-after: always;
+}
+
+/* Print Styles */
+@media print {
+  .bluf-summary {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #212653;
+  }
+
+  .bluf-content p {
+    text-align: left;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .bluf-summary {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .executive-bluf {
+    padding: 1.5rem;
+  }
+
+  .bluf-title {
+    font-size: 1.25rem;
+  }
+
+  .executive-bluf .bluf-title {
+    font-size: 1.5rem;
+  }
+
+  .bluf-metadata {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

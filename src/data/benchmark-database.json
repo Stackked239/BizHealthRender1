@@ -1,0 +1,811 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-15",
+    "description": "BizHealth Benchmark Database for Tier 1 and Tier 2 analyses",
+    "data_sources": {
+      "primary": {
+        "id": "rma_annual_studies",
+        "name": "RMA Annual Statement Studies 2025",
+        "description": "Risk Management Association industry benchmarks based on financial statement data from commercial lending institutions",
+        "confidence_range": [0.85, 1.0],
+        "sample_size": "250,000+ companies"
+      },
+      "secondary": {
+        "id": "industry_surveys",
+        "name": "Industry Benchmark Surveys",
+        "description": "Aggregated data from industry associations and specialized research firms",
+        "confidence_range": [0.70, 0.84],
+        "sample_size": "50,000+ companies"
+      },
+      "tertiary": {
+        "id": "expert_estimates",
+        "name": "Expert Estimates & Derived Metrics",
+        "description": "SME-derived benchmarks and calculated estimates based on related metrics",
+        "confidence_range": [0.50, 0.69],
+        "sample_size": "Research-based"
+      },
+      "fallback": {
+        "id": "general_smb",
+        "name": "General SMB Benchmarks",
+        "description": "Broad SMB benchmarks used when industry-specific data is unavailable",
+        "confidence_range": [0.30, 0.49],
+        "sample_size": "1,000,000+ companies"
+      }
+    },
+    "industries": [
+      "professional_services",
+      "technology_saas",
+      "manufacturing",
+      "retail",
+      "healthcare",
+      "financial_services",
+      "construction",
+      "general_smb"
+    ],
+    "lifecycle_phases": [
+      "startup",
+      "growth",
+      "maturity",
+      "decline"
+    ],
+    "confidence_framework": {
+      "tiers": {
+        "high": {
+          "range": [0.85, 1.0],
+          "label": "High Confidence",
+          "description": "Data from primary sources with large sample sizes"
+        },
+        "medium": {
+          "range": [0.70, 0.84],
+          "label": "Medium Confidence",
+          "description": "Data from secondary sources or smaller samples"
+        },
+        "low": {
+          "range": [0.50, 0.69],
+          "label": "Low Confidence",
+          "description": "Expert estimates or derived metrics"
+        },
+        "very_low": {
+          "range": [0.30, 0.49],
+          "label": "Very Low Confidence",
+          "description": "Fallback or generalized benchmarks"
+        }
+      }
+    }
+  },
+  "tier1_analyses": {
+    "revenue_engine": {
+      "analysis_name": "Revenue Engine Analysis",
+      "description": "Cross-functional analysis of sales, marketing, strategy, and customer experience",
+      "metrics": {
+        "sales_cycle_days": {
+          "display_name": "Average Sales Cycle Duration",
+          "unit": "days",
+          "direction": "lower_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 25, "median": 45, "max": 75, "confidence": 0.82, "source": "industry_surveys", "rationale": "Early-stage professional services firms often have longer cycles due to relationship building" },
+              "growth": { "min": 20, "median": 38, "max": 60, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Established processes reduce cycle time" },
+              "maturity": { "min": 15, "median": 30, "max": 50, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have optimized sales processes" },
+              "decline": { "min": 18, "median": 35, "max": 55, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining firms may see elongated cycles" }
+            },
+            "technology_saas": {
+              "startup": { "min": 30, "median": 60, "max": 120, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups often have longer enterprise sales cycles" },
+              "growth": { "min": 21, "median": 45, "max": 90, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth-stage SaaS companies optimize sales processes" },
+              "maturity": { "min": 14, "median": 35, "max": 70, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS firms have streamlined sales" },
+              "decline": { "min": 25, "median": 50, "max": 100, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS may struggle with conversions" }
+            },
+            "manufacturing": {
+              "startup": { "min": 45, "median": 90, "max": 180, "confidence": 0.78, "source": "industry_surveys", "rationale": "Manufacturing startups face longer B2B cycles" },
+              "growth": { "min": 35, "median": 75, "max": 150, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Established relationships shorten cycles" },
+              "maturity": { "min": 30, "median": 60, "max": 120, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature manufacturers have optimized sales" },
+              "decline": { "min": 40, "median": 80, "max": 160, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms face longer negotiations" }
+            },
+            "retail": {
+              "startup": { "min": 1, "median": 7, "max": 30, "confidence": 0.80, "source": "industry_surveys", "rationale": "Retail has shorter transactional cycles" },
+              "growth": { "min": 1, "median": 5, "max": 21, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth retailers optimize customer journey" },
+              "maturity": { "min": 1, "median": 3, "max": 14, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature retail has streamlined processes" },
+              "decline": { "min": 1, "median": 7, "max": 30, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining retail may see reduced urgency" }
+            },
+            "healthcare": {
+              "startup": { "min": 60, "median": 120, "max": 240, "confidence": 0.75, "source": "industry_surveys", "rationale": "Healthcare startups face regulatory delays" },
+              "growth": { "min": 45, "median": 90, "max": 180, "confidence": 0.82, "source": "industry_surveys", "rationale": "Growth healthcare firms have established processes" },
+              "maturity": { "min": 30, "median": 75, "max": 150, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Mature healthcare has optimized cycles" },
+              "decline": { "min": 45, "median": 100, "max": 200, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining firms face extended cycles" }
+            },
+            "financial_services": {
+              "startup": { "min": 30, "median": 60, "max": 120, "confidence": 0.80, "source": "industry_surveys", "rationale": "Financial services startups have moderate cycles" },
+              "growth": { "min": 21, "median": 45, "max": 90, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms optimize client acquisition" },
+              "maturity": { "min": 14, "median": 35, "max": 70, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have efficient processes" },
+              "decline": { "min": 25, "median": 55, "max": 110, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms see elongated cycles" }
+            },
+            "general_smb": {
+              "startup": { "min": 21, "median": 45, "max": 90, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 14, "median": 35, "max": 70, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 10, "median": 28, "max": 56, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 18, "median": 40, "max": 80, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "close_rate": {
+          "display_name": "Sales Close Rate",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 15, "median": 22, "max": 35, "confidence": 0.82, "source": "industry_surveys", "rationale": "Startups still refining their pitch" },
+              "growth": { "min": 20, "median": 28, "max": 42, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms have proven offerings" },
+              "maturity": { "min": 25, "median": 35, "max": 50, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have strong close rates" },
+              "decline": { "min": 18, "median": 25, "max": 38, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining firms face competitive pressure" }
+            },
+            "technology_saas": {
+              "startup": { "min": 8, "median": 15, "max": 25, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups have lower initial close rates" },
+              "growth": { "min": 15, "median": 25, "max": 38, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS improves with product-market fit" },
+              "maturity": { "min": 20, "median": 32, "max": 48, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has optimized conversion" },
+              "decline": { "min": 12, "median": 20, "max": 32, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS faces conversion challenges" }
+            },
+            "manufacturing": {
+              "startup": { "min": 12, "median": 20, "max": 32, "confidence": 0.78, "source": "industry_surveys", "rationale": "Manufacturing startups building relationships" },
+              "growth": { "min": 18, "median": 28, "max": 42, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth manufacturers have strong relationships" },
+              "maturity": { "min": 22, "median": 35, "max": 52, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature manufacturers have high close rates" },
+              "decline": { "min": 15, "median": 24, "max": 38, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining manufacturers face competition" }
+            },
+            "general_smb": {
+              "startup": { "min": 12, "median": 20, "max": 32, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 18, "median": 28, "max": 42, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 22, "median": 35, "max": 52, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 15, "median": 24, "max": 38, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "customer_acquisition_cost": {
+          "display_name": "Customer Acquisition Cost",
+          "unit": "USD",
+          "direction": "lower_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 500, "median": 1200, "max": 3000, "confidence": 0.80, "source": "industry_surveys", "rationale": "Startups invest heavily in client acquisition" },
+              "growth": { "min": 350, "median": 850, "max": 2000, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms optimize acquisition" },
+              "maturity": { "min": 250, "median": 650, "max": 1500, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have efficient acquisition" },
+              "decline": { "min": 400, "median": 1000, "max": 2500, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms face higher CAC" }
+            },
+            "technology_saas": {
+              "startup": { "min": 1000, "median": 3500, "max": 8000, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups have high customer acquisition costs" },
+              "growth": { "min": 750, "median": 2500, "max": 6000, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS optimizes CAC" },
+              "maturity": { "min": 500, "median": 1800, "max": 4500, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has efficient acquisition" },
+              "decline": { "min": 1200, "median": 4000, "max": 9000, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS faces rising CAC" }
+            },
+            "general_smb": {
+              "startup": { "min": 400, "median": 1000, "max": 2500, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 300, "median": 750, "max": 1800, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 200, "median": 550, "max": 1300, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 350, "median": 900, "max": 2200, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "customer_lifetime_value": {
+          "display_name": "Customer Lifetime Value",
+          "unit": "USD",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 3000, "median": 8000, "max": 25000, "confidence": 0.80, "source": "industry_surveys", "rationale": "Startups building client relationships" },
+              "growth": { "min": 5000, "median": 15000, "max": 45000, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms have established client base" },
+              "maturity": { "min": 8000, "median": 25000, "max": 75000, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have high LTV clients" },
+              "decline": { "min": 4000, "median": 12000, "max": 35000, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms see reduced LTV" }
+            },
+            "technology_saas": {
+              "startup": { "min": 5000, "median": 15000, "max": 50000, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups building recurring revenue" },
+              "growth": { "min": 10000, "median": 35000, "max": 100000, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS has strong LTV" },
+              "maturity": { "min": 20000, "median": 65000, "max": 200000, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS maximizes LTV" },
+              "decline": { "min": 8000, "median": 25000, "max": 75000, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS sees LTV erosion" }
+            },
+            "general_smb": {
+              "startup": { "min": 2500, "median": 7000, "max": 20000, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 4500, "median": 13000, "max": 38000, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 7000, "median": 22000, "max": 65000, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 3500, "median": 10000, "max": 30000, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "ltv_cac_ratio": {
+          "display_name": "LTV to CAC Ratio",
+          "unit": "ratio",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 2.0, "median": 4.0, "max": 8.0, "confidence": 0.82, "source": "industry_surveys", "rationale": "Startups aiming for healthy unit economics" },
+              "growth": { "min": 3.0, "median": 6.0, "max": 12.0, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms optimize unit economics" },
+              "maturity": { "min": 4.0, "median": 8.0, "max": 16.0, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have excellent ratios" },
+              "decline": { "min": 2.5, "median": 5.0, "max": 10.0, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining firms see ratio compression" }
+            },
+            "technology_saas": {
+              "startup": { "min": 2.5, "median": 4.5, "max": 10.0, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups target 3:1 minimum" },
+              "growth": { "min": 4.0, "median": 7.0, "max": 15.0, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS has strong unit economics" },
+              "maturity": { "min": 5.0, "median": 10.0, "max": 20.0, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS maximizes ratio" },
+              "decline": { "min": 3.0, "median": 5.5, "max": 12.0, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS sees ratio erosion" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 3.5, "max": 7.0, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 3.0, "median": 5.5, "max": 11.0, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 4.0, "median": 7.5, "max": 15.0, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.5, "median": 4.5, "max": 9.0, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "marketing_roi": {
+          "display_name": "Marketing Return on Investment",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 100, "median": 200, "max": 400, "confidence": 0.78, "source": "industry_surveys", "rationale": "Startups building marketing capabilities" },
+              "growth": { "min": 150, "median": 300, "max": 600, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms have optimized marketing" },
+              "maturity": { "min": 200, "median": 400, "max": 800, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms maximize marketing ROI" },
+              "decline": { "min": 80, "median": 180, "max": 350, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining firms see diminishing returns" }
+            },
+            "technology_saas": {
+              "startup": { "min": 150, "median": 300, "max": 600, "confidence": 0.82, "source": "industry_surveys", "rationale": "SaaS startups investing in growth" },
+              "growth": { "min": 250, "median": 500, "max": 1000, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS has strong marketing ROI" },
+              "maturity": { "min": 350, "median": 700, "max": 1400, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS maximizes marketing efficiency" },
+              "decline": { "min": 100, "median": 250, "max": 500, "confidence": 0.68, "source": "expert_estimates", "rationale": "Declining SaaS faces marketing challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 100, "median": 200, "max": 400, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 150, "median": 300, "max": 600, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 200, "median": 400, "max": 800, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 80, "median": 180, "max": 350, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "customer_satisfaction_score": {
+          "display_name": "Customer Satisfaction Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 3.2, "median": 3.8, "max": 4.5, "confidence": 0.82, "source": "industry_surveys", "rationale": "Startups focused on early client relationships" },
+              "growth": { "min": 3.5, "median": 4.0, "max": 4.7, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms invest in client success" },
+              "maturity": { "min": 3.8, "median": 4.3, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have high satisfaction" },
+              "decline": { "min": 3.0, "median": 3.6, "max": 4.3, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining firms may see satisfaction drop" }
+            },
+            "technology_saas": {
+              "startup": { "min": 3.0, "median": 3.6, "max": 4.3, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups refining product" },
+              "growth": { "min": 3.4, "median": 4.0, "max": 4.6, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS has product-market fit" },
+              "maturity": { "min": 3.7, "median": 4.2, "max": 4.8, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has high satisfaction" },
+              "decline": { "min": 2.8, "median": 3.4, "max": 4.1, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS faces satisfaction challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 3.0, "median": 3.6, "max": 4.3, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 3.3, "median": 3.9, "max": 4.5, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.6, "median": 4.2, "max": 4.8, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.8, "median": 3.4, "max": 4.0, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "operational_excellence": {
+      "analysis_name": "Operational Excellence Analysis",
+      "description": "Cross-functional analysis of operations, technology, IT/data systems, and risk management",
+      "metrics": {
+        "operational_efficiency_rating": {
+          "display_name": "Operational Efficiency Rating",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 2.5, "median": 3.2, "max": 4.0, "confidence": 0.80, "source": "industry_surveys", "rationale": "Startups developing operational capabilities" },
+              "growth": { "min": 3.0, "median": 3.6, "max": 4.4, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms improving efficiency" },
+              "maturity": { "min": 3.5, "median": 4.0, "max": 4.8, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have optimized operations" },
+              "decline": { "min": 2.8, "median": 3.4, "max": 4.2, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms may face efficiency challenges" }
+            },
+            "manufacturing": {
+              "startup": { "min": 2.8, "median": 3.4, "max": 4.2, "confidence": 0.82, "source": "industry_surveys", "rationale": "Manufacturing startups building capabilities" },
+              "growth": { "min": 3.2, "median": 3.8, "max": 4.5, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth manufacturers optimize processes" },
+              "maturity": { "min": 3.6, "median": 4.2, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature manufacturers have excellent efficiency" },
+              "decline": { "min": 3.0, "median": 3.6, "max": 4.3, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining manufacturers face challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.4, "median": 3.0, "max": 3.8, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.8, "median": 3.4, "max": 4.2, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.2, "median": 3.8, "max": 4.6, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.6, "median": 3.2, "max": 4.0, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "process_automation_percent": {
+          "display_name": "Process Automation Percentage",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 30, "median": 50, "max": 75, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups typically have higher automation" },
+              "growth": { "min": 45, "median": 65, "max": 85, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS invests in automation" },
+              "maturity": { "min": 55, "median": 75, "max": 92, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has extensive automation" },
+              "decline": { "min": 40, "median": 60, "max": 80, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS may reduce investment" }
+            },
+            "manufacturing": {
+              "startup": { "min": 15, "median": 30, "max": 50, "confidence": 0.78, "source": "industry_surveys", "rationale": "Manufacturing startups building automation" },
+              "growth": { "min": 25, "median": 45, "max": 65, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth manufacturers invest in automation" },
+              "maturity": { "min": 40, "median": 60, "max": 80, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature manufacturers have high automation" },
+              "decline": { "min": 30, "median": 50, "max": 70, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining manufacturers may reduce investment" }
+            },
+            "general_smb": {
+              "startup": { "min": 15, "median": 30, "max": 50, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 25, "median": 45, "max": 65, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 35, "median": 55, "max": 75, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 25, "median": 40, "max": 60, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "technology_investment_rating": {
+          "display_name": "Technology Investment Level",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 3.5, "median": 4.2, "max": 5.0, "confidence": 0.88, "source": "industry_surveys", "rationale": "SaaS startups invest heavily in technology" },
+              "growth": { "min": 3.8, "median": 4.4, "max": 5.0, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Growth SaaS maintains high investment" },
+              "maturity": { "min": 4.0, "median": 4.5, "max": 5.0, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature SaaS has optimal technology" },
+              "decline": { "min": 3.2, "median": 3.8, "max": 4.6, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining SaaS may reduce investment" }
+            },
+            "professional_services": {
+              "startup": { "min": 2.5, "median": 3.2, "max": 4.0, "confidence": 0.80, "source": "industry_surveys", "rationale": "Professional services startups building tech stack" },
+              "growth": { "min": 3.0, "median": 3.6, "max": 4.4, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms invest in technology" },
+              "maturity": { "min": 3.3, "median": 3.9, "max": 4.7, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have established tech" },
+              "decline": { "min": 2.8, "median": 3.4, "max": 4.2, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms may reduce investment" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.2, "median": 2.8, "max": 3.6, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.6, "median": 3.2, "max": 4.0, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.0, "median": 3.6, "max": 4.4, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.4, "median": 3.0, "max": 3.8, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "system_uptime_percent": {
+          "display_name": "System Uptime Percentage",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 98.0, "median": 99.2, "max": 99.9, "confidence": 0.88, "source": "industry_surveys", "rationale": "SaaS startups prioritize uptime" },
+              "growth": { "min": 99.0, "median": 99.5, "max": 99.99, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Growth SaaS invests in reliability" },
+              "maturity": { "min": 99.5, "median": 99.9, "max": 99.999, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature SaaS has excellent uptime" },
+              "decline": { "min": 97.5, "median": 99.0, "max": 99.8, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining SaaS may face reliability issues" }
+            },
+            "general_smb": {
+              "startup": { "min": 95.0, "median": 98.0, "max": 99.5, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 97.0, "median": 99.0, "max": 99.8, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 98.0, "median": 99.5, "max": 99.95, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 94.0, "median": 97.5, "max": 99.2, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "financial_strategic": {
+      "analysis_name": "Financial & Strategic Alignment Analysis",
+      "description": "Cross-functional analysis of strategy and financials",
+      "metrics": {
+        "gross_profit_margin": {
+          "display_name": "Gross Profit Margin",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 35, "median": 50, "max": 70, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Professional services have high margins" },
+              "growth": { "min": 40, "median": 55, "max": 75, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Growth firms optimize margins" },
+              "maturity": { "min": 45, "median": 60, "max": 80, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature firms have excellent margins" },
+              "decline": { "min": 30, "median": 45, "max": 65, "confidence": 0.78, "source": "industry_surveys", "rationale": "Declining firms face margin pressure" }
+            },
+            "technology_saas": {
+              "startup": { "min": 50, "median": 70, "max": 85, "confidence": 0.88, "source": "industry_surveys", "rationale": "SaaS startups target high margins" },
+              "growth": { "min": 60, "median": 75, "max": 90, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Growth SaaS has strong margins" },
+              "maturity": { "min": 65, "median": 80, "max": 92, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature SaaS maximizes margins" },
+              "decline": { "min": 45, "median": 65, "max": 82, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining SaaS faces margin erosion" }
+            },
+            "manufacturing": {
+              "startup": { "min": 18, "median": 28, "max": 42, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Manufacturing startups have lower margins" },
+              "growth": { "min": 22, "median": 32, "max": 48, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth manufacturers improve margins" },
+              "maturity": { "min": 25, "median": 38, "max": 55, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature manufacturers optimize margins" },
+              "decline": { "min": 15, "median": 25, "max": 40, "confidence": 0.78, "source": "industry_surveys", "rationale": "Declining manufacturers face pressure" }
+            },
+            "retail": {
+              "startup": { "min": 20, "median": 32, "max": 48, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Retail startups building margins" },
+              "growth": { "min": 25, "median": 38, "max": 55, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth retailers optimize sourcing" },
+              "maturity": { "min": 28, "median": 42, "max": 60, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature retailers have strong margins" },
+              "decline": { "min": 18, "median": 28, "max": 45, "confidence": 0.78, "source": "industry_surveys", "rationale": "Declining retailers face margin pressure" }
+            },
+            "general_smb": {
+              "startup": { "min": 25, "median": 38, "max": 55, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 30, "median": 42, "max": 60, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 35, "median": 48, "max": 68, "confidence": 0.70, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 22, "median": 35, "max": 52, "confidence": 0.58, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "cash_runway_months": {
+          "display_name": "Cash Runway Duration",
+          "unit": "months",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 6, "median": 12, "max": 24, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups target 12+ months runway" },
+              "growth": { "min": 9, "median": 18, "max": 36, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS maintains healthy runway" },
+              "maturity": { "min": 12, "median": 24, "max": 48, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has strong cash position" },
+              "decline": { "min": 3, "median": 9, "max": 18, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS may face cash constraints" }
+            },
+            "general_smb": {
+              "startup": { "min": 3, "median": 6, "max": 12, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 6, "median": 12, "max": 24, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 9, "median": 18, "max": 36, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2, "median": 6, "max": 12, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "yoy_revenue_growth": {
+          "display_name": "Year-over-Year Revenue Growth",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 50, "median": 100, "max": 300, "confidence": 0.82, "source": "industry_surveys", "rationale": "SaaS startups target high growth" },
+              "growth": { "min": 25, "median": 50, "max": 100, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS maintains strong growth" },
+              "maturity": { "min": 10, "median": 20, "max": 40, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has sustainable growth" },
+              "decline": { "min": -15, "median": 0, "max": 10, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS faces growth challenges" }
+            },
+            "professional_services": {
+              "startup": { "min": 20, "median": 50, "max": 120, "confidence": 0.80, "source": "industry_surveys", "rationale": "Professional services startups growing" },
+              "growth": { "min": 15, "median": 30, "max": 60, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms expanding steadily" },
+              "maturity": { "min": 5, "median": 12, "max": 25, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have stable growth" },
+              "decline": { "min": -10, "median": 2, "max": 12, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms face headwinds" }
+            },
+            "general_smb": {
+              "startup": { "min": 15, "median": 40, "max": 100, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 10, "median": 25, "max": 55, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3, "median": 10, "max": 22, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": -12, "median": 0, "max": 8, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "people_leadership": {
+      "analysis_name": "People & Leadership Ecosystem Analysis",
+      "description": "Cross-functional analysis of human resources and leadership/governance",
+      "metrics": {
+        "employee_turnover_rate": {
+          "display_name": "Employee Turnover Rate",
+          "unit": "percent",
+          "direction": "lower_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 15, "median": 25, "max": 40, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups have higher turnover" },
+              "growth": { "min": 12, "median": 20, "max": 32, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS stabilizes workforce" },
+              "maturity": { "min": 8, "median": 15, "max": 25, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has lower turnover" },
+              "decline": { "min": 18, "median": 30, "max": 50, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS faces retention challenges" }
+            },
+            "professional_services": {
+              "startup": { "min": 12, "median": 20, "max": 35, "confidence": 0.82, "source": "industry_surveys", "rationale": "Professional services startups building teams" },
+              "growth": { "min": 10, "median": 18, "max": 28, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms retain talent" },
+              "maturity": { "min": 6, "median": 12, "max": 22, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have stable workforce" },
+              "decline": { "min": 15, "median": 25, "max": 42, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining firms face attrition" }
+            },
+            "general_smb": {
+              "startup": { "min": 15, "median": 25, "max": 42, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 12, "median": 20, "max": 35, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 8, "median": 15, "max": 28, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 18, "median": 30, "max": 50, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "leadership_effectiveness_score": {
+          "display_name": "Leadership Effectiveness Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 2.8, "median": 3.4, "max": 4.2, "confidence": 0.78, "source": "industry_surveys", "rationale": "Startups developing leadership" },
+              "growth": { "min": 3.2, "median": 3.8, "max": 4.5, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms invest in leadership" },
+              "maturity": { "min": 3.5, "median": 4.1, "max": 4.8, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have strong leadership" },
+              "decline": { "min": 2.5, "median": 3.2, "max": 4.0, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining firms face leadership challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.5, "median": 3.2, "max": 4.0, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 3.0, "median": 3.6, "max": 4.4, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.3, "median": 3.9, "max": 4.7, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.3, "median": 3.0, "max": 3.8, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "compliance_sustainability": {
+      "analysis_name": "Compliance & Sustainability Framework Analysis",
+      "description": "Cross-functional analysis of compliance, legal, regulatory, and sustainability",
+      "metrics": {
+        "compliance_maturity_score": {
+          "display_name": "Compliance Maturity Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "financial_services": {
+              "startup": { "min": 3.0, "median": 3.8, "max": 4.5, "confidence": 0.88, "source": "industry_surveys", "rationale": "Financial services startups prioritize compliance" },
+              "growth": { "min": 3.5, "median": 4.2, "max": 4.8, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Growth firms invest heavily in compliance" },
+              "maturity": { "min": 4.0, "median": 4.5, "max": 5.0, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature firms have excellent compliance" },
+              "decline": { "min": 3.2, "median": 3.8, "max": 4.5, "confidence": 0.78, "source": "expert_estimates", "rationale": "Declining firms may reduce compliance investment" }
+            },
+            "healthcare": {
+              "startup": { "min": 3.2, "median": 4.0, "max": 4.7, "confidence": 0.88, "source": "industry_surveys", "rationale": "Healthcare startups focus on compliance" },
+              "growth": { "min": 3.8, "median": 4.4, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Growth healthcare invests in compliance" },
+              "maturity": { "min": 4.2, "median": 4.7, "max": 5.0, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature healthcare has strong compliance" },
+              "decline": { "min": 3.5, "median": 4.0, "max": 4.6, "confidence": 0.78, "source": "expert_estimates", "rationale": "Declining healthcare maintains compliance" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.5, "median": 3.2, "max": 4.2, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.3, "median": 3.0, "max": 4.0, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "risk_assessment_frequency_score": {
+          "display_name": "Risk Assessment Frequency",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "financial_services": {
+              "startup": { "min": 3.0, "median": 3.8, "max": 4.5, "confidence": 0.85, "source": "industry_surveys", "rationale": "Financial services prioritize risk assessment" },
+              "growth": { "min": 3.5, "median": 4.2, "max": 4.8, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms have regular assessments" },
+              "maturity": { "min": 4.0, "median": 4.5, "max": 5.0, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have comprehensive programs" },
+              "decline": { "min": 3.0, "median": 3.6, "max": 4.4, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining firms may reduce frequency" }
+            },
+            "general_smb": {
+              "startup": { "min": 1.5, "median": 2.5, "max": 3.5, "confidence": 0.58, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.0, "median": 3.0, "max": 4.0, "confidence": 0.62, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 2.5, "median": 3.5, "max": 4.5, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 1.8, "median": 2.8, "max": 3.8, "confidence": 0.52, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tier2_analyses": {
+    "growth_readiness": {
+      "analysis_name": "Growth Readiness Assessment",
+      "description": "Cross-functional analysis assessing organizational readiness for growth",
+      "metrics": {
+        "sustainable_growth_rate": {
+          "display_name": "Sustainable Growth Rate",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 30, "median": 75, "max": 150, "confidence": 0.82, "source": "industry_surveys", "rationale": "SaaS startups can achieve high sustainable growth" },
+              "growth": { "min": 20, "median": 45, "max": 90, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS has strong sustainable rate" },
+              "maturity": { "min": 8, "median": 18, "max": 35, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has measured sustainable growth" },
+              "decline": { "min": -5, "median": 5, "max": 15, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS faces growth constraints" }
+            },
+            "professional_services": {
+              "startup": { "min": 15, "median": 40, "max": 80, "confidence": 0.80, "source": "industry_surveys", "rationale": "Professional services startups growing" },
+              "growth": { "min": 12, "median": 28, "max": 55, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth firms have healthy sustainable rate" },
+              "maturity": { "min": 5, "median": 12, "max": 25, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature firms have stable sustainable growth" },
+              "decline": { "min": -8, "median": 3, "max": 12, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining firms face headwinds" }
+            },
+            "general_smb": {
+              "startup": { "min": 12, "median": 35, "max": 75, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 8, "median": 22, "max": 48, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 4, "median": 10, "max": 22, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": -10, "median": 2, "max": 10, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "scaling_capacity_score": {
+          "display_name": "Organizational Scaling Readiness",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 2.5, "median": 3.4, "max": 4.3, "confidence": 0.82, "source": "industry_surveys", "rationale": "SaaS startups building scalability" },
+              "growth": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS invests in scaling" },
+              "maturity": { "min": 3.5, "median": 4.2, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has strong scalability" },
+              "decline": { "min": 2.8, "median": 3.5, "max": 4.3, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS may face scaling challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.58, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.5, "median": 3.3, "max": 4.2, "confidence": 0.62, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.2, "median": 3.0, "max": 3.9, "confidence": 0.52, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "market_position": {
+      "analysis_name": "Market Position & Competitive Dynamics Assessment",
+      "description": "Cross-functional analysis of market positioning and competitive landscape",
+      "metrics": {
+        "competitive_strength_score": {
+          "display_name": "Competitive Strength Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 2.2, "median": 3.0, "max": 4.0, "confidence": 0.80, "source": "industry_surveys", "rationale": "SaaS startups establishing position" },
+              "growth": { "min": 2.8, "median": 3.5, "max": 4.4, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Growth SaaS strengthening position" },
+              "maturity": { "min": 3.2, "median": 4.0, "max": 4.8, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Mature SaaS has strong position" },
+              "decline": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.70, "source": "expert_estimates", "rationale": "Declining SaaS faces competitive pressure" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.58, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.5, "median": 3.3, "max": 4.2, "confidence": 0.62, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 1.8, "median": 2.6, "max": 3.5, "confidence": 0.52, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "innovation_maturity_score": {
+          "display_name": "Innovation Maturity Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups are innovation-focused" },
+              "growth": { "min": 3.3, "median": 4.0, "max": 4.8, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS maintains innovation" },
+              "maturity": { "min": 3.5, "median": 4.2, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has systematic innovation" },
+              "decline": { "min": 2.5, "median": 3.2, "max": 4.0, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS may reduce innovation" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.58, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.5, "median": 3.2, "max": 4.2, "confidence": 0.62, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 2.8, "median": 3.5, "max": 4.4, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 1.8, "median": 2.5, "max": 3.5, "confidence": 0.52, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "resource_optimization": {
+      "analysis_name": "Resource Optimization & Efficiency Assessment",
+      "description": "Cross-functional analysis of resource utilization and operational efficiency",
+      "metrics": {
+        "revenue_per_employee": {
+          "display_name": "Revenue per Employee",
+          "unit": "USD",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 80000, "median": 150000, "max": 300000, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups building productivity" },
+              "growth": { "min": 120000, "median": 220000, "max": 450000, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS has good productivity" },
+              "maturity": { "min": 180000, "median": 350000, "max": 700000, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has excellent productivity" },
+              "decline": { "min": 100000, "median": 180000, "max": 350000, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS may see productivity drop" }
+            },
+            "professional_services": {
+              "startup": { "min": 100000, "median": 150000, "max": 250000, "confidence": 0.85, "source": "rma_annual_studies", "rationale": "Professional services startups building" },
+              "growth": { "min": 130000, "median": 190000, "max": 320000, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms have good productivity" },
+              "maturity": { "min": 160000, "median": 250000, "max": 420000, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have high productivity" },
+              "decline": { "min": 110000, "median": 165000, "max": 280000, "confidence": 0.75, "source": "industry_surveys", "rationale": "Declining firms face productivity challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 80000, "median": 130000, "max": 220000, "confidence": 0.62, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 110000, "median": 175000, "max": 300000, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 140000, "median": 230000, "max": 400000, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 90000, "median": 145000, "max": 250000, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "resource_utilization_percent": {
+          "display_name": "Resource Utilization Rate",
+          "unit": "percent",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "professional_services": {
+              "startup": { "min": 55, "median": 68, "max": 82, "confidence": 0.82, "source": "industry_surveys", "rationale": "Professional services startups building utilization" },
+              "growth": { "min": 62, "median": 75, "max": 88, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms optimize utilization" },
+              "maturity": { "min": 68, "median": 80, "max": 92, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature firms have excellent utilization" },
+              "decline": { "min": 50, "median": 65, "max": 80, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining firms may face utilization challenges" }
+            },
+            "general_smb": {
+              "startup": { "min": 50, "median": 65, "max": 80, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 58, "median": 72, "max": 85, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 65, "median": 78, "max": 90, "confidence": 0.68, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 48, "median": 62, "max": 78, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "risk_resilience": {
+      "analysis_name": "Risk & Resilience Assessment",
+      "description": "Cross-functional analysis of risk management and business resilience",
+      "metrics": {
+        "risk_management_maturity_score": {
+          "display_name": "Risk Management Maturity Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "financial_services": {
+              "startup": { "min": 2.8, "median": 3.5, "max": 4.3, "confidence": 0.85, "source": "industry_surveys", "rationale": "Financial services prioritize risk" },
+              "growth": { "min": 3.2, "median": 4.0, "max": 4.7, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth firms invest in risk management" },
+              "maturity": { "min": 3.8, "median": 4.4, "max": 5.0, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature firms have comprehensive programs" },
+              "decline": { "min": 3.0, "median": 3.6, "max": 4.4, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining firms may reduce investment" }
+            },
+            "general_smb": {
+              "startup": { "min": 1.5, "median": 2.3, "max": 3.2, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 2.5, "median": 3.3, "max": 4.2, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 1.8, "median": 2.5, "max": 3.5, "confidence": 0.50, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "business_continuity_score": {
+          "display_name": "Business Continuity Planning Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 2.5, "median": 3.3, "max": 4.2, "confidence": 0.82, "source": "industry_surveys", "rationale": "SaaS startups building continuity" },
+              "growth": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS invests in continuity" },
+              "maturity": { "min": 3.5, "median": 4.2, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has comprehensive planning" },
+              "decline": { "min": 2.8, "median": 3.5, "max": 4.3, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS may reduce investment" }
+            },
+            "general_smb": {
+              "startup": { "min": 1.5, "median": 2.2, "max": 3.2, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 2.5, "median": 3.4, "max": 4.4, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 1.8, "median": 2.5, "max": 3.5, "confidence": 0.50, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    },
+    "scalability_readiness": {
+      "analysis_name": "Scalability & Infrastructure Readiness Assessment",
+      "description": "Cross-functional analysis of infrastructure and scalability capabilities",
+      "metrics": {
+        "technology_scalability_score": {
+          "display_name": "Technology Scalability Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 2.8, "median": 3.5, "max": 4.4, "confidence": 0.85, "source": "industry_surveys", "rationale": "SaaS startups build for scale" },
+              "growth": { "min": 3.2, "median": 4.0, "max": 4.7, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS invests in scalability" },
+              "maturity": { "min": 3.8, "median": 4.4, "max": 5.0, "confidence": 0.92, "source": "rma_annual_studies", "rationale": "Mature SaaS has excellent scalability" },
+              "decline": { "min": 3.0, "median": 3.7, "max": 4.5, "confidence": 0.75, "source": "expert_estimates", "rationale": "Declining SaaS may maintain infrastructure" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 2.8, "max": 3.8, "confidence": 0.58, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.5, "median": 3.3, "max": 4.2, "confidence": 0.62, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.2, "median": 3.0, "max": 4.0, "confidence": 0.52, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        },
+        "infrastructure_readiness_score": {
+          "display_name": "Infrastructure Readiness Score",
+          "unit": "scale_1_to_5",
+          "direction": "higher_is_better",
+          "benchmarks": {
+            "technology_saas": {
+              "startup": { "min": 2.5, "median": 3.3, "max": 4.2, "confidence": 0.82, "source": "industry_surveys", "rationale": "SaaS startups building infrastructure" },
+              "growth": { "min": 3.0, "median": 3.8, "max": 4.6, "confidence": 0.88, "source": "rma_annual_studies", "rationale": "Growth SaaS invests in infrastructure" },
+              "maturity": { "min": 3.5, "median": 4.2, "max": 4.9, "confidence": 0.90, "source": "rma_annual_studies", "rationale": "Mature SaaS has excellent infrastructure" },
+              "decline": { "min": 2.8, "median": 3.5, "max": 4.3, "confidence": 0.72, "source": "expert_estimates", "rationale": "Declining SaaS may maintain infrastructure" }
+            },
+            "general_smb": {
+              "startup": { "min": 2.0, "median": 2.7, "max": 3.6, "confidence": 0.55, "source": "general_smb", "rationale": "General SMB startup benchmark" },
+              "growth": { "min": 2.5, "median": 3.2, "max": 4.2, "confidence": 0.60, "source": "general_smb", "rationale": "General SMB growth benchmark" },
+              "maturity": { "min": 2.8, "median": 3.6, "max": 4.5, "confidence": 0.65, "source": "general_smb", "rationale": "General SMB maturity benchmark" },
+              "decline": { "min": 2.2, "median": 2.9, "max": 3.8, "confidence": 0.50, "source": "general_smb", "rationale": "General SMB decline benchmark" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,89 +1,136 @@
-# BizHealth Report Generation Pipeline
+# BizHealth Pipeline Worker
 
-This is the background worker service for BizHealth.ai that generates business health assessment reports using AI.
+Background worker for processing BizHealth assessment questionnaires and generating comprehensive business reports.
 
-## Overview
+## Supported Pipelines
 
-This worker:
-1. Polls the Supabase `pipeline_queue` table every 30 seconds for new jobs
-2. When a job is found, fetches the questionnaire data
-3. Generates 17 different report types using Claude AI
-4. Saves the generated HTML reports to the Supabase `reports` table
-5. Updates job status and progress throughout the process
+### BIG Pipeline (Growth Plan - $299)
+- **87 questions** across 12 business categories
+- **17+ reports** generated
+- **Full 5-phase processing** with deep analysis
+- **30-45 minutes** processing time
+- Includes Phase 2 (Comparative Analysis) and Phase 3 (Strategic Synthesis)
 
-## Report Types Generated
+### LIL Pipeline (Essentials Plan - $99)
+- **45 questions** across 12 business categories
+- **8 reports** generated
+- **Streamlined 4-phase processing** (skips Phase 2 & 3)
+- **8-10 minutes** processing time
+- 30-60-90 day roadmap focus
 
-- Comprehensive Business Health Report
-- Executive Brief
-- Executive Overview
-- Owner's Strategic Report
-- Growth Engine Deep Dive
-- Performance Hub Deep Dive
-- People & Leadership Deep Dive
-- Risk & Systems Deep Dive
-- Manager's Strategy Report
-- Manager's Sales & Marketing Report
-- Manager's Operations Report
-- Manager's Financials Report
-- Manager's IT & Technology Report
-- Employee Engagement Report
-- Financial Analysis Report
-- Risk Assessment Report
-- Transformation Roadmap
+## Reports Generated
+
+### BIG Pipeline Reports (17+)
+1. Comprehensive Business Health Report
+2. Executive Brief
+3. Executive Overview
+4. Owner's Report
+5. Manager's Strategy Report
+6. Manager's Sales & Marketing Report
+7. Manager's Operations Report
+8. Manager's IT & Technology Report
+9. Manager's Financials Report
+10. Manager's Human Resources Report
+11. Manager's Leadership & Governance Report
+12. Manager's Risk Management Report
+13. Manager's Compliance Report
+14. Manager's Technology & Innovation Report
+15. Manager's Customer Experience Report
+16. Employees Report
+17. Action Plan Report
+
+### LIL Pipeline Reports (8)
+1. Comprehensive Business Health Report
+2. Owner's Strategic Report
+3. Manager's Strategy Report
+4. Manager's Sales & Marketing Report
+5. Manager's Operations Report
+6. Manager's IT & Technology Report
+7. Manager's Financials Report
+8. Employees Report
+
+## Environment Variables
+
+```env
+SUPABASE_URL=https://jksqdjauzohieghijkam.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+ANTHROPIC_API_KEY=your-anthropic-api-key
+POLL_INTERVAL_MS=10000
+PORT=3000
+```
 
 ## Deployment on Render
 
-### 1. Create a New Background Worker
+### Build Command
+```bash
+npm install && npm run build
+```
 
-1. Go to [Render Dashboard](https://dashboard.render.com)
-2. Click "New" → "Background Worker"
-3. Connect your GitHub repository
-4. Select this repository (`BizHealthRender1`)
+### Start Command
+```bash
+npm run worker
+```
 
-### 2. Configure Build Settings
-
-- **Build Command:** `npm install && npm run build`
-- **Start Command:** `npm start`
-- **Environment:** Node
-
-### 3. Set Environment Variables
-
-Add these environment variables in Render:
-
-| Variable | Value |
-|----------|-------|
-| `SUPABASE_URL` | `https://jksqdjauzohieghijkam.supabase.co` |
-| `SUPABASE_SERVICE_ROLE_KEY` | Your Supabase service role key |
-| `ANTHROPIC_API_KEY` | Your Anthropic API key |
-
-### 4. Deploy
-
-Click "Create Background Worker" and Render will automatically build and deploy.
-
-## Local Development
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Create a `.env` file with the required environment variables
-4. Run in development mode: `npm run dev`
+### Instance Type
+- **Starter ($7/month)** - Recommended for low volume
+- **Standard ($25/month)** - For higher concurrent processing
 
 ## How It Works
 
-1. **User completes questionnaire** on the frontend
-2. **Frontend triggers pipeline** by inserting a job into `pipeline_queue`
-3. **This worker picks up the job** and starts processing
-4. **Reports are generated** one by one using Claude AI
-5. **Reports are saved** to the `reports` table
-6. **User can view reports** in their dashboard
+1. Worker polls `pipeline_queue` table every 10 seconds
+2. Picks up pending jobs ordered by creation time
+3. Determines pipeline type (BIG or LIL) from job data
+4. Runs appropriate pipeline phases
+5. Saves generated reports to `reports` table
+6. Updates job status to completed/failed
 
-## Monitoring
+## API Endpoints
 
-- Check Render logs for worker output
-- Monitor the `pipeline_queue` table for job status
-- Check the `reports` table for generated reports
+- `GET /` - Service status
+- `GET /health` - Health check
+- `POST /trigger` - Manually trigger a job
+- `GET /status/:jobId` - Get job status
 
-## Troubleshooting
+## Local Development
 
-- **Worker not processing jobs:** Check environment variables are set correctly
-- **Reports not generating:** Check Anthropic API key and rate limits
-- **Database errors:** Verify Supabase service role key has correct permissions
+```bash
+# Install dependencies
+npm install
+
+# Run the worker locally
+npm run worker
+
+# Run the full pipeline on a test file
+npm run pipeline -- --input test-data.json --output ./output
+```
+
+## Architecture
+
+```
+src/
+├── render-worker.ts       # Main worker entry point
+├── run-pipeline.ts        # BIG pipeline runner
+├── orchestration/
+│   ├── lil/               # LIL pipeline orchestrators
+│   │   ├── lil-pipeline-orchestrator.ts
+│   │   ├── phase0-lil-orchestrator.ts
+│   │   ├── phase1-lil-orchestrator.ts
+│   │   ├── phase1-5-lil-orchestrator.ts
+│   │   ├── phase4-lil-orchestrator.ts
+│   │   ├── phase4-5-lil-orchestrator.ts
+│   │   └── phase5-lil-orchestrator.ts
+│   └── ...                # BIG pipeline orchestrators
+├── config/
+│   ├── pipeline.config.ts # BIG pipeline config
+│   └── lil-pipeline.config.ts # LIL pipeline config
+├── data/
+│   ├── question-category-mapping.ts # BIG questions
+│   └── question-category-mapping-lil.ts # LIL questions
+└── types/
+    ├── pipeline.types.ts  # BIG pipeline types
+    └── lil-pipeline.types.ts # LIL pipeline types
+```
+
+## License
+
+Proprietary - BizHealth.ai
