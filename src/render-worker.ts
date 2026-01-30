@@ -308,11 +308,9 @@ async function processJob(job: any): Promise<void> {
         report_type: normalizedType,
         title: report.title || `${report.type.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())} Report`,
         html_content: report.content,
-        format: 'html',
         status: 'completed',
         pipeline_type: pipelineType,
         page_count: report.pageCount || null,
-        generated_at: new Date().toISOString(),
       };
       
       const { data, error } = await supabase.from('reports').insert(reportData).select();
