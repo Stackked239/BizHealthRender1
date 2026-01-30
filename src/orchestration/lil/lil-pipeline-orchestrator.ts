@@ -24,7 +24,7 @@ import { runLILPhase1 } from './phase1-lil-orchestrator.js';
 import { runLILPhase1_5 } from './phase1-5-lil-orchestrator.js';
 import { runLILPhase4 } from './phase4-lil-orchestrator.js';
 import { runLILPhase4_5 } from './phase4-5-lil-orchestrator.js';
-import { runLILPhase5 } from './phase5-lil-orchestrator.js';
+import { runPhase5LIL } from './phase5-lil-orchestrator.js';
 
 export interface LILPipelineOptions {
   inputData: LILQuestionnaireInput;
@@ -197,7 +197,7 @@ export async function runLILPipeline(options: LILPipelineOptions): Promise<LILPi
       logger.info({ phase: 'phase5' }, 'Starting Phase 5: Report Generation');
       updateState({ currentPhase: 'phase5' });
 
-      const phase5Output = await runLILPhase5({
+      const phase5Output = await runPhase5LIL({
         idmOutput: state.outputs.phase4!,
         blufsOutput: state.outputs.phase4_5!,
         businessOverview: inputData.businessOverview,
