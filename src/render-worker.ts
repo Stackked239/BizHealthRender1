@@ -296,19 +296,43 @@ async function processJob(job: any): Promise<void> {
     const { reports } = result;
 
     // Save reports to database
+    logger.info({ jobId, reportCount: reports.length }, 'Saving reports to database');
+    
     for (const report of reports) {
-      await supabase.from('reports').insert({
+      // Normalize report type (convert hyphens to underscores for consistency)
+      const normalizedType = report.type.replace(/-/g, '_');
+      
+      const reportData = {
         user_id: userId,
         questionnaire_id: questionnaireId,
-        report_type: report.type,
-        title: report.title || `${report.type.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())} Report`,
+        report_type: normalizedType,
+        title: report.title || `${report.type.replace(/[-_]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())} Report`,
         html_content: report.content,
         format: 'html',
         status: 'completed',
         pipeline_type: pipelineType,
         page_count: report.pageCount || null,
         generated_at: new Date().toISOString(),
-      });
+      };
+      
+      const { data, error } = await supabase.from('reports').insert(reportData).select();
+      
+      if (error) {
+        logger.error({ 
+          jobId, 
+          reportType: normalizedType, 
+          error: error.message,
+          details: error.details,
+          hint: error.hint
+        }, 'Failed to save report to database');
+        throw new Error(`Failed to save report ${normalizedType}: ${error.message}`);
+      }
+      
+      logger.info({ 
+        jobId, 
+        reportType: normalizedType,
+        reportId: data?.[0]?.id 
+      }, 'Report saved to database');
     }
 
     // Update questionnaire status
