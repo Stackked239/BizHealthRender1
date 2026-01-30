@@ -239,14 +239,15 @@ async function processLILJob(job: any, questionnaire: any): Promise<{ reports: a
   // Convert pipeline output to report format
   const reports: any[] = [];
   
-  if (result.reports) {
-    for (const report of result.reports.reports) {
+  if (result.reports && result.reports.reports) {
+    // Phase 5 returns reports as an object keyed by report type
+    for (const [reportType, report] of Object.entries(result.reports.reports)) {
       reports.push({
-        type: report.reportType,
-        filename: `${report.reportType}.html`,
-        content: report.htmlContent,
-        title: report.title,
-        pageCount: report.pageCount
+        type: reportType.replace(/-/g, '_'), // Convert hyphens to underscores for DB
+        filename: `${reportType}.html`,
+        content: (report as any).htmlContent,
+        title: (report as any).title,
+        pageCount: (report as any).pageCount
       });
     }
   }
