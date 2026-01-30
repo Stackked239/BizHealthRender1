@@ -83,11 +83,11 @@ async function generateCategoryAnalysis(
   const prompt = `You are a business consultant specializing in ${categoryInfo.name} for micro-businesses and solopreneurs.
 
 ## Company Profile
-- Company: ${businessOverview.companyName}
-- Industry: ${businessOverview.industry}
-- Employees: ${phase0Output.employeeCount}
-- Years in Business: ${new Date().getFullYear() - businessOverview.yearStarted}
-- Current Challenges: ${businessOverview.currentChallenges.join(', ') || 'Not specified'}
+- Company: ${businessOverview.companyName || 'Not specified'}
+- Industry: ${businessOverview.industry || 'Not specified'}
+- Employees: ${phase0Output.employeeCount || 'Not specified'}
+- Years in Business: ${businessOverview.yearStarted ? new Date().getFullYear() - businessOverview.yearStarted : (businessOverview.yearsInBusiness || 'Not specified')}
+- Current Challenges: ${(businessOverview.currentChallenges || []).join(', ') || 'Not specified'}
 
 ## ${categoryInfo.name} Assessment Results
 - Score: ${score}/100

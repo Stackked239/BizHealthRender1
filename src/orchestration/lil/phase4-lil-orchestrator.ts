@@ -182,11 +182,11 @@ export async function runLILPhase4(options: Phase4LILOptions): Promise<LILIDMOut
   const output: LILIDMOutput = {
     submissionId: phase0Output.submissionId,
     companyProfile: {
-      name: businessOverview.companyName,
-      industry: businessOverview.industry,
+      name: businessOverview.companyName || 'Company',
+      industry: businessOverview.industry || 'Not specified',
       size: getCompanySize(phase0Output.employeeCount),
-      yearsInBusiness: new Date().getFullYear() - businessOverview.yearStarted,
-      totalEmployees: phase0Output.employeeCount
+      yearsInBusiness: businessOverview.yearStarted ? new Date().getFullYear() - businessOverview.yearStarted : (businessOverview.yearsInBusiness || 5),
+      totalEmployees: phase0Output.employeeCount || 25
     },
     healthScores,
     consolidatedInsights: {

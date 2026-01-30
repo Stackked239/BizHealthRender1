@@ -412,7 +412,7 @@ async function generateReport(
     ...idmOutput.categoryData[cat]
   }));
 
-  const prompt = `Generate the HTML content for a ${config.title} for ${businessOverview.companyName}.
+  const prompt = `Generate the HTML content for a ${config.title} for ${businessOverview.companyName || 'the company'}.
 
 ## Report Configuration
 - Target Pages: ${config.pageTarget}
@@ -481,7 +481,7 @@ Make the content engaging, professional, and actionable. Use specific data from 
   // Build full HTML
   const htmlContent = HTML_TEMPLATE
     .replace('{{TITLE}}', config.title)
-    .replace('{{COMPANY_NAME}}', businessOverview.companyName)
+    .replace('{{COMPANY_NAME}}', businessOverview.companyName || 'Company')
     .replace('{{CONTENT}}', content.text);
 
   // Estimate page count (rough: ~3000 chars per page)
