@@ -163,7 +163,7 @@ const REPORT_CONFIGS: Record<LILReportType, {
 };
 
 // Professional HTML Template matching BIG pipeline styling
-const HTML_TEMPLATE = \`<!DOCTYPE html>
+const HTML_TEMPLATE = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -762,7 +762,7 @@ const HTML_TEMPLATE = \`<!DOCTYPE html>
     <p><em>This report is confidential and intended for authorized recipients only.</em></p>
   </footer>
 </body>
-</html>\`;
+</html>`;
 
 /**
  * Generate a single report using Claude with professional formatting
@@ -788,7 +788,7 @@ async function generateReport(
   }));
 
   // Build comprehensive prompt with BizHealth voice
-  const prompt = \`You are BizHealth.ai's senior business consultant and report architect.
+  const prompt = `You are BizHealth.ai's senior business consultant and report architect.
 
 Generate a professional \${config.title} for \${businessOverview.companyName || 'the company'}.
 
@@ -876,7 +876,7 @@ Use these additional classes as needed:
 - "metrics-grid" and "metric-card" for key metrics display
 - "priority-tag" with modifiers (high, medium, low) for priority labels
 
-Make the content comprehensive, data-driven, and actionable. Every recommendation should be specific and tied to the analysis data.\`;
+Make the content comprehensive, data-driven, and actionable. Every recommendation should be specific and tied to the analysis data.`;
 
   const response = await anthropic.messages.create({
     model: LIL_PIPELINE_CONFIG.aiConfig.model,
@@ -944,7 +944,7 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
       bluf || {
         headline: 'Business Health Assessment Complete',
         keyTakeaway: 'Review the detailed findings below.',
-        scoreHighlight: \`Overall Score: \${idmOutput.healthScores.overall}/100\`,
+        scoreHighlight: `Overall Score: \${idmOutput.healthScores.overall}/100`,
         topPriority: 'Review recommendations and create action plan.',
         callToAction: 'Schedule a follow-up consultation to discuss findings.'
       },
@@ -970,7 +970,7 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
 
   // Save each report as HTML
   for (const [reportType, report] of Object.entries(reports)) {
-    const htmlPath = path.join(phase5Dir, \`\${reportType}-report.html\`);
+    const htmlPath = path.join(phase5Dir, `\${reportType}-report.html`);
     fs.writeFileSync(htmlPath, report.htmlContent);
   }
 
