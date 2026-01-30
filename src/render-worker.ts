@@ -20,10 +20,15 @@ import * as path from 'path';
 // Load environment variables
 dotenvConfig();
 
-// Initialize Supabase client
+// Initialize Supabase client with service role (bypasses RLS)
 const supabaseUrl = process.env.SUPABASE_URL!;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const supabase = createClient(supabaseUrl, supabaseServiceKey, {
+  auth: {
+    autoRefreshToken: false,
+    persistSession: false
+  }
+});
 
 // Configuration
 const POLL_INTERVAL_MS = parseInt(process.env.POLL_INTERVAL_MS || '10000'); // 10 seconds
