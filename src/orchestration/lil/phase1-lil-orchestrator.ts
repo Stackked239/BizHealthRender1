@@ -96,11 +96,11 @@ async function generateCrossFunctionalAnalysis(
 ${analysisConfig.description}
 
 ## Company Context
-- Industry: ${businessOverview.industry}
-- Years in Business: ${new Date().getFullYear() - businessOverview.yearStarted}
-- Location: ${businessOverview.location.city}, ${businessOverview.location.state}
-- Corporate Structure: ${businessOverview.corporateStructure}
-- Current Challenges: ${businessOverview.currentChallenges.join(', ') || 'Not specified'}
+- Industry: ${businessOverview.industry || 'Not specified'}
+- Years in Business: ${businessOverview.yearStarted ? new Date().getFullYear() - businessOverview.yearStarted : (businessOverview.yearsInBusiness || 'Not specified')}
+- Location: ${businessOverview.location?.city || 'Not specified'}, ${businessOverview.location?.state || ''}
+- Corporate Structure: ${businessOverview.corporateStructure || 'Not specified'}
+- Current Challenges: ${(businessOverview.currentChallenges || []).join(', ') || 'Not specified'}
 
 ## Category Scores (0-100 scale)
 ${categoryData.map(c => `- ${c.code}: ${c.score}/100`).join('\n')}
