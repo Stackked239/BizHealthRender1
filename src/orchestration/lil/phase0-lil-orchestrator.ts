@@ -168,15 +168,16 @@ export async function runLILPhase0(options: Phase0LILOptions): Promise<LILPhase0
     )
   );
 
-  // Calculate total employee count
-  const workforce = input.businessOverview.workforce;
-  const employeeCount = 
-    workforce.executiveLeadership +
-    workforce.supportAdmin +
-    workforce.fullTimeEmployees +
-    workforce.partTimeEmployees +
-    workforce.contractors +
-    workforce.seasonal;
+  // Calculate total employee count (handle missing workforce data)
+  const workforce = input.businessOverview.workforce || {};
+  const employeeCount = input.businessOverview.employeeCount || (
+    (workforce.executiveLeadership || 0) +
+    (workforce.supportAdmin || 0) +
+    (workforce.fullTimeEmployees || 0) +
+    (workforce.partTimeEmployees || 0) +
+    (workforce.contractors || 0) +
+    (workforce.seasonal || 0)
+  ) || 25; // Default to 25 if no employee data provided
 
   // Build output
   const output: LILPhase0Output = {
