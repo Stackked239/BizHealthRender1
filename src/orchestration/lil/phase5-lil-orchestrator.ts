@@ -997,11 +997,18 @@ export async function runPhase5LIL(options: Phase5LILOptions): Promise<LILPhase5
     totalTokensUsed
   }, 'Phase 5 LIL: Report generation complete');
 
+  // Convert reports Record to array for LILPhase5Output type compliance
+  const reportsArray: LILGeneratedReport[] = Object.values(reports);
+
   return {
     submissionId: idmOutput.submissionId,
-    reports,
-    totalPages,
-    tokensUsed: totalTokensUsed,
-    generatedAt: new Date().toISOString()
+    reports: reportsArray,
+    metadata: {
+      processedAt: new Date().toISOString(),
+      totalReports: reportsArray.length,
+      totalPages,
+      modelUsed: LIL_PIPELINE_CONFIG.aiConfig.model,
+      tokensUsed: totalTokensUsed
+    }
   };
 }
